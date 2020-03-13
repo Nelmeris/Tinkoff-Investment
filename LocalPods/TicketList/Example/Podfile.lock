@@ -4,11 +4,14 @@ PODS:
   - TicketList (0.1.0):
     - Network
     - Storage
+    - UIViewKit
+  - UIViewKit (0.1.0)
 
 DEPENDENCIES:
   - Network (from `../../Network/`)
   - Storage (from `../../Storage/`)
   - TicketList (from `../`)
+  - UIViewKit (from `../../UIViewKit/`)
 
 EXTERNAL SOURCES:
   Network:
@@ -17,12 +20,15 @@ EXTERNAL SOURCES:
     :path: "../../Storage/"
   TicketList:
     :path: "../"
+  UIViewKit:
+    :path: "../../UIViewKit/"
 
 SPEC CHECKSUMS:
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
-  TicketList: b1b781be5442e19805220ecca653f47518eeee8b
+  TicketList: 9e76381cab9ddee29f117c5886b32ae04d882c09
+  UIViewKit: 8d8b12b203a9c4d13c1d060abb3f323a0ed626a5
 
-PODFILE CHECKSUM: 058dd4839977577f013e56088cc6f4442fe6ce18
+PODFILE CHECKSUM: 7b4ed16d9748d238e099486c1600fe5630ee3767
 
 COCOAPODS: 1.9.0
