@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'TicketList_Example' do
+  pod 'TicketList', :path => '../'
+
+  target 'TicketList_Tests' do
+    inherit! :search_paths
+
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - TicketList (0.1.0)
+
+DEPENDENCIES:
+  - TicketList (from `../`)
+
+EXTERNAL SOURCES:
+  TicketList:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TicketList: eb4027f6d5ee6de6dbbd45fc45f24708f156785f
+
+PODFILE CHECKSUM: 4603f12512ddf3a7664282262495c576b59dc1ec
+
+COCOAPODS: 1.9.0
