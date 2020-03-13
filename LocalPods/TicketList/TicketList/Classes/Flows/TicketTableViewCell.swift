@@ -9,6 +9,10 @@ import UIKit
 
 class TicketTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconView: TicketTableViewCell!
+    @IBOutlet weak var symbolLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
