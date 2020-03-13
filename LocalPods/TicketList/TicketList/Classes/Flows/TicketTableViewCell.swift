@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import UIViewKit
 
-class TicketTableViewCell: UITableViewCell {
+class TicketTableViewCell: UITableViewCell, ConfigurableCell {
+    typealias ViewModel = TicketViewModel
 
     @IBOutlet weak var iconView: TicketTableViewCell!
     @IBOutlet weak var symbolLabel: UILabel!
@@ -22,6 +24,11 @@ class TicketTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(_ viewModel: TicketViewModel, at indexPath: IndexPath) {
+        symbolLabel.text = viewModel.symbol
+        descriptionLabel.text = viewModel.description
     }
     
 }
