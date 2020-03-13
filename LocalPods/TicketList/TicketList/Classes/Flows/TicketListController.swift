@@ -5,4 +5,10 @@
 //  Created by Artem Kufaev on 13.03.2020.
 //
 
-import Foundation
+import UIViewKit
+
+public class TicketListController: UIViewController {
+    
+    @IBOutlet weak var ticketTableView: UITableView!
+    
+}
