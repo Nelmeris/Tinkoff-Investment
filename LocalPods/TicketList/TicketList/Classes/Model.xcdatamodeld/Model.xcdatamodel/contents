@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Exchange" representedClassName="Exchange" syncable="YES" codeGenerationType="class">
+    <entity name="Exchange" representedClassName="Exchange" syncable="YES">
         <attribute name="code" attributeType="String"/>
         <attribute name="currency" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
     </entity>
-    <entity name="Ticket" representedClassName="Ticket" syncable="YES" codeGenerationType="class">
+    <entity name="Ticket" representedClassName="Ticket" syncable="YES">
         <attribute name="descript" attributeType="String"/>
         <attribute name="displaySymbol" attributeType="String"/>
         <attribute name="symbol" attributeType="String"/>
