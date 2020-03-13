@@ -1,16 +1,26 @@
 PODS:
+  - Network (0.1.0)
+  - Storage (0.1.0)
   - TicketList (0.1.0)
 
 DEPENDENCIES:
+  - Network (from `../../Network/`)
+  - Storage (from `../../Storage/`)
   - TicketList (from `../`)
 
 EXTERNAL SOURCES:
+  Network:
+    :path: "../../Network/"
+  Storage:
+    :path: "../../Storage/"
   TicketList:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TicketList: eb4027f6d5ee6de6dbbd45fc45f24708f156785f
+  Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
+  TicketList: 7543d330b6e07a4ae4e4c8d3ad49efd40da6df8a
 
-PODFILE CHECKSUM: 4603f12512ddf3a7664282262495c576b59dc1ec
+PODFILE CHECKSUM: 058dd4839977577f013e56088cc6f4442fe6ce18
 
 COCOAPODS: 1.9.0

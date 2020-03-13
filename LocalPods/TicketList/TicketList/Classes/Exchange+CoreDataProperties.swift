@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Exchange {
+extension ExchangeCD {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Exchange> {
-        return NSFetchRequest<Exchange>(entityName: "Exchange")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<ExchangeCD> {
+        return NSFetchRequest<ExchangeCD>(entityName: "ExchangeCD")
     }
 
     @NSManaged public var code: String?

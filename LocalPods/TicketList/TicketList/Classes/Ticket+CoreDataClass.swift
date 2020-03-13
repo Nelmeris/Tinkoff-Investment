@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(Ticket)
-public class Ticket: NSManagedObject {
+public class TicketCD: NSManagedObject {
 
 }

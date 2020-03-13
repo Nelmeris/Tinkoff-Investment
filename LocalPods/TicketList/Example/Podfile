@@ -1,10 +1,9 @@
 use_frameworks!
+platform :ios, '10.0'
 
 target 'TicketList_Example' do
   pod 'TicketList', :path => '../'
 
-  target 'TicketList_Tests' do
-    inherit! :search_paths
-
-  end
+  pod 'Storage', :path => '../../Storage/'
+  pod 'Network', :path => '../../Network/'
 end

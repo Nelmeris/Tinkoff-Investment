@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Ticket {
+extension TicketCD {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Ticket> {
-        return NSFetchRequest<Ticket>(entityName: "Ticket")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TicketCD> {
+        return NSFetchRequest<TicketCD>(entityName: "TicketCD")
     }
 
     @NSManaged public var symbol: String?
