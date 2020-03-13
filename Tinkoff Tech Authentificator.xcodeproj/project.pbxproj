@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		451DA5466CC8FBD67CD20D22 /* Pods_Tinkoff_Tech_Authentificator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14C102CA5A3CEFE96716161 /* Pods_Tinkoff_Tech_Authentificator.framework */; };
+		576338AD241BE19800A4F235 /* TicketTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576338AC241BE19800A4F235 /* TicketTableController.swift */; };
+		576338B0241BE5D700A4F235 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 576338AE241BE5D700A4F235 /* Model.xcdatamodeld */; };
+		576338B3241BE62000A4F235 /* TicketCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576338B1241BE62000A4F235 /* TicketCD+CoreDataClass.swift */; };
+		576338B4241BE62000A4F235 /* TicketCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576338B2241BE62000A4F235 /* TicketCD+CoreDataProperties.swift */; };
 		743068E523FDC88C0075A374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E423FDC88C0075A374 /* AppDelegate.swift */; };
 		743068E723FDC88C0075A374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E623FDC88C0075A374 /* SceneDelegate.swift */; };
 		743068E923FDC88C0075A374 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E823FDC88C0075A374 /* ContentController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		576338AC241BE19800A4F235 /* TicketTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableController.swift; sourceTree = "<group>"; };
+		576338AF241BE5D700A4F235 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		576338B1241BE62000A4F235 /* TicketCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketCD+CoreDataClass.swift"; sourceTree = "<group>"; };
+		576338B2241BE62000A4F235 /* TicketCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TicketCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		723D3B812CC6D394B879E710 /* Pods-Tinkoff Tech Authentificator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Tech Authentificator.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Tech Authentificator/Pods-Tinkoff Tech Authentificator.release.xcconfig"; sourceTree = "<group>"; };
 		743068E123FDC88C0075A374 /* Tinkoff Tech Authentificator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Tech Authentificator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		743068E423FDC88C0075A374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 		743068E323FDC88C0075A374 /* Tinkoff Tech Authentificator */ = {
 			isa = PBXGroup;
 			children = (
+				576338B1241BE62000A4F235 /* TicketCD+CoreDataClass.swift */,
+				576338B2241BE62000A4F235 /* TicketCD+CoreDataProperties.swift */,
 				743068FD23FE55A40075A374 /* RootAppController.swift */,
 				743068E823FDC88C0075A374 /* ContentController.swift */,
 				743068E423FDC88C0075A374 /* AppDelegate.swift */,
@@ -85,6 +95,8 @@
 				743068ED23FDC88D0075A374 /* Assets.xcassets */,
 				743068EF23FDC88D0075A374 /* LaunchScreen.storyboard */,
 				743068F223FDC88D0075A374 /* Info.plist */,
+				576338AC241BE19800A4F235 /* TicketTableController.swift */,
+				576338AE241BE5D700A4F235 /* Model.xcdatamodeld */,
 			);
 			path = "Tinkoff Tech Authentificator";
 			sourceTree = "<group>";
@@ -253,9 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				743068E923FDC88C0075A374 /* ContentController.swift in Sources */,
+				576338B4241BE62000A4F235 /* TicketCD+CoreDataProperties.swift in Sources */,
+				576338AD241BE19800A4F235 /* TicketTableController.swift in Sources */,
 				743068E523FDC88C0075A374 /* AppDelegate.swift in Sources */,
+				576338B0241BE5D700A4F235 /* Model.xcdatamodeld in Sources */,
 				743068E723FDC88C0075A374 /* SceneDelegate.swift in Sources */,
 				743068FE23FE55A40075A374 /* RootAppController.swift in Sources */,
+				576338B3241BE62000A4F235 /* TicketCD+CoreDataClass.swift in Sources */,
 				743068FA23FDCD6D0075A374 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +474,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		576338AE241BE5D700A4F235 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				576338AF241BE5D700A4F235 /* Model.xcdatamodel */,
+			);
+			currentVersion = 576338AF241BE5D700A4F235 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 743068D923FDC88C0075A374 /* Project object */;
 }

@@ -64,7 +64,7 @@ class RootAppController: UINavigationController {
     }
 
     private func runContent() {
-        guard let content = R.storyboard.main.contentController() else { return }
+        guard let content = R.storyboard.main.ticketTableController() else { return }
         setViewControllers([content], animated: true)
     }
     

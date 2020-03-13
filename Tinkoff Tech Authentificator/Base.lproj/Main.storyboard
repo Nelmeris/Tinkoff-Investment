@@ -92,5 +92,35 @@
             </objects>
             <point key="canvasLocation" x="188" y="9"/>
         </scene>
+        <!--Ticket Table Controller-->
+        <scene sceneID="gIe-Hf-f3u">
+            <objects>
+                <viewController storyboardIdentifier="TicketTableController" id="wpg-Ow-9jO" customClass="TicketTableController" customModule="Tinkoff_Tech_Authentificator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OBi-jX-dBS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBu-cZ-pb0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nBu-cZ-pb0" firstAttribute="top" secondItem="uwa-XV-rbo" secondAttribute="top" id="20M-fe-Mt2"/>
+                            <constraint firstItem="nBu-cZ-pb0" firstAttribute="leading" secondItem="uwa-XV-rbo" secondAttribute="leading" id="9vz-2C-vK3"/>
+                            <constraint firstItem="uwa-XV-rbo" firstAttribute="bottom" secondItem="nBu-cZ-pb0" secondAttribute="bottom" id="JCx-QD-bJT"/>
+                            <constraint firstItem="uwa-XV-rbo" firstAttribute="trailing" secondItem="nBu-cZ-pb0" secondAttribute="trailing" id="bmE-hK-fDE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uwa-XV-rbo"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="nBu-cZ-pb0" id="pbm-XG-afo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yox-cF-p42" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="9"/>
+        </scene>
     </scenes>
 </document>
