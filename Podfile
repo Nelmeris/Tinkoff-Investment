@@ -14,4 +14,5 @@ target 'Tinkoff Tech Authentificator' do
   pod 'UIViewKit', :path => 'LocalPods/UIViewKit'
   pod 'Storage', :path => 'LocalPods/Storage'
   pod 'Network', :path => 'LocalPods/Network'
+  pod 'TicketList', :path => 'LocalPods/TicketList'
 end

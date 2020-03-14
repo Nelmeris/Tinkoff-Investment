@@ -11,6 +11,10 @@ PODS:
   - R.swift.Library (5.1.0)
   - Storage (0.1.0)
   - SwiftLint (0.38.2)
+  - TicketList (0.1.0):
+    - Network
+    - Storage
+    - UIViewKit
   - UIViewKit (0.1.0)
   - Validator (3.2.1)
 
@@ -22,6 +26,7 @@ DEPENDENCIES:
   - R.swift
   - Storage (from `LocalPods/Storage`)
   - SwiftLint
+  - TicketList (from `LocalPods/TicketList`)
   - UIViewKit (from `LocalPods/UIViewKit`)
 
 SPEC REPOS:
@@ -42,6 +47,8 @@ EXTERNAL SOURCES:
     :path: LocalPods/Network
   Storage:
     :path: LocalPods/Storage
+  TicketList:
+    :path: LocalPods/TicketList
   UIViewKit:
     :path: LocalPods/UIViewKit
 
@@ -54,9 +61,10 @@ SPEC CHECKSUMS:
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  TicketList: 491b317354db01bde81ad3a62dfaf59f86131250
   UIViewKit: 8d8b12b203a9c4d13c1d060abb3f323a0ed626a5
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: fdffa3f01d315d7d98c7467251bb26fe4634b57a
+PODFILE CHECKSUM: 63f665651957670c589a99fbdf2bcafed52ee039
 
 COCOAPODS: 1.9.0
