@@ -1,8 +1,8 @@
 //
-//  Exchange+CoreDataProperties.swift
-//  Pods-TicketList_Example
+//  ExchangeCD+CoreDataProperties.swift
+//  
 //
-//  Created by Artem Kufaev on 13.03.2020.
+//  Created by Artem Kufaev on 14.03.2020.
 //
 //
 
@@ -17,7 +17,7 @@ extension ExchangeCD {
     }
 
     @NSManaged public var code: String?
-    @NSManaged public var name: String?
     @NSManaged public var currency: String?
+    @NSManaged public var name: String?
 
 }

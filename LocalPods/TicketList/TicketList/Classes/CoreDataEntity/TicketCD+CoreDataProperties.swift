@@ -1,8 +1,8 @@
 //
-//  Ticket+CoreDataProperties.swift
-//  Pods-TicketList_Example
+//  TicketCD+CoreDataProperties.swift
+//  
 //
-//  Created by Artem Kufaev on 13.03.2020.
+//  Created by Artem Kufaev on 14.03.2020.
 //
 //
 
@@ -16,8 +16,8 @@ extension TicketCD {
         return NSFetchRequest<TicketCD>(entityName: "TicketCD")
     }
 
-    @NSManaged public var symbol: String?
-    @NSManaged public var displaySymbol: String?
     @NSManaged public var descript: String?
+    @NSManaged public var displaySymbol: String?
+    @NSManaged public var symbol: String?
 
 }
