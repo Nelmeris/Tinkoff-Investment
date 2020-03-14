@@ -38,6 +38,6 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'UIViewKit'
+  s.dependency 'DesignKit'
   s.dependency 'Validator'
 end

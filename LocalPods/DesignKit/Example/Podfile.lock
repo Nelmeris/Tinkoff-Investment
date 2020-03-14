@@ -1,0 +1,22 @@
+PODS:
+  - DesignKit (0.1.0):
+    - UIUtils
+  - UIUtils (0.1.0)
+
+DEPENDENCIES:
+  - DesignKit (from `../`)
+  - UIUtils (from `../../UIUtils`)
+
+EXTERNAL SOURCES:
+  DesignKit:
+    :path: "../"
+  UIUtils:
+    :path: "../../UIUtils"
+
+SPEC CHECKSUMS:
+  DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
+  UIUtils: d8a80c165e76b48b92192c5c5338a759c5ccfbb3
+
+PODFILE CHECKSUM: b326c91cd3f5bd734e8b6caf578d6b09bd2ee65c
+
+COCOAPODS: 1.9.0

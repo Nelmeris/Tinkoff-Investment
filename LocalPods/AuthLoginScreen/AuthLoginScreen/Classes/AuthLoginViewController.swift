@@ -6,7 +6,7 @@
 //
 
 import Validator
-import UIViewKit
+import DesignKit
 
 public protocol AuthLoginViewControllerDelegate: class {
     func loginButtonDidClicked(login: String, password: String, isSetPin: Bool)

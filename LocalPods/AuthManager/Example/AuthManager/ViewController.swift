@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import AuthManager
 
 public class AuthViewController: UIViewController {
 
+    private var auth: AuthManager!
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.auth = AuthManager()
+        authentificate()
+        auth.sendLoginCredentials(login: "Login", password: "Password")
+        authentificate()
+        auth.sendPin(code: "1234")
+        authentificate()
     }
-
-    override public func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func authentificate() {
+        auth.authentificate { (state) in
+            switch state {
+            case .credentials:
+                print("credentials")
+            case .confirmPin(let code):
+                print(code)
+            }
+        }
     }
 
 }

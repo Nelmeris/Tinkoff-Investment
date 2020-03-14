@@ -5,7 +5,7 @@
 //  Created by Artem Kufaev on 23.02.2020.
 //
 
-import UIViewKit
+import DesignKit
 
 public class AuthLoginView: UIView {
     

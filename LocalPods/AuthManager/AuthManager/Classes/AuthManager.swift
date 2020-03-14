@@ -38,7 +38,7 @@ public class AuthManager {
     }
     
     public func resetCredentials() {
-        _ = keychain.remove(key: KeychainKeys.login.rawValue)
+        _ = keychain.remove(key: KeychainKeys.login.rawValue)
         _ = keychain.remove(key: KeychainKeys.password.rawValue)
         _ = keychain.remove(key: KeychainKeys.pin.rawValue)
     }

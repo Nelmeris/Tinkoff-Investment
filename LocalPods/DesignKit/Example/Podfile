@@ -1,0 +1,9 @@
+use_frameworks!
+platform :ios, '11.0'
+
+target 'DesignKit_Example' do
+  pod 'DesignKit', :path => '../'
+
+  pod 'UIUtils', :path => '../../UIUtils'
+
+end

@@ -9,12 +9,13 @@
 import UIKit
 import AuthLoginScreen
 
-@available(iOS 13.0, *)
 class ViewController: AuthLoginViewController, AuthLoginViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
         self.delegate = self
     }
     

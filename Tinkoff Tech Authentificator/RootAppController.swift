@@ -43,7 +43,6 @@ class RootAppController: UINavigationController {
     
     private func runConfirmPin() {
         guard let pin = AuthPinController.new() else { fatalError() }
-        pin.pincodeSize = 5
         self.authPin = pin
         pin.delegate = self
         pin.state = .confirmPin
@@ -53,7 +52,6 @@ class RootAppController: UINavigationController {
     private func runSetPinIfNeeded(_ needPin: Bool) {
         guard let authPin = AuthPinController.new() else { fatalError() }
         self.authPin = authPin
-        authPin.pincodeSize = 5
         guard needPin else {
             runContent()
             return
