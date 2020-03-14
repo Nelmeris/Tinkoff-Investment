@@ -31,9 +31,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'TicketList/Classes/**/*'
-  s.resources = 'TicketList/CoreData/*.xcdatamodeld'
 
-  s.resources = ["TicketList/Assets/*.xib"]
+  s.resources = 'TicketList/CoreData/*.xcdatamodeld', 'TicketList/Assets/*.xib'
 
   # s.resource_bundles = {
   #   'TicketList' => ['TicketList/Assets/*.png']
