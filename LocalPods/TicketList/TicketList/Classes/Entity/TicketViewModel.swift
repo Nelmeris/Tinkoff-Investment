@@ -10,12 +10,12 @@ struct TicketViewModel {
     let description: String
 }
 
-class TicketViewModelFabric {
-    static func make(from models: [Ticket]) -> [TicketViewModel] {
+class TicketViewModelFactory {
+    public func make(from models: [Ticket]) -> [TicketViewModel] {
         return models.map(make)
     }
     
-    static func make(from model: Ticket) -> TicketViewModel {
+    public func make(from model: Ticket) -> TicketViewModel {
         let symbol = model.symbol
         let description = model.description
         return TicketViewModel(symbol: symbol, description: description)
