@@ -8,9 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TicketListController" customModule="TicketList" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TicketListViewController" customModule="TicketList" customModuleProvider="target">
             <connections>
-                <outlet property="ticketTableView" destination="4Vj-bi-vH6" id="qMF-nB-08s"/>
+                <outlet property="ticketTableView" destination="4Vj-bi-vH6" id="gGH-re-WeH"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qKT-cA-L84"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
