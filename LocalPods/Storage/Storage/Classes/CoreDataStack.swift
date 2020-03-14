@@ -11,11 +11,13 @@ public final class CoreDataStack {
     
     private let modelName: String
     private let storeIsReady = DispatchGroup()
+    private let bundle: Bundle
     
     // MARK: - Init
     
-    public init(modelName: String) {
+    public init(modelName: String, bundle: Bundle) {
         self.modelName = modelName
+        self.bundle = bundle
         registerStore()
     }
     
@@ -46,7 +48,9 @@ public final class CoreDataStack {
     // MARK: - Private
     
     private lazy var persistentContainer: NSPersistentContainer = {
-        return NSPersistentContainer(name: self.modelName)
+        guard let modelURL = bundle.url(forResource: self.modelName, withExtension: "momd"),
+            let model = NSManagedObjectModel(contentsOf: modelURL) else { fatalError("Find model failed") }
+        return NSPersistentContainer(name: self.modelName, managedObjectModel: model)
     }()
     
     private func registerStore() {
