@@ -42,5 +42,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Network'
   s.dependency 'Storage'
-  s.dependency 'UIViewKit'
+  s.dependency 'DesignKit'
+  s.dependency 'UIUtils'
 end

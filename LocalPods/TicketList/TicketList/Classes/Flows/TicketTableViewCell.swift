@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIViewKit
+import UIUtils
 
 class TicketTableViewCell: UITableViewCell, ConfigurableCell {
     typealias ViewModel = TicketViewModel

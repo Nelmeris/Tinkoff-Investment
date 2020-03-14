@@ -5,7 +5,7 @@
 //  Created by Artem Kufaev on 13.03.2020.
 //
 
-import UIViewKit
+import UIUtils
 import Network
 import Storage
 

@@ -6,5 +6,7 @@ target 'TicketList_Example' do
 
   pod 'Storage', :path => '../../Storage/'
   pod 'Network', :path => '../../Network/'
-  pod 'UIViewKit', :path => '../../UIViewKit/'
+
+  pod 'DesignKit', :path => '../../DesignKit/'
+  pod 'UIUtils', :path => '../../UIUtils/'
 end
