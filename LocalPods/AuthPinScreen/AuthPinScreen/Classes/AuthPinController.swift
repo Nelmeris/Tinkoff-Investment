@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UIViewKit
+import DesignKit
 
 public enum AuthPinState {
     case setPin // set new pin

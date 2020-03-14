@@ -1,12 +1,9 @@
 platform :ios, '11.0'
-# use_frameworks!
+use_frameworks!
 
 target 'AuthLoginScreen_Example' do
   pod 'AuthLoginScreen', :path => '../'
 
-  target 'AuthLoginScreen_Tests' do
-    inherit! :search_paths
-
-    pod 'UIViewKit', :path => '../../UIViewKit'
-  end
+  pod 'DesignKit', :path => '../../DesignKit'
+  pod 'UIUtils', :path => '../../UIUtils'
 end

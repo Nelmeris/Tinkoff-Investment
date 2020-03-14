@@ -4,9 +4,6 @@ use_frameworks!
 target 'AuthPinScreen_Example' do
   pod 'AuthPinScreen', :path => '../'
 
-  target 'AuthPinScreen_Tests' do
-    inherit! :search_paths
-
-    pod 'UIViewKit', :path => '../../UIViewKit'
-  end
+  pod 'DesignKit', :path => '../../DesignKit'
+  pod 'UIUtils', :path => '../../UIUtils'
 end
