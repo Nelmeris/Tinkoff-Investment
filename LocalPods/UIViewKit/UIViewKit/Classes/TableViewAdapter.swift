@@ -13,15 +13,23 @@ public class TableViewAdapter<Cell: UITableViewCell & ConfigurableCell>:
     
     private(set) weak var tableView: UITableView!
     private(set) var viewModels: [Model] = [] {
-        didSet { tableView.reloadData() }
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
-    public init(table: UITableView) {
+    public init(table: UITableView, nib: UINib? = nil) {
         self.tableView = table
         super.init()
         table.dataSource = self
         table.delegate = self
-        table.register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
+        if let nib = nib {
+            table.register(nib, forCellReuseIdentifier: Cell.reuseIdentifier)
+        } else {
+            table.register(Cell.self, forCellReuseIdentifier: Cell.reuseIdentifier)
+        }
     }
     
     public func set(items: [Model]) {
