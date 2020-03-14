@@ -1,10 +1,13 @@
 PODS:
   - AuthLoginScreen (0.1.0):
-    - UIViewKit
+    - DesignKit
     - Validator
   - AuthManager (0.1.0)
   - AuthPinScreen (0.1.0):
-    - UIViewKit
+    - DesignKit
+    - UIUtils
+  - DesignKit (0.1.0):
+    - UIUtils
   - Network (0.1.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
@@ -12,22 +15,24 @@ PODS:
   - Storage (0.1.0)
   - SwiftLint (0.38.2)
   - TicketList (0.1.0):
+    - DesignKit
     - Network
     - Storage
-    - UIViewKit
-  - UIViewKit (0.1.0)
+    - UIUtils
+  - UIUtils (0.1.0)
   - Validator (3.2.1)
 
 DEPENDENCIES:
   - AuthLoginScreen (from `LocalPods/AuthLoginScreen`)
   - AuthManager (from `LocalPods/AuthManager`)
   - AuthPinScreen (from `LocalPods/AuthPinScreen`)
+  - DesignKit (from `LocalPods/DesignKit`)
   - Network (from `LocalPods/Network`)
   - R.swift
   - Storage (from `LocalPods/Storage`)
   - SwiftLint
   - TicketList (from `LocalPods/TicketList`)
-  - UIViewKit (from `LocalPods/UIViewKit`)
+  - UIUtils (from `LocalPods/UIUtils`)
 
 SPEC REPOS:
   trunk:
@@ -43,28 +48,31 @@ EXTERNAL SOURCES:
     :path: LocalPods/AuthManager
   AuthPinScreen:
     :path: LocalPods/AuthPinScreen
+  DesignKit:
+    :path: LocalPods/DesignKit
   Network:
     :path: LocalPods/Network
   Storage:
     :path: LocalPods/Storage
   TicketList:
     :path: LocalPods/TicketList
-  UIViewKit:
-    :path: LocalPods/UIViewKit
+  UIUtils:
+    :path: LocalPods/UIUtils
 
 SPEC CHECKSUMS:
-  AuthLoginScreen: d20e1e5934e68d832915fa65a0df4d41467a4966
+  AuthLoginScreen: 220c0838361ae643e0486b280395e8efb7ff178b
   AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
-  AuthPinScreen: 5875b252c874e2bf43089e42f13cc93d87e43662
+  AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
+  DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
-  TicketList: 491b317354db01bde81ad3a62dfaf59f86131250
-  UIViewKit: 8d8b12b203a9c4d13c1d060abb3f323a0ed626a5
+  TicketList: 41ae5778f4e1de0066d90178ab0cc4793be23a3d
+  UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 63f665651957670c589a99fbdf2bcafed52ee039
+PODFILE CHECKSUM: 08b0b9b8c9887bb48276f5279ae7dc799a421aa7
 
 COCOAPODS: 1.9.0
