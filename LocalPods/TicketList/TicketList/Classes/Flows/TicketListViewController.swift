@@ -18,12 +18,26 @@ public class TicketListViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        initTableAdapter()
+        configureUI()
+        configureTableView()
+        interactor.loadTickets()
+    }
+    
+    private func configureUI() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        self.title = "Companies"
+    }
+    
+    private func initTableAdapter() {
         let bundle = Bundle(for: TicketTableViewCell.self)
         let nib = UINib(nibName: "TicketTableViewCell", bundle: bundle)
         self.tableAdapter = TableViewAdapter(table: ticketTableView, nib: nib)
-        self.ticketTableView.estimatedRowHeight = 80
+    }
+    
+    private func configureTableView() {
         self.ticketTableView.rowHeight = 80
-        interactor.loadTickets()
     }
     
     public class func build() -> TicketListViewController {
