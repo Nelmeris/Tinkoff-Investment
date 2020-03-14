@@ -1,6 +1,10 @@
 //
 //  AppDelegate.swift
+<<<<<<< HEAD:LocalPods/DesignKit/Example/DesignKit/AppDelegate.swift
 //  DesignKit
+=======
+//  UIUtils
+>>>>>>> feature/add-views:LocalPods/UIUtils/Example/UIUtils/AppDelegate.swift
 //
 //  Created by Nelmeris on 03/14/2020.
 //  Copyright (c) 2020 Nelmeris. All rights reserved.
