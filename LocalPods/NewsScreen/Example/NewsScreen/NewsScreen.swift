@@ -41,11 +41,11 @@ struct NewsScreen: View {
     
     var body: some View {
         GeometryReader { geometry in
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView {
                 VStack {
                     ForEach(self.fetcher.viewModels) { viewModel in
                         NewsFeedCell(viewModel: viewModel)
-                    }
+                    }.frame(width: geometry.size.width)
                 }.frame(width: geometry.size.width)
             }.background(self.backgroundColor)
         }
