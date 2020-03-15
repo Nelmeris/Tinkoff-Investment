@@ -16,9 +16,11 @@ target 'Tinkoff Investment' do
   # Screens
   pod 'AuthLoginScreen', :path => 'LocalPods/Screens/AuthLoginScreen'
   pod 'AuthPinScreen', :path => 'LocalPods/Screens/AuthPinScreen'
+  pod 'TicketList', :path => 'LocalPods/Screens/TicketList'
 
   # Services
   pod 'AuthManager', :path => 'LocalPods/Services/AuthManager'
+  pod 'FinnhubDataManager', :path => 'LocalPods/Services/FinnhubDataManager'
 
   # Core
   pod 'Storage', :path => 'LocalPods/Core/Storage'

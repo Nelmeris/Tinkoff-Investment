@@ -11,7 +11,7 @@
         <!--Root App Controller-->
         <scene sceneID="R4O-7h-LQ8">
             <objects>
-                <navigationController storyboardIdentifier="RootAppController" navigationBarHidden="YES" id="lie-dv-X8N" customClass="RootAppController" customModule="Tinkoff_Tech_Authentificator" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootAppController" navigationBarHidden="YES" id="lie-dv-X8N" customClass="RootAppController" customModule="Tinkoff_Investment" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i8D-8x-htz">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -38,59 +38,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94P-gT-dki" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-671" y="735"/>
-        </scene>
-        <!--Content Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="ContentController" id="BYZ-38-t0r" customClass="ContentController" customModule="Tinkoff_Tech_Authentificator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-JL-ifY">
-                                <rect key="frame" x="0.0" y="387" width="414" height="122.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация успешна" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-RR-jdJ">
-                                        <rect key="frame" x="16" y="16" width="382" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-qR-cdk">
-                                        <rect key="frame" x="16" y="56.5" width="382" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="JoO-F5-QiZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <state key="normal" title="Выйти"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchUpLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vbz-kx-YlT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="PGr-JL-ifY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FEk-pe-nJF"/>
-                            <constraint firstItem="PGr-JL-ifY" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="c6w-BH-Cko"/>
-                            <constraint firstItem="PGr-JL-ifY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cbH-Ig-plY"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tje-bk-kcR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="188" y="9"/>
         </scene>
     </scenes>
 </document>

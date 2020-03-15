@@ -8,12 +8,19 @@ PODS:
     - UIUtils
   - DesignKit (0.1.0):
     - UIUtils
+  - FinnhubDataManager (0.1.0):
+    - Network
+    - Storage
   - Network (0.1.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
   - Storage (0.1.0)
   - SwiftLint (0.38.2)
+  - TicketList (0.1.0):
+    - DesignKit
+    - FinnhubDataManager
+    - UIUtils
   - UIUtils (0.1.0)
   - Validator (3.2.1)
 
@@ -22,10 +29,12 @@ DEPENDENCIES:
   - AuthManager (from `LocalPods/Services/AuthManager`)
   - AuthPinScreen (from `LocalPods/Screens/AuthPinScreen`)
   - DesignKit (from `LocalPods/Presentation/DesignKit`)
+  - FinnhubDataManager (from `LocalPods/Services/FinnhubDataManager`)
   - Network (from `LocalPods/Core/Network`)
   - R.swift
   - Storage (from `LocalPods/Core/Storage`)
   - SwiftLint
+  - TicketList (from `LocalPods/Screens/TicketList`)
   - UIUtils (from `LocalPods/Presentation/UIUtils`)
 
 SPEC REPOS:
@@ -44,10 +53,14 @@ EXTERNAL SOURCES:
     :path: LocalPods/Screens/AuthPinScreen
   DesignKit:
     :path: LocalPods/Presentation/DesignKit
+  FinnhubDataManager:
+    :path: LocalPods/Services/FinnhubDataManager
   Network:
     :path: LocalPods/Core/Network
   Storage:
     :path: LocalPods/Core/Storage
+  TicketList:
+    :path: LocalPods/Screens/TicketList
   UIUtils:
     :path: LocalPods/Presentation/UIUtils
 
@@ -56,14 +69,16 @@ SPEC CHECKSUMS:
   AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
   AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
   DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
+  FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  TicketList: 8960d63be82f8a1d0b3b7eaae2f15f52d62bf453
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 4efdc106a69610c163fb75f663241eb38d3d1667
+PODFILE CHECKSUM: 06889bf990946eae446c988a7836d8a778be5153
 
 COCOAPODS: 1.9.0
