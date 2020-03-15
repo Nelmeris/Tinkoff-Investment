@@ -9,12 +9,12 @@ import CoreData
 import Storage
 
 public struct News: Decodable {
-    let id: Int
-    let image: URL
-    let headline: String
-    let summary: String
-    let datetime: TimeInterval
-    let url: URL
+    public let id: Int
+    public let image: URL
+    public let headline: String
+    public let summary: String
+    public let datetime: TimeInterval
+    public let url: URL
 }
 
 extension News: ManagedObjectConvertible {

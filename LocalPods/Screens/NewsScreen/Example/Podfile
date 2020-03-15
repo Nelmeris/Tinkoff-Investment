@@ -4,6 +4,9 @@ platform :ios, '13.0'
 target 'NewsScreen_Example' do
   pod 'NewsScreen', :path => '../'
 
+  pod 'FinnhubDataManager', :path => '../../../Services/FinnhubDataManager'
+
   pod 'Network', :path => '../../../Core/Network/'
+  pod 'Storage', :path => '../../../Core/Storage/'
   pod 'FormattersKit', :path => '../../../Core/FormattersKit/'
 end

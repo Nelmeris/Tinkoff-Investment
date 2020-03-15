@@ -5,33 +5,32 @@
 //
 
 import SwiftUI
-import Network
+import FinnhubDataManager
 
 class ModelFetcher: ObservableObject {
     @Published var viewModels: [NewsViewModel] = []
     @Published var error: Error?
     @Published var isError: Bool = false
 
-    let provider: Provider<FinnhubAPI>
+    let dataManager: NewsDataManager
     let viewModelFactory: NewsViewModelFactory
 
     init() {
-        provider = Provider<FinnhubAPI>()
+        dataManager = NewsDataManager()
         viewModelFactory = NewsViewModelFactory()
         load()
     }
 
     func load() {
-        provider.load(.news) { (result: NetworkResult<[News]>) in
-            switch result {
-            case .success(let viewModels):
-                DispatchQueue.main.async {
-                    self.viewModels = self.viewModelFactory.make(from: viewModels)
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
+        dataManager.load { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let news):
+                    let viewModels = self.viewModelFactory.make(from: news)
+                    self.viewModels = viewModels
+                case .failure(let error):
                     self.error = error
-                    self.isError.toggle()
+                    self.isError = true
                 }
             }
         }

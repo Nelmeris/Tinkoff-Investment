@@ -5,6 +5,7 @@
 //
 
 import FormattersKit
+import FinnhubDataManager
 
 struct NewsViewModel: Identifiable {
     let id: Int
