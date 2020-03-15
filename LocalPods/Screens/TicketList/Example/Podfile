@@ -1,0 +1,14 @@
+use_frameworks!
+platform :ios, '11.0'
+
+target 'TicketList_Example' do
+  pod 'TicketList', :path => '../'
+
+  pod 'FinnhubDataManager', :path => '../../../Services/FinnhubDataManager'
+
+  pod 'Storage', :path => '../../../Core/Storage/'
+  pod 'Network', :path => '../../../Core/Network/'
+
+  pod 'DesignKit', :path => '../../../Presentation/DesignKit/'
+  pod 'UIUtils', :path => '../../../Presentation/UIUtils/'
+end

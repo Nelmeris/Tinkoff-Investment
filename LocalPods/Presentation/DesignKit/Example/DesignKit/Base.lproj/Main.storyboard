@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFy-eD-oha" customClass="TextField" customModule="DesignKit">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFy-eD-oha" customClass="TextField" customModule="DesignKit">
                                 <rect key="frame" x="139" y="166" width="97" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CyM-7r-jm4"/>
@@ -28,14 +28,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-84-C0q" customClass="Button" customModule="DesignKit">
-                                <rect key="frame" x="36" y="140" width="303" height="50"/>
+                                <rect key="frame" x="164" y="260" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="dtt-Ci-qOb"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-bA-9vs" customClass="Checkbox" customModule="DesignKit">
-                                <rect key="frame" x="36" y="215" width="25" height="25"/>
+                                <rect key="frame" x="28" y="357" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="tJN-y3-9rW"/>
@@ -43,36 +43,15 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9j-nN-4FZ" customClass="PincodeView" customModule="DesignKit">
-                                <rect key="frame" x="66" y="265" width="243" height="35"/>
+                                <rect key="frame" x="87" y="527" width="200" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="uWd-ba-4UP"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PeF-bN-bKa" customClass="GradientView" customModule="DesignKit">
-                                <rect key="frame" x="50" y="400" width="275" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="s0S-ic-LGH"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                        <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bwa-bA-9vs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="4VI-Ll-oJO"/>
-                            <constraint firstItem="PeF-bN-bKa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="634-pT-XEj"/>
-                            <constraint firstItem="PeF-bN-bKa" firstAttribute="top" secondItem="A9j-nN-4FZ" secondAttribute="bottom" constant="100" id="B9E-DD-BgH"/>
-                            <constraint firstAttribute="trailing" secondItem="PeF-bN-bKa" secondAttribute="trailing" constant="50" id="BtH-88-1bL"/>
                             <constraint firstItem="IFy-eD-oha" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="CV4-7u-Rwl"/>
                             <constraint firstItem="IFy-eD-oha" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Gqf-UE-mTe"/>
                             <constraint firstItem="bwa-bA-9vs" firstAttribute="top" secondItem="3SG-84-C0q" secondAttribute="bottom" constant="25" id="Gxh-EU-qkz"/>

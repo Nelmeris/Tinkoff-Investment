@@ -9,9 +9,9 @@ import CoreData
 import Storage
 
 public struct Ticket: Decodable {
-    let symbol: String
-    let displaySymbol: String
-    let description: String
+    public let symbol: String
+    public let displaySymbol: String
+    public let description: String
 }
 
 extension Ticket: ManagedObjectConvertible {

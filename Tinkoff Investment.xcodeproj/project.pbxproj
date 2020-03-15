@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		743068E523FDC88C0075A374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E423FDC88C0075A374 /* AppDelegate.swift */; };
 		743068E723FDC88C0075A374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E623FDC88C0075A374 /* SceneDelegate.swift */; };
-		743068E923FDC88C0075A374 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E823FDC88C0075A374 /* ContentController.swift */; };
 		743068EC23FDC88C0075A374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743068EA23FDC88C0075A374 /* Main.storyboard */; };
 		743068EE23FDC88D0075A374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743068ED23FDC88D0075A374 /* Assets.xcassets */; };
 		743068F123FDC88D0075A374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743068EF23FDC88D0075A374 /* LaunchScreen.storyboard */; };
@@ -25,7 +24,6 @@
 		743068E123FDC88C0075A374 /* Tinkoff Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Investment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		743068E423FDC88C0075A374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		743068E623FDC88C0075A374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		743068E823FDC88C0075A374 /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		743068EB23FDC88C0075A374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		743068ED23FDC88D0075A374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		743068F023FDC88D0075A374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				743068FD23FE55A40075A374 /* RootAppController.swift */,
-				743068E823FDC88C0075A374 /* ContentController.swift */,
 				743068E423FDC88C0075A374 /* AppDelegate.swift */,
 				743068E623FDC88C0075A374 /* SceneDelegate.swift */,
 				743068EA23FDC88C0075A374 /* Main.storyboard */,
@@ -256,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743068E923FDC88C0075A374 /* ContentController.swift in Sources */,
 				743068E523FDC88C0075A374 /* AppDelegate.swift in Sources */,
 				743068E723FDC88C0075A374 /* SceneDelegate.swift in Sources */,
 				743068FE23FE55A40075A374 /* RootAppController.swift in Sources */,

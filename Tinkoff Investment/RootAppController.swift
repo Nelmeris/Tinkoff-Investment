@@ -10,6 +10,7 @@ import UIKit
 import AuthManager
 import AuthLoginScreen
 import AuthPinScreen
+import TicketList
 
 private typealias Credentials = (login: String, password: String)
 
@@ -62,8 +63,21 @@ class RootAppController: UINavigationController {
     }
 
     private func runContent() {
-        guard let content = R.storyboard.main.contentController() else { return }
-        setViewControllers([content], animated: true)
+        let tabBarController = UITabBarController()
+        
+        let ticketListController = UINavigationController(
+            rootViewController: TicketListViewController.build()
+        )
+        ticketListController.tabBarItem = UITabBarItem(title: "Tickets", image: nil, tag: 0)
+        
+        let viewController = UIViewController()
+        viewController.tabBarItem = UITabBarItem(title: "Some", image: nil, tag: 1)
+        
+        tabBarController.setViewControllers([
+            ticketListController,
+            viewController
+        ], animated: true)
+        setViewControllers([tabBarController], animated: true)
     }
     
     private func sendCredentials(_ credentials: Credentials) {
