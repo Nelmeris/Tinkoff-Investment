@@ -6,75 +6,86 @@
 //
 import UIKit
 
-@IBDesignable class GradientView: UIView {
+@IBDesignable
+open class GradientView: UIView {
     
     private var gradientLayer: CAGradientLayer!
     
-    @IBInspectable var topColor: UIColor = .red {
+    @IBInspectable
+    public var topColor: UIColor = .red {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var bottomColor: UIColor = .yellow {
+    @IBInspectable
+    public var bottomColor: UIColor = .yellow {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowColor: UIColor = .clear {
+    @IBInspectable
+    public var shadowColor: UIColor = .clear {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowX: CGFloat = 0 {
+    @IBInspectable
+    public var shadowX: CGFloat = 0 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowY: CGFloat = -3 {
+    @IBInspectable
+    public var shadowY: CGFloat = -3 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var shadowBlur: CGFloat = 3 {
+    @IBInspectable
+    public var shadowBlur: CGFloat = 3 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var startPointX: CGFloat = 0 {
+    @IBInspectable
+    public var startPointX: CGFloat = 0 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var startPointY: CGFloat = 0.5 {
+    @IBInspectable
+    public var startPointY: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var endPointX: CGFloat = 1 {
+    @IBInspectable
+    public var endPointX: CGFloat = 1 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable var endPointY: CGFloat = 0.5 {
+    @IBInspectable
+    public var endPointY: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    override class var layerClass: AnyClass {
+    override public class var layerClass: AnyClass {
         return CAGradientLayer.self
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         self.gradientLayer = self.layer as? CAGradientLayer
         self.gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
         self.gradientLayer.startPoint = CGPoint(x: startPointX, y: startPointY)
@@ -86,7 +97,7 @@ import UIKit
         
     }
     
-    func animate(duration: TimeInterval, newTopColor: UIColor, newBottomColor: UIColor) {
+    public func animate(duration: TimeInterval, newTopColor: UIColor, newBottomColor: UIColor) {
         let fromColors = self.gradientLayer?.colors
         let toColors: [AnyObject] = [ newTopColor.cgColor, newBottomColor.cgColor]
         self.gradientLayer?.colors = toColors
@@ -99,4 +110,5 @@ import UIKit
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         self.gradientLayer?.add(animation, forKey:"animateGradient")
     }
+    
 }

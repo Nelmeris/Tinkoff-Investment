@@ -11,7 +11,7 @@ import UIKit
 // Inspectable - Design and layout for View
 // cornerRadius, borderWidth, borderColor
 //
-extension UIView {
+public extension UIView {
 
     @IBInspectable
     var cornerRadius: CGFloat {
@@ -57,4 +57,5 @@ extension UIView {
             layer.shadowRadius = newValue
         }
     }
+    
 }
