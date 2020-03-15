@@ -1,0 +1,28 @@
+PODS:
+  - FinnhubDataManager (0.1.0):
+    - Network
+    - Storage
+  - Network (0.1.0)
+  - Storage (0.1.0)
+
+DEPENDENCIES:
+  - FinnhubDataManager (from `../`)
+  - Network (from `../../../Core/Network/`)
+  - Storage (from `../../../Core/Storage/`)
+
+EXTERNAL SOURCES:
+  FinnhubDataManager:
+    :path: "../"
+  Network:
+    :path: "../../../Core/Network/"
+  Storage:
+    :path: "../../../Core/Storage/"
+
+SPEC CHECKSUMS:
+  FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
+  Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
+
+PODFILE CHECKSUM: 0d6d1db239d9baaf068e9560507cd4d0f30c8f5d
+
+COCOAPODS: 1.9.0
