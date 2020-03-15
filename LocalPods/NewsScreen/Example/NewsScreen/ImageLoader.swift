@@ -12,18 +12,22 @@ import Combine
 struct ImageView: View {
     @ObservedObject var imageLoader: ImageLoader
     @State var image: UIImage = UIImage()
+    @State var isHidden: Bool = true
 
     init(withURL url:String) {
-        imageLoader = ImageLoader(urlString:url)
+        imageLoader = ImageLoader(urlString: url)
     }
 
     var body: some View {
         VStack {
             Image(uiImage: image)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .frame(height: isHidden ? 0 : nil)
+                .aspectRatio(contentMode: .fit)
         }.onReceive(imageLoader.didChange) { data in
-            self.image = UIImage(data: data) ?? UIImage()
+            guard let image = UIImage(data: data) else { return }
+            self.image = image
+            self.isHidden = false
         }
     }
 }
@@ -36,7 +40,7 @@ class ImageLoader: ObservableObject {
         }
     }
 
-    init(urlString:String) {
+    init(urlString: String) {
         guard let url = URL(string: urlString) else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }

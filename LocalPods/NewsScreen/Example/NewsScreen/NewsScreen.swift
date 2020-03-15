@@ -37,19 +37,17 @@ public class ModelFetcher: ObservableObject {
 
 struct NewsScreen: View {
     @ObservedObject var fetcher = ModelFetcher()
+    @State var backgroundColor = Color(red: 230/255, green: 230/255, blue: 230/255)
     
     var body: some View {
         GeometryReader { geometry in
-            ScrollView {
-                ForEach(self.fetcher.viewModels) { viewModel in
-                    NewsFeedCell(viewModel: viewModel)
-                }
-                .padding(.horizontal, 20).padding(.vertical, 10)
-                .frame(width: geometry.size.width, height: nil, alignment: .topLeading)
-                .shadow(color: .gray, radius: 2, x: 0, y: 3)
-            }
-            .frame(width: geometry.size.width, height: nil, alignment: .topLeading)
-            .background(Color(red: 230/255, green: 230/255, blue: 230/255))
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    ForEach(self.fetcher.viewModels) { viewModel in
+                        NewsFeedCell(viewModel: viewModel)
+                    }
+                }.frame(width: geometry.size.width)
+            }.background(self.backgroundColor)
         }
     }
 }
