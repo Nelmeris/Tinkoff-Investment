@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import SwiftUI
+
 import AuthManager
 import AuthLoginScreen
 import AuthPinScreen
 import TicketList
+import NewsScreen
 
 private typealias Credentials = (login: String, password: String)
 
@@ -64,20 +67,21 @@ class RootAppController: UINavigationController {
 
     private func runContent() {
         let tabBarController = UITabBarController()
+        tabBarController.modalPresentationStyle = .fullScreen
         
         let ticketListController = UINavigationController(
             rootViewController: TicketListViewController.build()
         )
         ticketListController.tabBarItem = UITabBarItem(title: "Tickets", image: nil, tag: 0)
         
-        let viewController = UIViewController()
-        viewController.tabBarItem = UITabBarItem(title: "Some", image: nil, tag: 1)
+        let viewController = UIHostingController(rootView: NewsFeedView())
+        viewController.tabBarItem = UITabBarItem(title: "Новости", image: nil, tag: 1)
         
         tabBarController.setViewControllers([
             ticketListController,
             viewController
         ], animated: true)
-        setViewControllers([tabBarController], animated: true)
+        present(tabBarController, animated: true)
     }
     
     private func sendCredentials(_ credentials: Credentials) {
