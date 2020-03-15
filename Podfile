@@ -5,16 +5,22 @@ target 'Tinkoff Tech Authentificator' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+  # Official pods
   pod 'R.swift'
   pod 'SwiftLint'
 
-  pod 'AuthManager', :path => 'LocalPods/AuthManager'
-  pod 'AuthLoginScreen', :path => 'LocalPods/AuthLoginScreen'
-  pod 'AuthPinScreen', :path => 'LocalPods/AuthPinScreen'
+  # Presentation
+  pod 'DesignKit', :path => 'LocalPods/Presentation/DesignKit'
+  pod 'UIUtils', :path => 'LocalPods/Presentation/UIUtils'
 
-  pod 'DesignKit', :path => 'LocalPods/DesignKit'
-  pod 'UIUtils', :path => 'LocalPods/UIUtils'
+  # Screens
+  pod 'AuthLoginScreen', :path => 'LocalPods/Screens/AuthLoginScreen'
+  pod 'AuthPinScreen', :path => 'LocalPods/Screens/AuthPinScreen'
 
-  pod 'Storage', :path => 'LocalPods/Storage'
-  pod 'Network', :path => 'LocalPods/Network'
+  # Services
+  pod 'AuthManager', :path => 'LocalPods/Services/AuthManager'
+
+  # Core
+  pod 'Storage', :path => 'LocalPods/Core/Storage'
+  pod 'Network', :path => 'LocalPods/Core/Network'
 end
