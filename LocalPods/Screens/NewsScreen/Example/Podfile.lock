@@ -10,8 +10,8 @@ PODS:
     - Network
 
 DEPENDENCIES:
-  - FormattersKit (from `../../FormattersKit/`)
-  - Network (from `../../Network/`)
+  - FormattersKit (from `../../../Core/FormattersKit/`)
+  - Network (from `../../../Core/Network/`)
   - NewsScreen (from `../`)
 
 SPEC REPOS:
@@ -20,9 +20,9 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   FormattersKit:
-    :path: "../../FormattersKit/"
+    :path: "../../../Core/FormattersKit/"
   Network:
-    :path: "../../Network/"
+    :path: "../../../Core/Network/"
   NewsScreen:
     :path: "../"
 
@@ -32,6 +32,6 @@ SPEC CHECKSUMS:
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
   NewsScreen: 5b4f0a648f35f5f19de8a23d76f1cd32cbd87508
 
-PODFILE CHECKSUM: 4ccdd127a2f181bed93b77c59a42c0f53d54e983
+PODFILE CHECKSUM: a63f6bb1f8c814cecbed4e9b8987700778a3e929
 
 COCOAPODS: 1.9.0
