@@ -37,7 +37,7 @@ public class ModelFetcher: ObservableObject {
 
 struct NewsScreen: View {
     @ObservedObject var fetcher = ModelFetcher()
-    @State var backgroundColor = Color(red: 230/255, green: 230/255, blue: 230/255)
+    @State var backgroundColor = Color(red: 240/255, green: 240/255, blue: 240/255)
     
     var body: some View {
         GeometryReader { geometry in

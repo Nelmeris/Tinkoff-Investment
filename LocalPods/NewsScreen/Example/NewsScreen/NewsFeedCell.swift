@@ -12,7 +12,7 @@ import struct Kingfisher.KFImage
 
 struct NewsFeedCell: View {
     let viewModel: NewsViewModel
-    @State var cellColor = Color(white: 0.95)
+    @State var cellColor = Color.white
     
     var body: some View {
         VStack {
@@ -31,13 +31,13 @@ struct NewsFeedCell: View {
                     .lineLimit(6)
                     .layoutPriority(1)
                 HStack {
-                    Text(self.viewModel.date)
+                    Text(self.viewModel.date).font(Font.system(size: 13))
                     Spacer()
-                    Button("Перейти в источник >") {
+                    Button("Источник >") {
                         print(self.viewModel.url)
                     }.foregroundColor(.blue)
-                }
-            }.padding(15)
+                }.padding(.top, 5)
+            }.padding(20)
         }
         .background(self.cellColor)
         .cornerRadius(5)
