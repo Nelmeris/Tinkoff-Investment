@@ -1,16 +1,22 @@
 PODS:
-  - NewsScreen (0.1.0)
+  - Network (0.1.0)
+  - NewsScreen (0.1.0):
+    - Network
 
 DEPENDENCIES:
+  - Network (from `../../Network/`)
   - NewsScreen (from `../`)
 
 EXTERNAL SOURCES:
+  Network:
+    :path: "../../Network/"
   NewsScreen:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NewsScreen: 0a07d76a9c41cc62450acd90b64a65dd6983fd67
+  Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  NewsScreen: 81c8c960064b2e005f99e7b80c6900bd16115da1
 
-PODFILE CHECKSUM: 98d984b2dc7a05ecc827e01ec405e85295723b7d
+PODFILE CHECKSUM: 05cb47a354a5666efb259874963bcf6171b0c6f6
 
 COCOAPODS: 1.9.0

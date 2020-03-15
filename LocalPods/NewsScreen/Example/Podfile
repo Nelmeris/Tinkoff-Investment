@@ -4,4 +4,6 @@ platform :ios, '13.0'
 target 'NewsScreen_Example' do
   pod 'NewsScreen', :path => '../'
 
+  pod 'Network', :path => '../../Network/'
+
 end
