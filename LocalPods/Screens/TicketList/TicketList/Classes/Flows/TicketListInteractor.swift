@@ -5,8 +5,7 @@
 //  Created by Artem Kufaev on 14.03.2020.
 //
 
-import Storage
-import Network
+import FinnhubDataManager
 
 protocol ITicketListInteractor: class {
     func loadTickets()
@@ -21,8 +20,7 @@ class TicketListInteractor {
     
     public var controller: ITicketListViewController!
     
-    public var provider: Provider<FinnhubAPI>!
-    public var storage: Storage<Ticket>!
+    public var dataManager: TicketDataManager!
     public var viewModelFactory: TicketViewModelFactory!
     
     private(set) var viewModels: [TicketViewModel] = [] {
@@ -34,24 +32,11 @@ class TicketListInteractor {
 extension TicketListInteractor: ITicketListInteractor {
     
     public func loadTickets() {
-        loadTicketsFromDB()
-        loadTicketsFromNetwork()
-    }
-    
-    private func loadTicketsFromDB() {
-        storage.readAll { [weak self] (tickets) in
-            guard let `self` = self else { return }
-            self.viewModels = self.viewModelFactory.make(from: tickets)
-        }
-    }
-    
-    private func loadTicketsFromNetwork() {
-        provider.load(.stockSymbol(exchange: "US")) { [weak self] (result: NetworkResult<[Ticket]>) in
-            guard let `self` = self else { return }
+        dataManager.load(exchange: "US") { (result) in
             switch result {
             case .success(let tickets):
-                self.storage.write(tickets)
-                self.viewModels = self.viewModelFactory.make(from: tickets)
+                let viewModels = self.viewModelFactory.make(from: tickets)
+                self.viewModels = viewModels
             case .failure(let error):
                 self.controller.showError(error)
             }

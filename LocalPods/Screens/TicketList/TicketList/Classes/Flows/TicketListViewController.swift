@@ -6,8 +6,7 @@
 //
 
 import UIUtils
-import Network
-import Storage
+import FinnhubDataManager
 
 public class TicketListViewController: UIViewController {
     
@@ -46,8 +45,7 @@ public class TicketListViewController: UIViewController {
         let interactor = TicketListInteractor()
         controller.interactor = interactor
         interactor.controller = controller
-        interactor.provider = Provider<FinnhubAPI>()
-        interactor.storage = Storage<Ticket>(modelName: "Model", bundle: bundle)
+        interactor.dataManager = TicketDataManager()
         interactor.viewModelFactory = TicketViewModelFactory()
         return controller
     }

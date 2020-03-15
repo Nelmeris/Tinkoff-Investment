@@ -5,6 +5,8 @@
 //  Created by Artem Kufaev on 13.03.2020.
 //
 
+import FinnhubDataManager
+
 struct TicketViewModel {
     let symbol: String
     let description: String

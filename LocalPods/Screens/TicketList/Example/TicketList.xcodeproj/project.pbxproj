@@ -217,6 +217,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TicketList_Example/Pods-TicketList_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DesignKit/DesignKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FinnhubDataManager/FinnhubDataManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Network/Network.framework",
 				"${BUILT_PRODUCTS_DIR}/Storage/Storage.framework",
 				"${BUILT_PRODUCTS_DIR}/TicketList/TicketList.framework",
@@ -225,6 +226,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DesignKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FinnhubDataManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Network.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Storage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TicketList.framework",
