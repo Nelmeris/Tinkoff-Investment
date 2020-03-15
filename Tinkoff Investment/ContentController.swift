@@ -1,6 +1,6 @@
 //
 //  ContentController.swift
-//  Tinkoff Tech Authentificator
+//  Tinkoff Investment
 //
 //  Created by Mikhail on 19.02.2020.
 //  Copyright © 2020 Tinkoff Courses. All rights reserved.
