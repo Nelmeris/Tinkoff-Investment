@@ -24,6 +24,7 @@ class RootAppController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        auth.resetCredentials()
         checkAuthState()
     }
     
