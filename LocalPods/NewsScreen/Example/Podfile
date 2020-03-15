@@ -5,5 +5,5 @@ target 'NewsScreen_Example' do
   pod 'NewsScreen', :path => '../'
 
   pod 'Network', :path => '../../Network/'
-
+  pod 'FormattersKit', :path => '../../FormattersKit/'
 end
