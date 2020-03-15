@@ -1,12 +1,8 @@
 //
 //  NewsViewModel.swift
-//  NewsScreen_Example
 //
 //  Created by Artem Kufaev on 15.03.2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
 //
-
-import Foundation
 
 struct NewsViewModel: Identifiable {
     let id: Int

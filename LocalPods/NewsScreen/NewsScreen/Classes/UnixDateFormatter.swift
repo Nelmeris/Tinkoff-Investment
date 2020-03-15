@@ -1,9 +1,8 @@
 //
 //  UnixDateFormatter.swift
-//  NewsScreen_Example
+//  Kingfisher
 //
 //  Created by Artem Kufaev on 15.03.2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import Foundation

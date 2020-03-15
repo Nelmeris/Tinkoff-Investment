@@ -1,9 +1,7 @@
 //
-//  NewsFeedCell.swift
-//  NewsScreen_Example
+//  NewsFeedCellView.swift
 //
 //  Created by Artem Kufaev on 15.03.2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import SwiftUI
