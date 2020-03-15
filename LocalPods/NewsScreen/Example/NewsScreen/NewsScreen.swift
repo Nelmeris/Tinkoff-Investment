@@ -42,13 +42,12 @@ struct NewsScreen: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                VStack {
-                    ForEach(self.fetcher.viewModels) { viewModel in
-                        NewsFeedCell(viewModel: viewModel)
-                    }.padding(.vertical, 5)
+                ForEach(self.fetcher.viewModels) { viewModel in
+                    NewsFeedCell(viewModel: viewModel)
+                        .padding(.vertical, 5)
                 }.padding(.horizontal, 20)
-                    .padding(.vertical, 15)
-                    .frame(width: geometry.size.width)
+                .padding(.vertical, 15)
+                .frame(width: geometry.size.width)
             }.background(self.backgroundColor)
         }
     }
