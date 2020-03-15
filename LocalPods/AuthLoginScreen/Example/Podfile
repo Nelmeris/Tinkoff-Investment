@@ -1,9 +1,0 @@
-platform :ios, '11.0'
-use_frameworks!
-
-target 'AuthLoginScreen_Example' do
-  pod 'AuthLoginScreen', :path => '../'
-
-  pod 'DesignKit', :path => '../../DesignKit'
-  pod 'UIUtils', :path => '../../UIUtils'
-end
