@@ -11,7 +11,15 @@ PODS:
   - FinnhubDataManager (0.1.0):
     - Network
     - Storage
+  - FormattersKit (0.1.0)
+  - Kingfisher/Core (5.13.2)
+  - Kingfisher/SwiftUI (5.13.2):
+    - Kingfisher/Core
   - Network (0.1.0)
+  - NewsScreen (0.1.0):
+    - FormattersKit
+    - Kingfisher/SwiftUI
+    - Network
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -30,7 +38,9 @@ DEPENDENCIES:
   - AuthPinScreen (from `LocalPods/Screens/AuthPinScreen`)
   - DesignKit (from `LocalPods/Presentation/DesignKit`)
   - FinnhubDataManager (from `LocalPods/Services/FinnhubDataManager`)
+  - FormattersKit (from `LocalPods/Core/FormattersKit`)
   - Network (from `LocalPods/Core/Network`)
+  - NewsScreen (from `LocalPods/Screens/NewsScreen`)
   - R.swift
   - Storage (from `LocalPods/Core/Storage`)
   - SwiftLint
@@ -39,6 +49,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - R.swift
     - R.swift.Library
     - SwiftLint
@@ -55,8 +66,12 @@ EXTERNAL SOURCES:
     :path: LocalPods/Presentation/DesignKit
   FinnhubDataManager:
     :path: LocalPods/Services/FinnhubDataManager
+  FormattersKit:
+    :path: LocalPods/Core/FormattersKit
   Network:
     :path: LocalPods/Core/Network
+  NewsScreen:
+    :path: LocalPods/Screens/NewsScreen
   Storage:
     :path: LocalPods/Core/Storage
   TicketList:
@@ -70,7 +85,10 @@ SPEC CHECKSUMS:
   AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
   DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
   FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
+  FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  NewsScreen: 5b4f0a648f35f5f19de8a23d76f1cd32cbd87508
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
@@ -79,6 +97,6 @@ SPEC CHECKSUMS:
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 06889bf990946eae446c988a7836d8a778be5153
+PODFILE CHECKSUM: b730e23be89c35582b2686527ea18cdab8aeb7e2
 
 COCOAPODS: 1.9.0

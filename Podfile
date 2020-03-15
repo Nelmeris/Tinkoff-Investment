@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.4'
+platform :ios, '13.0'
 
 target 'Tinkoff Investment' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -17,6 +17,7 @@ target 'Tinkoff Investment' do
   pod 'AuthLoginScreen', :path => 'LocalPods/Screens/AuthLoginScreen'
   pod 'AuthPinScreen', :path => 'LocalPods/Screens/AuthPinScreen'
   pod 'TicketList', :path => 'LocalPods/Screens/TicketList'
+  pod 'NewsScreen', :path => 'LocalPods/Screens/NewsScreen'
 
   # Services
   pod 'AuthManager', :path => 'LocalPods/Services/AuthManager'
@@ -25,4 +26,5 @@ target 'Tinkoff Investment' do
   # Core
   pod 'Storage', :path => 'LocalPods/Core/Storage'
   pod 'Network', :path => 'LocalPods/Core/Network'
+  pod 'FormattersKit', :path => 'LocalPods/Core/FormattersKit'
 end
