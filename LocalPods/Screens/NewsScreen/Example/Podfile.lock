@@ -1,0 +1,37 @@
+PODS:
+  - FormattersKit (0.1.0)
+  - Kingfisher/Core (5.13.2)
+  - Kingfisher/SwiftUI (5.13.2):
+    - Kingfisher/Core
+  - Network (0.1.0)
+  - NewsScreen (0.1.0):
+    - FormattersKit
+    - Kingfisher/SwiftUI
+    - Network
+
+DEPENDENCIES:
+  - FormattersKit (from `../../../Core/FormattersKit/`)
+  - Network (from `../../../Core/Network/`)
+  - NewsScreen (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+
+EXTERNAL SOURCES:
+  FormattersKit:
+    :path: "../../../Core/FormattersKit/"
+  Network:
+    :path: "../../../Core/Network/"
+  NewsScreen:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  NewsScreen: 5b4f0a648f35f5f19de8a23d76f1cd32cbd87508
+
+PODFILE CHECKSUM: a63f6bb1f8c814cecbed4e9b8987700778a3e929
+
+COCOAPODS: 1.9.0
