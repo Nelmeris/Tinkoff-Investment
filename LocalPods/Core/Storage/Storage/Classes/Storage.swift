@@ -11,8 +11,8 @@ public class Storage<Entity> where Entity: ManagedObjectConvertible {
     
     private let worker: CoreDataWorker
     
-    public init(modelName: String) {
-        let stack = CoreDataStack(modelName: modelName)
+    public init(modelName: String, bundle: Bundle) {
+        let stack = CoreDataStack.build(modelName: modelName, bundle: bundle)
         worker = CoreDataWorker(coreData: stack)
     }
     

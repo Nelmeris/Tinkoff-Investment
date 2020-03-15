@@ -11,12 +11,26 @@ public final class CoreDataStack {
     
     private let modelName: String
     private let storeIsReady = DispatchGroup()
+    private let bundle: Bundle
+    
+    static private var cache: [URL: CoreDataStack] = [:]
     
     // MARK: - Init
     
-    public init(modelName: String) {
+    public static func build(modelName: String, bundle: Bundle) -> CoreDataStack {
+        let stack = CoreDataStack(modelName: modelName, bundle: bundle)
+        if let stack = cache[stack.modelURL] {
+            return stack
+        } else {
+            stack.registerStore()
+            cache[stack.modelURL] = stack
+            return stack
+        }
+    }
+    
+    private init(modelName: String, bundle: Bundle) {
         self.modelName = modelName
-        registerStore()
+        self.bundle = bundle
     }
     
     // MARK: - Public
@@ -45,8 +59,14 @@ public final class CoreDataStack {
     
     // MARK: - Private
     
+    private lazy var modelURL: URL = {
+        guard let url = bundle.url(forResource: self.modelName, withExtension: "momd") else { fatalError("Find model failed") }
+        return url
+    }()
+    
     private lazy var persistentContainer: NSPersistentContainer = {
-        return NSPersistentContainer(name: self.modelName)
+        guard let model = NSManagedObjectModel(contentsOf: modelURL) else { fatalError("Find model failed") }
+        return NSPersistentContainer(name: self.modelName, managedObjectModel: model)
     }()
     
     private func registerStore() {
