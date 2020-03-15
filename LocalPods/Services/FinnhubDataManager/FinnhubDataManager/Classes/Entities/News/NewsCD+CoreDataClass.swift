@@ -23,7 +23,7 @@ public class NewsCD: NSManagedObject {
 
 extension NewsCD: ManagedObjectProtocol {
     public typealias Entity = News
-    
+
     public func toEntity() -> NewsCD.Entity? {
         let id = Int(self.id)
         let datetime = TimeInterval(integerLiteral: self.datetime)

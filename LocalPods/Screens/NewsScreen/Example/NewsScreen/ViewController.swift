@@ -11,7 +11,7 @@ import SwiftUI
 import NewsScreen
 
 class ViewController: UIViewController {
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let swiftUIView = NewsFeedView()
@@ -21,4 +21,3 @@ class ViewController: UIViewController {
     }
 
 }
-

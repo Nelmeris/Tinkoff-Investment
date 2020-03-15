@@ -9,11 +9,11 @@ public enum DateFormat: String {
 }
 
 extension DateFormatter {
-    
+
     convenience init(with format: DateFormat?) {
         self.init()
         guard let format = format else { return }
         self.dateFormat = format.rawValue
     }
-    
+
 }

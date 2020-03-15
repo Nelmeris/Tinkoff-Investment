@@ -7,60 +7,60 @@
 
 @IBDesignable
 open class PincodeView: UIStackView {
-    
+
     // MARK: - IBInspectable properties
-    
+
     typealias Dot = UIView
-    
+
     @IBInspectable
     public var dotCount: Int = 4 {
         didSet {
             if oldValue != dotCount { setupDots() }
         }
     }
-    
+
     @IBInspectable
     public var filledDotColor: UIColor = .systemYellow {
         didSet { recolorDots() }
     }
-    
+
     @IBInspectable
     public var emptyDotColor: UIColor = .lightGray {
         didSet { recolorDots() }
     }
-    
+
     // MARK: - Subviews
-    
+
     /// Reversed list
     private(set) var emptyDots: [Dot] = []
     private(set) var filledDots: [Dot] = []
-    
+
     // MARK: - Lifecycle
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupDefaults()
     }
-    
+
     public required init(coder: NSCoder) {
         super.init(coder: coder)
         setupDefaults()
     }
-    
+
     open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupDefaults()
     }
-    
+
     // MARK: - Configure
-    
+
     private func setupDefaults() {
         self.axis = .horizontal
         self.distribution = .equalSpacing
         self.alignment = .center
         setupDots()
     }
-    
+
     private func setupDots() {
         emptyDots.forEach { $0.removeFromSuperview() }
         emptyDots.removeAll()
@@ -80,7 +80,7 @@ open class PincodeView: UIStackView {
 
 // MARK: - Private
 extension PincodeView {
-    
+
     private func configureDot(_ dot: Dot) {
         dot.backgroundColor = emptyDotColor
         dot.translatesAutoresizingMaskIntoConstraints = false
@@ -90,12 +90,12 @@ extension PincodeView {
         ])
         dot.layer.cornerRadius = self.bounds.height / 2
     }
-    
+
     private func recolorDots() {
         emptyDots.forEach { $0.backgroundColor = emptyDotColor }
         filledDots.forEach { $0.backgroundColor = filledDotColor }
     }
-    
+
     private func recolorDot(_ dot: Dot, color: UIColor,
                             animated: Bool,
                             duration: TimeInterval = 0.1,
@@ -109,24 +109,24 @@ extension PincodeView {
             completion?()
         }
     }
-    
+
 }
 
 // MARK: - Public
 extension PincodeView {
-    
+
     public func fillNextDot(animated: Bool = false) {
         guard let dot = emptyDots.popLast() else { return }
         recolorDot(dot, color: filledDotColor, animated: animated)
         filledDots.append(dot)
     }
-    
+
     public func emptyLastDot(animated: Bool = false) {
         guard let dot = filledDots.popLast() else { return }
         recolorDot(dot, color: emptyDotColor, animated: animated)
         emptyDots.append(dot)
     }
-    
+
     public func emptyAllDots(animated: Bool = false) {
         guard let dot = filledDots.popLast() else { return }
         emptyDots.append(dot)
@@ -134,5 +134,5 @@ extension PincodeView {
             self.emptyAllDots(animated: animated)
         }
     }
-    
+
 }

@@ -15,7 +15,7 @@ struct TextViewModel {
 
 class Cell: UITableViewCell, ConfigurableCell {
     typealias ViewModel = TextViewModel
-    
+
     func configure(_ viewModel: TextViewModel, at indexPath: IndexPath) {
         self.textLabel?.text = viewModel.text
     }
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var adapter: TableViewAdapter<Cell>!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         adapter = TableViewAdapter<Cell>(table: tableView)
@@ -39,4 +39,3 @@ class ViewController: UIViewController {
     }
 
 }
-

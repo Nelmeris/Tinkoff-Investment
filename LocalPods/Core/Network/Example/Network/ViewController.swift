@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let provider = Provider<TicketAPI>()
         provider.load(.stockSymbol(exchange: "US")) { (result: NetworkResult<[Ticket]>) in
             switch result {
@@ -25,5 +25,5 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
 }

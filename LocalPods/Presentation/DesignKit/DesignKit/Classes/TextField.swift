@@ -7,25 +7,25 @@
 
 @IBDesignable
 open class TextField: UITextField {
-    
+
     // MARK: - Properties
-    
+
     @IBInspectable
     public var underLineWidth: CGFloat = 0.5 {
         didSet {
             updateUnderLineFrame()
         }
     }
-    
+
     @IBInspectable
     public var underLineColor: UIColor = .lightGray {
         didSet {
             updateUnderLineUI()
         }
     }
-    
+
     private lazy var underLine = CALayer()
-    
+
     /// Sets left margin
     @IBInspectable
     public var leftMargin: CGFloat = 5.0 {
@@ -34,7 +34,7 @@ open class TextField: UITextField {
             updateAccessoryViewFrame()
         }
     }
-    
+
     /// Sets right margin
     @IBInspectable
     public var rightMargin: CGFloat = 5.0 {
@@ -43,37 +43,37 @@ open class TextField: UITextField {
             updateAccessoryViewFrame()
         }
     }
-    
+
     // MARK: - Lifecycle
-    
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
     }
-    
+
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
         configureUI()
     }
-    
+
     open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         configureUI()
     }
-    
+
     open override func layoutSubviews() {
         super.layoutSubviews()
         applyUnderLine()
     }
-    
+
     // MARK: - Configure
-    
+
     private func configureUI() {
         self.borderStyle = .none
         applyUnderLine()
         setMargins()
     }
-    
+
     private func applyUnderLine() {
         underLine.removeFromSuperlayer()
         updateUnderLineFrame()
@@ -81,28 +81,28 @@ open class TextField: UITextField {
         layer.addSublayer(underLine)
         layer.masksToBounds = true
     }
-    
+
     private func updateUnderLineFrame() {
         var rect = bounds
         rect.origin.y = bounds.height - underLineWidth
         rect.size.height = underLineWidth
         underLine.frame = rect
     }
-    
+
     private func updateUnderLineUI() {
         underLine.backgroundColor = underLineColor.cgColor
     }
-    
+
     // MARK: - Margins
     private var leftAcessoryView = UIView()
     private var rightAcessoryView = UIView()
-    
+
     private func setMargins() {
         setLeftMargin()
         setRightMargin()
         updateAccessoryViewFrame()
     }
-    
+
     private func setLeftMargin() {
         leftView = nil
         leftViewMode = .never
@@ -111,7 +111,7 @@ open class TextField: UITextField {
         leftView = leftAcessoryView
         leftViewMode = .always
     }
-    
+
     private func setRightMargin() {
         rightView = nil
         rightViewMode = .never
@@ -120,7 +120,7 @@ open class TextField: UITextField {
         rightView = rightAcessoryView
         rightViewMode = .always
     }
-    
+
     private func updateAccessoryViewFrame() {
         // Left View Frame
         var leftRect = bounds
@@ -131,5 +131,5 @@ open class TextField: UITextField {
         rightRect.size.width = rightMargin
         rightAcessoryView.frame = rightRect
     }
-    
+
 }

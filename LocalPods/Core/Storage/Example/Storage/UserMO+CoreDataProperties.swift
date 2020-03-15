@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension UserMO {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserMO> {

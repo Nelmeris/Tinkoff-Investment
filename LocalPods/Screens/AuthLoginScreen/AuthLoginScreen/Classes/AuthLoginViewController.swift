@@ -13,14 +13,14 @@ public protocol AuthLoginViewControllerDelegate: class {
 }
 
 open class AuthLoginViewController: LoadingViewController {
-    
+
     public weak var delegate: AuthLoginViewControllerDelegate?
-    
+
     public var loginView: AuthLoginView {
         guard let view = self.view as? AuthLoginView else { fatalError() }
         return view
     }
-    
+
     public override func loadView() {
         super.loadView()
         self.view = AuthLoginView()
@@ -28,24 +28,24 @@ open class AuthLoginViewController: LoadingViewController {
         self.loginView.loginField.delegate = self
         self.loginView.passwordField.delegate = self
     }
-    
+
     open override func viewDidLoad() {
         super.viewDidLoad()
         setHideKeyboardOnTap()
         configureUI()
     }
-    
+
     private func configureUI() {
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         }
     }
-    
+
     private func setHideKeyboardOnTap() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
     }
-    
+
     @objc
     private func loginButtonDidClicked() {
         let login = self.loginView.loginField.text ?? ""
@@ -53,11 +53,11 @@ open class AuthLoginViewController: LoadingViewController {
         let isSetPin = self.loginView.isSetPinCheckbox.isChecked
         self.delegate?.loginButtonDidClicked(login: login, password: password, isSetPin: isSetPin)
     }
-    
+
 }
 
 extension AuthLoginViewController: UITextFieldDelegate {
-    
+
     public func textFieldDidChangeSelection(_ textField: UITextField) {
         let login = self.loginView.loginField.text ?? ""
         let password = self.loginView.passwordField.text ?? ""
@@ -65,7 +65,7 @@ extension AuthLoginViewController: UITextFieldDelegate {
             login.validate(rules: AuthLoginValidator.loginValidateRules).isValid &&
             password.validate(rules: AuthLoginValidator.passwordValidateRules).isValid
     }
-    
+
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTag = textField.tag + 1
         if let nextResponder = self.loginView.viewWithTag(nextTag) {
@@ -75,5 +75,5 @@ extension AuthLoginViewController: UITextFieldDelegate {
         }
         return true
     }
-    
+
 }

@@ -10,7 +10,7 @@ import UIKit
 import AuthLoginScreen
 
 class ViewController: AuthLoginViewController, AuthLoginViewControllerDelegate {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -18,7 +18,7 @@ class ViewController: AuthLoginViewController, AuthLoginViewControllerDelegate {
         }
         self.delegate = self
     }
-    
+
     func loginButtonDidClicked(login: String, password: String, isSetPin: Bool) {
         self.showSpinner()
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
@@ -28,4 +28,3 @@ class ViewController: AuthLoginViewController, AuthLoginViewControllerDelegate {
     }
 
 }
-

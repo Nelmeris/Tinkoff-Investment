@@ -20,12 +20,12 @@ public class UserMO: NSManagedObject {
         return result.first ?? UserMO(context: context)
     }
 }
- 
+
 extension UserMO: ManagedObjectProtocol {
     public func toEntity() -> User? {
         return User(id: id!,
-                     username:username,
-                    name:  name,
-                    birthday:  birthday as Date?)
+                     username: username,
+                    name: name,
+                    birthday: birthday as Date?)
     }
 }

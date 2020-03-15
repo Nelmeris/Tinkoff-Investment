@@ -13,10 +13,10 @@ struct NewsFeedCell: View {
     @State var cellColor = Color.white
     @State var showSafari = false
     @State var isImageLoaded = false
-    
+
     var body: some View {
         VStack {
-            KFImage(self.viewModel.imageURL).onSuccess { (result) in
+            KFImage(self.viewModel.imageURL).onSuccess { (_) in
                 self.isImageLoaded = true
             }
                 .cancelOnDisappear(true)
@@ -40,7 +40,7 @@ struct NewsFeedCell: View {
                     }.sheet(isPresented: self.$showSafari) {
                         SafariView(url: self.viewModel.url)
                     }.foregroundColor(.blue)
-                    
+
                 }.padding(.top, 5)
             }.padding(20)
         }

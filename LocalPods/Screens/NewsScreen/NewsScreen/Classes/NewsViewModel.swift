@@ -16,11 +16,11 @@ struct NewsViewModel: Identifiable {
 }
 
 class NewsViewModelFactory {
-    
+
     func make(from models: [News]) -> [NewsViewModel] {
         return models.map(make)
     }
-    
+
     func make(from model: News) -> NewsViewModel {
         let id = model.id
         let imageURL = model.image
@@ -36,5 +36,5 @@ class NewsViewModelFactory {
                              date: dateStr,
                              url: url)
     }
-    
+
 }

@@ -11,16 +11,16 @@ public enum FinnhubAPI {
     case stockSymbol(exchange: String)
     case stockExchange
     case news
-    
+
     var apiKey: String { "bpkpa07rh5rcgrlrc06g" }
 }
 
 extension FinnhubAPI: INetworkAPI {
-    
+
     public var schema: NetworkSchema { .https }
     public var host: String { "finnhub.io/api/v1" }
     public var headers: HTTPHeaders? { nil }
-    
+
     public var path: String {
         switch self {
         case .stockSymbol: return "/stock/symbol"
@@ -28,13 +28,13 @@ extension FinnhubAPI: INetworkAPI {
         case .news: return "news"
         }
     }
-    
+
     public var httpMethod: HTTPMethod {
         switch self {
         case .stockSymbol, .stockExchange, .news: return .get
         }
     }
-    
+
     public var task: HTTPTask {
         switch self {
         case .stockSymbol(let exchange):
@@ -50,5 +50,5 @@ extension FinnhubAPI: INetworkAPI {
                                                       "token": apiKey])
         }
     }
-    
+
 }

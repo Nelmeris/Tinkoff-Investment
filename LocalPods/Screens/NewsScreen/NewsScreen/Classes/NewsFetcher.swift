@@ -11,16 +11,16 @@ class ModelFetcher: ObservableObject {
     @Published var viewModels: [NewsViewModel] = []
     @Published var error: Error?
     @Published var isError: Bool = false
-    
+
     let provider: Provider<FinnhubAPI>
     let viewModelFactory: NewsViewModelFactory
-    
+
     init() {
         provider = Provider<FinnhubAPI>()
         viewModelFactory = NewsViewModelFactory()
         load()
     }
-    
+
     func load() {
         provider.load(.news) { (result: NetworkResult<[News]>) in
             switch result {

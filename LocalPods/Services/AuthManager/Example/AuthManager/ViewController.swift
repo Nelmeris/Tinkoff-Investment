@@ -12,7 +12,7 @@ import AuthManager
 public class AuthViewController: UIViewController {
 
     private var auth: AuthManager!
-    
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.auth = AuthManager()
@@ -22,7 +22,7 @@ public class AuthViewController: UIViewController {
         auth.sendPin(code: "1234")
         authentificate()
     }
-    
+
     private func authentificate() {
         auth.authentificate { (state) in
             switch state {
@@ -35,4 +35,3 @@ public class AuthViewController: UIViewController {
     }
 
 }
-

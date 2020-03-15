@@ -5,9 +5,9 @@
 //
 
 extension DateFormatter {
-    
+
     public func setFormat(_ format: DateFormat) {
         self.dateFormat = format.rawValue
     }
-    
+
 }

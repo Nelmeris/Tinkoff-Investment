@@ -22,7 +22,7 @@ public class ExchangeCD: NSManagedObject {
 
 extension ExchangeCD: ManagedObjectProtocol {
     public typealias Entity = Exchange
-    
+
     public func toEntity() -> ExchangeCD.Entity? {
         guard let code = self.code,
             let name = self.name,

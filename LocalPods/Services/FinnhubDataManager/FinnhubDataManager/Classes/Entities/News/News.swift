@@ -19,7 +19,7 @@ public struct News: Decodable {
 
 extension News: ManagedObjectConvertible {
     public typealias ManagedObject = NewsCD
-    
+
     public func toManagedObject(in context: NSManagedObjectContext) -> NewsCD? {
         guard let obj = NewsCD.getOrCreateSingle(with: self.id, from: context) else { return nil }
         obj.id = Int64(id)

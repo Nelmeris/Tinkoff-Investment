@@ -26,7 +26,7 @@ class RequestBuilder {
         }
         return request
     }
-    
+
     /// Записывает параметры в запрос
     fileprivate class func configureParameters(bodyParameters: Parameters?,
                                          urlParameters: Parameters?,
@@ -38,7 +38,7 @@ class RequestBuilder {
             try URLParameterEncoder.encode(urlRequest: &request, with: urlParameters)
         }
     }
-    
+
     /// Записывает заголовки в запрос
     fileprivate class func addAdditionalHeaders(_ headers: HTTPHeaders, request: inout URLRequest) {
         for (key, value) in headers {

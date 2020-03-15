@@ -15,19 +15,19 @@ public protocol Loading {
 }
 
 extension Loading where Self: UIViewController {
-    
+
     public func showSpinner() {
         spinnerView.indicatorView.startAnimating()
         self.view.isUserInteractionEnabled = false
         self.view.addSubview(spinnerView)
         NSLayoutConstraint.activate(spinnerViewConstraints)
     }
-    
+
     public func hideSpinner() {
         spinnerView.indicatorView.stopAnimating()
         view.isUserInteractionEnabled = true
         NSLayoutConstraint.deactivate(spinnerViewConstraints)
         spinnerView.removeFromSuperview()
     }
-    
+
 }

@@ -17,20 +17,20 @@ protocol ITicketListViewController: class {
 }
 
 class TicketListInteractor {
-    
+
     public var controller: ITicketListViewController!
-    
+
     public var dataManager: TicketDataManager!
     public var viewModelFactory: TicketViewModelFactory!
-    
+
     private(set) var viewModels: [TicketViewModel] = [] {
         didSet { controller.showTickets(viewModels) }
     }
-    
+
 }
 
 extension TicketListInteractor: ITicketListInteractor {
-    
+
     public func loadTickets() {
         dataManager.load(exchange: "US") { (result) in
             switch result {
@@ -42,5 +42,5 @@ extension TicketListInteractor: ITicketListInteractor {
             }
         }
     }
-    
+
 }

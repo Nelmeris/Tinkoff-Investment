@@ -15,7 +15,7 @@ public typealias Parameters = [String: Any]
 
 public enum HTTPTask {
     case request
-    
+
     case requestParameters(
         bodyParameters: Parameters?,
         urlParameters: Parameters?)

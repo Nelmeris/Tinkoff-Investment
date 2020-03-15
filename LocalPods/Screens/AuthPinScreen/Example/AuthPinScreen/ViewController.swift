@@ -18,14 +18,14 @@ class ViewController: UIViewController, AuthPinControllerDelegate {
         super.viewDidLoad()
         setupAuthPinController()
     }
-    
+
     func setupAuthPinController() {
         guard let controller = AuthPinController.new() else { return }
         controller.delegate = self
         self.controller = controller
         navigationController?.pushViewController(controller, animated: true)
     }
-    
+
     func didPinCodeEntered(_ pin: String) {
         print("Entered PIN: \(pin)")
         controller?.showSpinner()
@@ -38,6 +38,5 @@ class ViewController: UIViewController, AuthPinControllerDelegate {
             }
         }
     }
-    
-}
 
+}

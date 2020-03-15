@@ -22,13 +22,13 @@ extension AuthPinController {
 }
 
 open class AuthPinController: LoadingViewController {
-    
+
     // MARK: - Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pincodeView: PincodeView!
-    
+
     @IBOutlet weak var errorLbl: UILabel?
-    
+
     private var pincode: Pincode?
     private var confirmPincode: Pincode?
     private var activePincode: Pincode? {
@@ -40,18 +40,18 @@ open class AuthPinController: LoadingViewController {
             return pincode.isCodeFill() ? confirmPincode : pincode
         }
     }
-    
-    public var delegate: AuthPinControllerDelegate?
+
+    public weak var delegate: AuthPinControllerDelegate?
     public var state: AuthPinState = .setPin {
         didSet { if self.isViewLoaded { reset() } }
     }
-    
+
     public var pincodeSize: Int = 4 {
         didSet { if self.isViewLoaded { configurePin() } }
     }
-    
+
     // MARK: - Lifecycle
-    
+
     override open func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -59,20 +59,20 @@ open class AuthPinController: LoadingViewController {
         }
         configurePin()
     }
-    
+
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reset()
     }
-    
+
     // MARK: - Public
-    
+
     public func sendError(_ msg: String) {
         catchError(msg: msg)
     }
-    
+
     // MARK: - Private
-    
+
     private func configurePin() {
         pincode = Pincode(with: pincodeSize)
         pincodeView.dotCount = pincodeSize
@@ -90,35 +90,35 @@ open class AuthPinController: LoadingViewController {
             }
         }
     }
-    
+
     private func reset() {
         titleLabel.text = "Введите PIN"
         pincode?.clear()
         confirmPincode?.clear()
         pincodeView.emptyAllDots(animated: true)
     }
-    
+
     private func catchError(msg: String) {
         errorLbl?.text = msg
         errorLbl?.isHidden = false
         reset()
     }
-    
+
     // MARK: - Actions
-    
+
     @IBAction func touchNumberBtn(_ sender: UIButton) {
         errorLbl?.isHidden = true
         guard let char = String(sender.tag).first else { return }
         pincodeView.fillNextDot(animated: true)
         activePincode?.insert(char)
     }
-    
+
     @IBAction func touchRemoveBtn(_ sender: Any) {
         errorLbl?.isHidden = true
         activePincode?.removeLast()
         pincodeView.emptyLastDot(animated: true)
     }
-    
+
     private func pinVerification() {
         switch state {
         case .setPin:
@@ -133,7 +133,5 @@ open class AuthPinController: LoadingViewController {
             delegate?.didPinCodeEntered(code)
         }
     }
-    
+
 }
-
-

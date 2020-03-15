@@ -8,15 +8,15 @@
 import CoreData
 
 public final class CoreDataStack {
-    
+
     private let modelName: String
     private let storeIsReady = DispatchGroup()
     private let bundle: Bundle
-    
+
     static private var cache: [URL: CoreDataStack] = [:]
-    
+
     // MARK: - Init
-    
+
     public static func build(modelName: String, bundle: Bundle) -> CoreDataStack {
         let stack = CoreDataStack(modelName: modelName, bundle: bundle)
         if let stack = cache[stack.modelURL] {
@@ -27,51 +27,51 @@ public final class CoreDataStack {
             return stack
         }
     }
-    
+
     private init(modelName: String, bundle: Bundle) {
         self.modelName = modelName
         self.bundle = bundle
     }
-    
+
     // MARK: - Public
-    
+
     public lazy var mainContext: NSManagedObjectContext = {
         storeIsReady.wait()
         return persistentContainer.viewContext
     }()
-    
+
     public func makePrivateContext() -> NSManagedObjectContext {
         storeIsReady.wait()
         return persistentContainer.newBackgroundContext()
     }
-    
+
     public func performForegroundTask(_ block: @escaping (NSManagedObjectContext) -> Void) {
         storeIsReady.wait()
         mainContext.perform {
             block(self.mainContext)
         }
     }
-    
+
     public func performBackgroundTask(_ block: @escaping (NSManagedObjectContext) -> Void) {
         storeIsReady.wait()
         persistentContainer.performBackgroundTask(block)
     }
-    
+
     // MARK: - Private
-    
+
     private lazy var modelURL: URL = {
         guard let url = bundle.url(forResource: self.modelName, withExtension: "momd") else { fatalError("Find model failed") }
         return url
     }()
-    
+
     private lazy var persistentContainer: NSPersistentContainer = {
         guard let model = NSManagedObjectModel(contentsOf: modelURL) else { fatalError("Find model failed") }
         return NSPersistentContainer(name: self.modelName, managedObjectModel: model)
     }()
-    
+
     private func registerStore() {
         storeIsReady.enter()
-        
+
         DispatchQueue.global(qos: .background).async {
             self.persistentContainer.loadPersistentStores { (storeDescription, error) in
                 if let url = storeDescription.url {
@@ -84,5 +84,5 @@ public final class CoreDataStack {
             }
         }
     }
-    
+
 }

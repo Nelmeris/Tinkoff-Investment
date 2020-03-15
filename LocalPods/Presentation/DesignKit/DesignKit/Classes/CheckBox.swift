@@ -89,7 +89,7 @@ open class Checkbox: UIControl {
     /// **Default:** Light gray
     @IBInspectable
     public var uncheckedBorderColor: UIColor = .lightGray
-    
+
     /// The checboxes border color in its checked state.
     ///
     /// **Default:** Yellow
@@ -103,13 +103,13 @@ open class Checkbox: UIControl {
     /// **Default:** White.
     @IBInspectable
     public var checkboxBackgroundColor: UIColor = .white
-    
+
     /// The checkboxes fill color.
     ///
     /// **Default:** `UIColor.Clear`
     @IBInspectable
     public var checkboxFillColor: UIColor = .clear
-    
+
     /// Sets the corner radius for the checkbox border.
     ///
     /// **Default:** `7.0`
@@ -159,7 +159,7 @@ open class Checkbox: UIControl {
         super.init(coder: aDecoder)
         setupDefaults()
     }
-    
+
     open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupDefaults()
@@ -198,7 +198,7 @@ open class Checkbox: UIControl {
             squareBorder(rect: adjustedRect)
         }
     }
-    
+
     private func squareBorder(rect: CGRect) {
         let rectanglePath = UIBezierPath(roundedRect: rect, cornerRadius: borderCornerRadius)
 

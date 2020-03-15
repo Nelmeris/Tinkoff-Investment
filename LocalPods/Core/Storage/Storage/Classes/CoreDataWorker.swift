@@ -6,7 +6,7 @@
 //
 
 import CoreData
- 
+
 public protocol CoreDataWorkerProtocol {
     func get<Entity: ManagedObjectConvertible>
         (with predicate: NSPredicate?,
@@ -20,7 +20,7 @@ public enum CoreDataWorkerError: Error, LocalizedError {
     case cannotSave(Error)
     case cannotConvertion
     case cannotDelete(Error)
-    
+
     public var localizedDescription: String {
         switch self {
         case .cannotFetch(let error):
@@ -34,14 +34,14 @@ public enum CoreDataWorkerError: Error, LocalizedError {
         }
     }
 }
- 
+
 public class CoreDataWorker: CoreDataWorkerProtocol {
     let coreData: CoreDataStack
- 
+
     public init(coreData: CoreDataStack) {
         self.coreData = coreData
     }
- 
+
     public func get<Entity: ManagedObjectConvertible>
         (with predicate: NSPredicate? = nil,
          sortDescriptors: [NSSortDescriptor]? = nil,
@@ -64,7 +64,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             }
         }
     }
-    
+
     private func upsertProccess<Entity: ManagedObjectConvertible>
         (_ entity: Entity,
         in context: NSManagedObjectContext,
@@ -80,7 +80,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             completion(.cannotSave(error))
         }
     }
-    
+
     public func upsert<Entity: ManagedObjectConvertible>
         (_ entity: Entity,
          completion: @escaping (CoreDataWorkerError?) -> Void) {
@@ -88,7 +88,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             self.upsertProccess(entity, in: context, completion: completion)
         }
     }
-    
+
     public func upsert<Entity: ManagedObjectConvertible>
         (_ entities: [Entity],
          completion: @escaping (CoreDataWorkerError?) -> Void) {
@@ -98,7 +98,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             }
         }
     }
-    
+
     private func removeProccess<Entity: ManagedObjectConvertible>
         (_ entity: Entity,
          in context: NSManagedObjectContext,
@@ -115,7 +115,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             completion(.cannotDelete(error))
         }
     }
-    
+
     public func remove<Entity: ManagedObjectConvertible>
         (_ entity: Entity,
          completion: @escaping (CoreDataWorkerError?) -> Void) {
@@ -123,7 +123,7 @@ public class CoreDataWorker: CoreDataWorkerProtocol {
             self.removeProccess(entity, in: context, completion: completion)
         }
     }
-    
+
     public func remove<Entity: ManagedObjectConvertible>
         (_ entities: [Entity],
          completion: @escaping (CoreDataWorkerError?) -> Void) {

@@ -22,7 +22,7 @@ public class TicketCD: NSManagedObject {
 
 extension TicketCD: ManagedObjectProtocol {
     public typealias Entity = Ticket
-    
+
     public func toEntity() -> TicketCD.Entity? {
         guard let symbol = self.symbol,
             let displaySymbol = self.displaySymbol,

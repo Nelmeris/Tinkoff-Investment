@@ -16,7 +16,7 @@ public struct Ticket: Decodable {
 
 extension Ticket: ManagedObjectConvertible {
     public typealias ManagedObject = TicketCD
-    
+
     public func toManagedObject(in context: NSManagedObjectContext) -> TicketCD? {
         guard let obj = TicketCD.getOrCreateSingle(with: self.symbol, from: context) else { return nil }
         obj.symbol = self.symbol

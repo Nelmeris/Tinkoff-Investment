@@ -16,7 +16,7 @@ class TicketViewModelFactory {
     public func make(from models: [Ticket]) -> [TicketViewModel] {
         return models.map(make)
     }
-    
+
     public func make(from model: Ticket) -> TicketViewModel {
         let symbol = model.symbol
         let description = model.description

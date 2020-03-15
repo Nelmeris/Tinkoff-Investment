@@ -11,9 +11,9 @@ import Combine
 public struct NewsFeedView: View {
     @ObservedObject var fetcher = ModelFetcher()
     @State var backgroundColor = Color(red: 240/255, green: 240/255, blue: 240/255)
-    
+
     public init() {}
-    
+
     public var body: some View {
         GeometryReader { geometry in
             ScrollView {

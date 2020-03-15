@@ -11,11 +11,11 @@ class AuthLoginValidator {
 
     enum LoginValidateError: String, ValidationError {
         var message: String { self.rawValue }
-        
+
         case length
         case latin
     }
-    
+
     static public var loginValidateRules: ValidationRuleSet<String> = {
         let lengthRule = ValidationRuleLength(min: 3, max: 20,
                                               lengthType: .characters,
@@ -30,10 +30,10 @@ class AuthLoginValidator {
 
     enum PasswordValidateError: String, ValidationError {
         var message: String { self.rawValue }
-        
+
         case length
     }
-    
+
     static public var passwordValidateRules: ValidationRuleSet<String> = {
         let lengthRule = ValidationRuleLength(min: 8, max: 20,
                                               lengthType: .characters,
@@ -42,5 +42,5 @@ class AuthLoginValidator {
         rules.add(rule: lengthRule)
         return rules
     }()
-    
+
 }

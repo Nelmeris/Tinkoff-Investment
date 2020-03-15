@@ -16,7 +16,7 @@ public struct Exchange: Decodable {
 
 extension Exchange: ManagedObjectConvertible {
     public typealias ManagedObject = ExchangeCD
-    
+
     public func toManagedObject(in context: NSManagedObjectContext) -> ExchangeCD? {
         guard let obj = ExchangeCD.getOrCreateSingle(with: self.code, from: context) else { return nil }
         obj.code = self.code

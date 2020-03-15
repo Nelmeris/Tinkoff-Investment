@@ -6,7 +6,7 @@
 //
 
 open class LoadingViewController: UIViewController, Loading {
-    
+
     public private(set) lazy var spinnerView: SpinnerView = {
         let view = SpinnerView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -14,7 +14,7 @@ open class LoadingViewController: UIViewController, Loading {
         view.layer.cornerRadius = 15
         return view
     }()
-    
+
     public lazy var spinnerViewConstraints: [NSLayoutConstraint] = {
         let safeArea = self.view.safeAreaLayoutGuide
         return [
@@ -24,5 +24,5 @@ open class LoadingViewController: UIViewController, Loading {
             spinnerView.widthAnchor.constraint(equalToConstant: 100)
         ]
     }()
-    
+
 }

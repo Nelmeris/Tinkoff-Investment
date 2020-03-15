@@ -10,18 +10,18 @@ import UIKit
 import FinnhubDataManager
 
 class ViewController: UIViewController {
-    
+
     var ticketDataManager: TicketDataManager!
     var newsDataManager: NewsDataManager!
     var exchangeDataManager: ExchangeDataManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         ticketDataManager = TicketDataManager()
         newsDataManager = NewsDataManager()
         exchangeDataManager = ExchangeDataManager()
-        
+
         ticketDataManager.load(exchange: "US") { result in
             switch result {
             case .success(let tickets):
@@ -52,4 +52,3 @@ class ViewController: UIViewController {
     }
 
 }
-
