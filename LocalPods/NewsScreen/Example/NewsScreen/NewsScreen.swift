@@ -59,7 +59,7 @@ struct NewsScreen: View {
             Alert(title: Text("Ошибка"),
                   message: Text(self.fetcher.error?.localizedDescription ?? ""),
                   dismissButton: .cancel())
-        }
+        }.padding(.top)
     }
 }
 
