@@ -6,6 +6,9 @@ target 'NewsScreen_Example' do
 
   pod 'FinnhubDataManager', :path => '../../../Services/FinnhubDataManager'
 
+  pod 'DesignKit', :path => '../../../Presentation/DesignKit'
+  pod 'UIUtils', :path => '../../../Presentation/UIUtils'
+
   pod 'Network', :path => '../../../Core/Network/'
   pod 'Storage', :path => '../../../Core/Storage/'
   pod 'FormattersKit', :path => '../../../Core/FormattersKit/'

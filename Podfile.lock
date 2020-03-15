@@ -17,9 +17,10 @@ PODS:
     - Kingfisher/Core
   - Network (0.1.0)
   - NewsScreen (0.1.0):
+    - DesignKit
+    - FinnhubDataManager
     - FormattersKit
     - Kingfisher/SwiftUI
-    - Network
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -88,7 +89,7 @@ SPEC CHECKSUMS:
   FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
-  NewsScreen: 5b4f0a648f35f5f19de8a23d76f1cd32cbd87508
+  NewsScreen: 5765d28ff5af712dc81c3c187ec0ffee826d105b
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f

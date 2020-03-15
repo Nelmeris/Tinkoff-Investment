@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import DesignKit
 
 import struct Kingfisher.KFImage
 

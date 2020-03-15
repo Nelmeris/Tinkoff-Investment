@@ -1,4 +1,6 @@
 PODS:
+  - DesignKit (0.1.0):
+    - UIUtils
   - FinnhubDataManager (0.1.0):
     - Network
     - Storage
@@ -8,23 +10,29 @@ PODS:
     - Kingfisher/Core
   - Network (0.1.0)
   - NewsScreen (0.1.0):
+    - DesignKit
     - FinnhubDataManager
     - FormattersKit
     - Kingfisher/SwiftUI
   - Storage (0.1.0)
+  - UIUtils (0.1.0)
 
 DEPENDENCIES:
+  - DesignKit (from `../../../Presentation/DesignKit`)
   - FinnhubDataManager (from `../../../Services/FinnhubDataManager`)
   - FormattersKit (from `../../../Core/FormattersKit/`)
   - Network (from `../../../Core/Network/`)
   - NewsScreen (from `../`)
   - Storage (from `../../../Core/Storage/`)
+  - UIUtils (from `../../../Presentation/UIUtils`)
 
 SPEC REPOS:
   trunk:
     - Kingfisher
 
 EXTERNAL SOURCES:
+  DesignKit:
+    :path: "../../../Presentation/DesignKit"
   FinnhubDataManager:
     :path: "../../../Services/FinnhubDataManager"
   FormattersKit:
@@ -35,15 +43,19 @@ EXTERNAL SOURCES:
     :path: "../"
   Storage:
     :path: "../../../Core/Storage/"
+  UIUtils:
+    :path: "../../../Presentation/UIUtils"
 
 SPEC CHECKSUMS:
+  DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
   FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
   FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
-  NewsScreen: b1e3775161c53853994f105b4deac565b4b762e9
+  NewsScreen: 5765d28ff5af712dc81c3c187ec0ffee826d105b
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
+  UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
 
-PODFILE CHECKSUM: b241da51432c3991f4e20c7e330f38702c22d42c
+PODFILE CHECKSUM: 9076f868ded85f9d8b479316b2e1b74e1044128a
 
 COCOAPODS: 1.9.0
