@@ -14,14 +14,17 @@ struct NewsFeedCell: View {
     let viewModel: NewsViewModel
     @State var cellColor = Color.white
     @State var showSafari = false
+    @State var isImageLoaded = false
     
     var body: some View {
         VStack {
-            KFImage(self.viewModel.imageURL)
+            KFImage(self.viewModel.imageURL).onSuccess { (result) in
+                self.isImageLoaded = true
+            }
                 .cancelOnDisappear(true)
                 .resizable()
                 .scaledToFit()
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, minHeight: 0, maxHeight: !isImageLoaded ? 0 : nil)
                 .layoutPriority(3)
             VStack(alignment: .leading, spacing: 5) {
                 Text(self.viewModel.headline)
