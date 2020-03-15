@@ -4,6 +4,6 @@ use_frameworks!
 target 'AuthLoginScreen_Example' do
   pod 'AuthLoginScreen', :path => '../'
 
-  pod 'DesignKit', :path => '../../DesignKit'
-  pod 'UIUtils', :path => '../../UIUtils'
+  pod 'DesignKit', :path => '../../../Presentation/DesignKit'
+  pod 'UIUtils', :path => '../../../Presentation/UIUtils'
 end

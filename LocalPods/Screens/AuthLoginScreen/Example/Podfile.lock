@@ -9,8 +9,8 @@ PODS:
 
 DEPENDENCIES:
   - AuthLoginScreen (from `../`)
-  - DesignKit (from `../../DesignKit`)
-  - UIUtils (from `../../UIUtils`)
+  - DesignKit (from `../../../Presentation/DesignKit`)
+  - UIUtils (from `../../../Presentation/UIUtils`)
 
 SPEC REPOS:
   trunk:
@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
   AuthLoginScreen:
     :path: "../"
   DesignKit:
-    :path: "../../DesignKit"
+    :path: "../../../Presentation/DesignKit"
   UIUtils:
-    :path: "../../UIUtils"
+    :path: "../../../Presentation/UIUtils"
 
 SPEC CHECKSUMS:
   AuthLoginScreen: 220c0838361ae643e0486b280395e8efb7ff178b
@@ -30,6 +30,6 @@ SPEC CHECKSUMS:
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 1e17833c074cf24b60bd1df77b6b1d9fc79deb57
+PODFILE CHECKSUM: aecdd0dff733a741e664d61f37319da0010be17c
 
 COCOAPODS: 1.9.0

@@ -1,1 +1,1 @@
-# tinkoff-tech-auth
+# Tinkoff Investment
