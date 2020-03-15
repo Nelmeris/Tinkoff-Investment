@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57A0CEDD241DB2C500B88AE6 /* UIHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEDC241DB2C500B88AE6 /* UIHostingController.swift */; };
+		57A0CEDD241DB2C500B88AE6 /* NewsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEDC241DB2C500B88AE6 /* NewsScreen.swift */; };
+		57A0CEDF241DDA8800B88AE6 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEDE241DDA8800B88AE6 /* NewsFeedCell.swift */; };
+		57A0CEE1241DDABC00B88AE6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE0241DDABC00B88AE6 /* News.swift */; };
+		57A0CEE3241DDAC500B88AE6 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */; };
+		57A0CEE5241DDAD200B88AE6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE4241DDAD200B88AE6 /* ImageLoader.swift */; };
+		57A0CEE7241DDB0000B88AE6 /* FinnhubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */; };
+		57A0CEE9241DDB1A00B88AE6 /* UnixDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -17,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		57A0CEDC241DB2C500B88AE6 /* UIHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHostingController.swift; sourceTree = "<group>"; };
+		57A0CEDC241DB2C500B88AE6 /* NewsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsScreen.swift; sourceTree = "<group>"; };
+		57A0CEDE241DDA8800B88AE6 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
+		57A0CEE0241DDABC00B88AE6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		57A0CEE4241DDAD200B88AE6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnhubAPI.swift; sourceTree = "<group>"; };
+		57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixDateFormatter.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NewsScreen_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsScreen_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +85,13 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				57A0CEDC241DB2C500B88AE6 /* UIHostingController.swift */,
+				57A0CEDC241DB2C500B88AE6 /* NewsScreen.swift */,
+				57A0CEDE241DDA8800B88AE6 /* NewsFeedCell.swift */,
+				57A0CEE0241DDABC00B88AE6 /* News.swift */,
+				57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */,
+				57A0CEE4241DDAD200B88AE6 /* ImageLoader.swift */,
+				57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */,
+				57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */,
 			);
 			name = "Example for NewsScreen";
 			path = NewsScreen;
@@ -125,6 +143,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				A5C36F1C5A32757564B55DBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +224,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A5C36F1C5A32757564B55DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsScreen_Example/Pods-NewsScreen_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Network/Network.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Network.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsScreen_Example/Pods-NewsScreen_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -212,9 +249,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A0CEE5241DDAD200B88AE6 /* ImageLoader.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				57A0CEE3241DDAC500B88AE6 /* NewsViewModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				57A0CEDD241DB2C500B88AE6 /* UIHostingController.swift in Sources */,
+				57A0CEDF241DDA8800B88AE6 /* NewsFeedCell.swift in Sources */,
+				57A0CEE1241DDABC00B88AE6 /* News.swift in Sources */,
+				57A0CEDD241DB2C500B88AE6 /* NewsScreen.swift in Sources */,
+				57A0CEE7241DDB0000B88AE6 /* FinnhubAPI.swift in Sources */,
+				57A0CEE9241DDB1A00B88AE6 /* UnixDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
