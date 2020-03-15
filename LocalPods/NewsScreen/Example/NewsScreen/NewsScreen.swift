@@ -12,6 +12,9 @@ import Combine
 
 public class ModelFetcher: ObservableObject {
     @Published var viewModels: [NewsViewModel] = []
+    @Published var error: Error?
+    @Published var isError: Bool = false
+    
     let provider: Provider<FinnhubAPI>
     let viewModelFactory: NewsViewModelFactory
     
@@ -29,7 +32,10 @@ public class ModelFetcher: ObservableObject {
                     self.viewModels = self.viewModelFactory.make(from: viewModels)
                 }
             case .failure(let error):
-                print(error)
+                DispatchQueue.main.async {
+                    self.error = error
+                    self.isError.toggle()
+                }
             }
         }
     }
@@ -49,6 +55,10 @@ struct NewsScreen: View {
                 .padding(.vertical, 15)
                 .frame(width: geometry.size.width)
             }.background(self.backgroundColor)
+        }.alert(isPresented: self.$fetcher.isError) { () -> Alert in
+            Alert(title: Text("Ошибка"),
+                  message: Text(self.fetcher.error?.localizedDescription ?? ""),
+                  dismissButton: .cancel())
         }
     }
 }
