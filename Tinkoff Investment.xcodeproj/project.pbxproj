@@ -20,7 +20,7 @@
 		4FB653D21C631C00C018FB31 /* Pods-Tinkoff Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment.debug.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.debug.xcconfig"; sourceTree = "<group>"; };
 		540840341B5B7C6E95E8C020 /* Pods_Tinkoff_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		723D3B812CC6D394B879E710 /* Pods-Tinkoff Tech Authentificator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Tech Authentificator.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Tech Authentificator/Pods-Tinkoff Tech Authentificator.release.xcconfig"; sourceTree = "<group>"; };
-		743068E123FDC88C0075A374 /* Tinkoff Investment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Investment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		743068E123FDC88C0075A374 /* Tinkoff Investor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Investor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		743068E423FDC88C0075A374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		743068E623FDC88C0075A374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		743068ED23FDC88D0075A374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		743068E223FDC88C0075A374 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				743068E123FDC88C0075A374 /* Tinkoff Investment.app */,
+				743068E123FDC88C0075A374 /* Tinkoff Investor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +116,7 @@
 			);
 			name = "Tinkoff Investment";
 			productName = "Tinkoff Tech Authentificator";
-			productReference = 743068E123FDC88C0075A374 /* Tinkoff Investment.app */;
+			productReference = 743068E123FDC88C0075A374 /* Tinkoff Investor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -398,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.tinkoff.courses.tinkoff-investment";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tinkoff Investor";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -418,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.tinkoff.courses.tinkoff-investment";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tinkoff Investor";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
