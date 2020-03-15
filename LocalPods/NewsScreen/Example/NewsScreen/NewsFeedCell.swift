@@ -41,7 +41,6 @@ struct NewsFeedCell: View {
         }
         .background(self.cellColor)
         .cornerRadius(5)
-        .padding(.horizontal, 20).padding(.vertical, 10)
         .shadow(color: .gray, radius: 2, x: 0, y: 3)
     }
 }

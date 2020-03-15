@@ -45,8 +45,10 @@ struct NewsScreen: View {
                 VStack {
                     ForEach(self.fetcher.viewModels) { viewModel in
                         NewsFeedCell(viewModel: viewModel)
-                    }.frame(width: geometry.size.width)
-                }.frame(width: geometry.size.width)
+                    }.padding(.vertical, 5)
+                }.padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .frame(width: geometry.size.width)
             }.background(self.backgroundColor)
         }
     }
