@@ -26,7 +26,7 @@ public class TicketListViewController: UIViewController {
     private func configureUI() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
-        self.title = "Companies"
+        self.navigationController?.navigationBar.topItem?.title = "Companies"
     }
 
     private func initTableAdapter() {

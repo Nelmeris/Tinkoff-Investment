@@ -73,10 +73,10 @@ class RootAppController: UINavigationController {
         let ticketListController = UINavigationController(
             rootViewController: TicketListViewController.build()
         )
-        ticketListController.tabBarItem = UITabBarItem(title: "Tickets", image: nil, tag: 0)
+        ticketListController.tabBarItem = UITabBarItem(title: "Акции", image: R.image.stocksIcon(), tag: 0)
         
         let viewController = UIHostingController(rootView: NewsFeedView())
-        viewController.tabBarItem = UITabBarItem(title: "Новости", image: nil, tag: 1)
+        viewController.tabBarItem = UITabBarItem(title: "Новости", image: R.image.newsFeedIcon(), tag: 1)
         
         tabBarController.setViewControllers([
             ticketListController,
