@@ -14,7 +14,7 @@ struct NewsViewModel: Identifiable {
     let headline: String
     let summary: String
     let date: String
-    let url: String
+    let url: URL
 }
 
 class NewsViewModelFactory {
@@ -31,7 +31,7 @@ class NewsViewModelFactory {
         let dateFormatter = DateFormatter.unix()
         let date = Date(timeIntervalSince1970: model.datetime)
         let dateStr = dateFormatter.string(from: date)
-        let url = model.url.absoluteString
+        let url = model.url
         return NewsViewModel(id: id,
                              imageURL: imageURL,
                              headline: headline,

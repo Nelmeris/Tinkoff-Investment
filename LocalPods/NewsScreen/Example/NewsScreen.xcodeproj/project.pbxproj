@@ -13,6 +13,7 @@
 		57A0CEE3241DDAC500B88AE6 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */; };
 		57A0CEE7241DDB0000B88AE6 /* FinnhubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */; };
 		57A0CEE9241DDB1A00B88AE6 /* UnixDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */; };
+		57A0CEED241E7CEC00B88AE6 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A0CEEC241E7CEC00B88AE6 /* SafariView.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnhubAPI.swift; sourceTree = "<group>"; };
 		57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixDateFormatter.swift; sourceTree = "<group>"; };
+		57A0CEEC241E7CEC00B88AE6 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* NewsScreen_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsScreen_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				57A0CEE2241DDAC500B88AE6 /* NewsViewModel.swift */,
 				57A0CEE6241DDB0000B88AE6 /* FinnhubAPI.swift */,
 				57A0CEE8241DDB1A00B88AE6 /* UnixDateFormatter.swift */,
+				57A0CEEC241E7CEC00B88AE6 /* SafariView.swift */,
 			);
 			name = "Example for NewsScreen";
 			path = NewsScreen;
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				57A0CEED241E7CEC00B88AE6 /* SafariView.swift in Sources */,
 				57A0CEE3241DDAC500B88AE6 /* NewsViewModel.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				57A0CEDF241DDA8800B88AE6 /* NewsFeedCell.swift in Sources */,

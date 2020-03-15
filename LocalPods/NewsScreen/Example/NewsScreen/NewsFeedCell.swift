@@ -13,6 +13,7 @@ import struct Kingfisher.KFImage
 struct NewsFeedCell: View {
     let viewModel: NewsViewModel
     @State var cellColor = Color.white
+    @State var showSafari = false
     
     var body: some View {
         VStack {
@@ -33,9 +34,12 @@ struct NewsFeedCell: View {
                 HStack {
                     Text(self.viewModel.date).font(Font.system(size: 13))
                     Spacer()
-                    Button("Источник >") {
-                        print(self.viewModel.url)
+                    Button("Источник") {
+                        self.showSafari = true
+                    }.sheet(isPresented: self.$showSafari) {
+                        SafariView(url: self.viewModel.url)
                     }.foregroundColor(.blue)
+                    
                 }.padding(.top, 5)
             }.padding(20)
         }
@@ -53,7 +57,7 @@ struct NewsFeedCell_Previews: PreviewProvider {
                           headline: "Facebook acknowledges flaw in Messenger Kids app",
                           summary: "Facebook Inc  acknowledged a flaw in its Messenger Kids app, weeks after two U.S. senators raised privacy concerns about the application, and said that it spoke to the U.S. Federal Trade Commission about the matter.",
                           date: DateFormatter.unix().string(from: Date(timeIntervalSince1970: 1567054115)),
-                          url: "https://www.reuters.com/article/us-facebook-privacy/facebook-acknowledges-flaw-in-messenger-kids-app-idUSKCN1VJ08X")
+                          url: URL(string: "https://www.reuters.com/article/us-facebook-privacy/facebook-acknowledges-flaw-in-messenger-kids-app-idUSKCN1VJ08X")!)
         )
     }
 }
