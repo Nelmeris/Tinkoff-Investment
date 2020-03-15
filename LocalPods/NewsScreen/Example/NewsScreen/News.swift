@@ -10,7 +10,7 @@ import Foundation
 
 struct News: Decodable {
     let id: Int
-    let image: String
+    let image: URL
     let headline: String
     let summary: String
     let datetime: TimeInterval

@@ -10,7 +10,7 @@ import Foundation
 
 struct NewsViewModel: Identifiable {
     let id: Int
-    let imageURL: String
+    let imageURL: URL
     let headline: String
     let summary: String
     let date: String

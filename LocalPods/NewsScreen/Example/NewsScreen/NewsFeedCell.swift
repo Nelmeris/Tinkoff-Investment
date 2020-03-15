@@ -8,14 +8,19 @@
 
 import SwiftUI
 
+import struct Kingfisher.KFImage
+
 struct NewsFeedCell: View {
     let viewModel: NewsViewModel
     @State var cellColor = Color(white: 0.95)
     
     var body: some View {
         VStack {
-            ImageView(withURL: self.viewModel.imageURL)
+            KFImage(self.viewModel.imageURL)
+                .cancelOnDisappear(true)
+                .resizable()
                 .frame(maxWidth: .infinity)
+                .aspectRatio(contentMode: .fit)
             VStack(alignment: .leading, spacing: 5) {
                 Text(self.viewModel.headline).bold()
                 Text(self.viewModel.summary).lineLimit(6).foregroundColor(.gray)
@@ -39,7 +44,7 @@ struct NewsFeedCell_Previews: PreviewProvider {
     static var previews: some View {
         NewsFeedCell(viewModel:
             NewsViewModel(id: 25040,
-                          imageURL:     "https://data.bloomberglp.com/company/sites/2/2019/01/logobbg-wht.png",
+                          imageURL: URL(string: "https://data.bloomberglp.com/company/sites/2/2019/01/logobbg-wht.png")!,
                           headline: "Facebook acknowledges flaw in Messenger Kids app",
                           summary: "Facebook Inc  acknowledged a flaw in its Messenger Kids app, weeks after two U.S. senators raised privacy concerns about the application, and said that it spoke to the U.S. Federal Trade Commission about the matter.",
                           date: DateFormatter.unix().string(from: Date(timeIntervalSince1970: 1567054115)),

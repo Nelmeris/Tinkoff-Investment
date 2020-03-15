@@ -1,11 +1,19 @@
 PODS:
+  - Kingfisher/Core (5.13.2)
+  - Kingfisher/SwiftUI (5.13.2):
+    - Kingfisher/Core
   - Network (0.1.0)
   - NewsScreen (0.1.0):
+    - Kingfisher/SwiftUI
     - Network
 
 DEPENDENCIES:
   - Network (from `../../Network/`)
   - NewsScreen (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   Network:
@@ -14,8 +22,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
-  NewsScreen: 81c8c960064b2e005f99e7b80c6900bd16115da1
+  NewsScreen: ab4da4a8b3e9d917d141880e7437643cf4e1c043
 
 PODFILE CHECKSUM: 05cb47a354a5666efb259874963bcf6171b0c6f6
 

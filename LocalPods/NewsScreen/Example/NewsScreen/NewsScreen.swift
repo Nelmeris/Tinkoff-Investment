@@ -52,8 +52,6 @@ struct NewsScreen: View {
     }
 }
 
-
-
 struct NewsScreen_Previews: PreviewProvider {
     static var previews: some View {
         NewsScreen()
