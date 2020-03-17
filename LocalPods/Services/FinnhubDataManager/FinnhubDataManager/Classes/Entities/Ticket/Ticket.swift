@@ -12,6 +12,12 @@ public struct Ticket: Decodable {
     public let symbol: String
     public let displaySymbol: String
     public let description: String
+    
+    public init(symbol: String, displaySymbol: String, description: String) {
+        self.symbol = symbol
+        self.displaySymbol = displaySymbol
+        self.description = description
+    }
 }
 
 extension Ticket: ManagedObjectConvertible {
