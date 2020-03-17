@@ -1,0 +1,16 @@
+PODS:
+  - DetailStockScreen (0.1.0)
+
+DEPENDENCIES:
+  - DetailStockScreen (from `../`)
+
+EXTERNAL SOURCES:
+  DetailStockScreen:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DetailStockScreen: 94e20f2192bf5e9d7a2876290d21f831122bcff4
+
+PODFILE CHECKSUM: bff0e38622dfa3b32fca554783e7e410e3109698
+
+COCOAPODS: 1.9.0

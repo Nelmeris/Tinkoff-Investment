@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'DetailStockScreen_Example' do
+  pod 'DetailStockScreen', :path => '../'
+
+end
