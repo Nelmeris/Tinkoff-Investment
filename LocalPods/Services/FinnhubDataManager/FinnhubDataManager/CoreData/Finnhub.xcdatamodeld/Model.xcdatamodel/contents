@@ -16,6 +16,7 @@
         <attribute name="headline" attributeType="String"/>
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" attributeType="String"/>
+        <attribute name="related" attributeType="String"/>
         <attribute name="summary" attributeType="String"/>
         <attribute name="url" attributeType="String"/>
     </entity>
@@ -25,9 +26,9 @@
         <attribute name="symbol" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ExchangeCD" positionX="-54" positionY="18" width="128" height="88"/>
-        <element name="NewsCD" positionX="-54" positionY="27" width="128" height="133"/>
-        <element name="TicketCD" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="CompanyProfileCD" positionX="-54" positionY="54" width="128" height="103"/>
+        <element name="ExchangeCD" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="NewsCD" positionX="-54" positionY="27" width="128" height="148"/>
+        <element name="TicketCD" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

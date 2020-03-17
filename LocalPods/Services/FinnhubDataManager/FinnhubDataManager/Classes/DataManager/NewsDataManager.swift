@@ -21,8 +21,11 @@ public class NewsDataManager {
     }
     
     public func load(with companySymbol: String, completion: @escaping ((Result<[News], NetworkError>) -> Void)) {
-        baseDataManager.load(api: .companyNews(symbol: companySymbol)) { (result) in
-            completion(result)
+        baseDataManager.load(api: .companyNews(symbol: companySymbol)) { (result: Result<[News], NetworkError>) in
+            switch result {
+            case .success(let data): completion(.success(data.filter { $0.related == companySymbol }))
+            case .failure(let error): completion(.failure(error))
+            }
         }
     }
     

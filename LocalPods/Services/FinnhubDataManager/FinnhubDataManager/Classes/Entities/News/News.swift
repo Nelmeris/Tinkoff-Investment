@@ -14,6 +14,7 @@ public struct News: Decodable {
     public let headline: String
     public let summary: String
     public let datetime: TimeInterval
+    public let related: String
     public let url: URL
 }
 
@@ -26,6 +27,7 @@ extension News: ManagedObjectConvertible {
         obj.image = image
         obj.datetime = Int64(datetime)
         obj.headline = headline
+        obj.related = related
         obj.summary = summary
         obj.url = url.absoluteString
         return obj

@@ -30,12 +30,14 @@ extension NewsCD: ManagedObjectProtocol {
         guard let image = self.image,
             let headline = self.headline,
             let summary = self.summary,
+            let related = self.related,
             let url = self.url else { return nil }
         return News(id: id,
                     image: image,
                     headline: headline,
                     summary: summary,
                     datetime: datetime,
+                    related: related,
                     url: URL(string: url)!)
     }
 }
