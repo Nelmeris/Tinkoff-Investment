@@ -31,6 +31,7 @@ PODS:
   - SwiftLint (0.38.2)
   - TicketList (0.1.0):
     - DesignKit
+    - DetailStockScreen
     - FinnhubDataManager
     - UIUtils
   - UIUtils (0.1.0)
@@ -101,7 +102,7 @@ SPEC CHECKSUMS:
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
-  TicketList: 8960d63be82f8a1d0b3b7eaae2f15f52d62bf453
+  TicketList: 2421f18a477838560e707cdbc386fb6f297dac6f
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 

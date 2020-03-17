@@ -19,7 +19,8 @@ public struct DetailStockView: View {
         VStack {
             CompanyProfileView(with: self.companySymbol)
             CompanyNewsView(with: self.companySymbol)
-        }.navigationBarTitle(self.companySymbol).padding(.vertical)
+        }.padding(.vertical)
+            .navigationBarTitle(Text(self.companySymbol), displayMode: .inline)
     }
 }
 

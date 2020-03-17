@@ -22,7 +22,7 @@ public class TicketListViewController: UIViewController {
         configureTableView()
         interactor.loadTickets()
     }
-
+    
     private func configureUI() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
