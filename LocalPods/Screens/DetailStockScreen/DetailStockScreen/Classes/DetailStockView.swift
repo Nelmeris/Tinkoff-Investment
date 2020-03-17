@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct DetailStockView: View {
+public struct DetailStockView: View {
     let companySymbol: String
     
-    init(with companySymbol: String) {
+    public init(with companySymbol: String) {
         self.companySymbol = companySymbol
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             CompanyProfileView(with: self.companySymbol)
             CompanyNewsView(with: self.companySymbol)

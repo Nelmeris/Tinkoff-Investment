@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import FinnhubDataManager
 import SwiftUI
+
+import DetailStockScreen
 
 class ViewController: UIViewController {
     
