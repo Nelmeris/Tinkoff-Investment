@@ -7,4 +7,8 @@ target 'DetailStockScreen_Example' do
   pod 'FinnhubDataManager', :path => '../../../Services/FinnhubDataManager'
   pod 'Storage', :path => '../../../Core/Storage'
   pod 'Network', :path => '../../../Core/Network'
+  pod 'NewsScreen', :path => '../../NewsScreen'
+  pod 'FormattersKit', :path => '../../../Core/FormattersKit'
+  pod 'DesignKit', :path => '../../../Presentation/DesignKit'
+  pod 'UIUtils', :path => '../../../Presentation/UIUtils'
 end
