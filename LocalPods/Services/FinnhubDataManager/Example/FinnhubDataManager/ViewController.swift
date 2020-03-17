@@ -8,12 +8,14 @@
 
 import UIKit
 import FinnhubDataManager
+import Network
 
 class ViewController: UIViewController {
 
     var ticketDataManager: TicketDataManager!
     var newsDataManager: NewsDataManager!
     var exchangeDataManager: ExchangeDataManager!
+    var companyProfileDataManager: CompanyProfileDataManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,33 +23,21 @@ class ViewController: UIViewController {
         ticketDataManager = TicketDataManager()
         newsDataManager = NewsDataManager()
         exchangeDataManager = ExchangeDataManager()
+        companyProfileDataManager = CompanyProfileDataManager()
 
-        ticketDataManager.load(exchange: "US") { result in
-            switch result {
-            case .success(let tickets):
-                guard let ticket = tickets.first else { return }
-                print(ticket)
-            case .failure(let error):
-                print(error)
-            }
-        }
-        newsDataManager.load { result in
-            switch result {
-            case .success(let news):
-                guard let news = news.first else { return }
-                print(news)
-            case .failure(let error):
-                print(error)
-            }
-        }
-        exchangeDataManager.load { (result) in
-            switch result {
-            case .success(let exchanges):
-                guard let exchange = exchanges.first else { return }
-                print(exchange)
-            case .failure(let error):
-                print(error)
-            }
+        ticketDataManager.load(exchange: "US") { self.handleResult($0, with: "Tickets for US") }
+        newsDataManager.load { self.handleResult($0, with: "News") }
+        newsDataManager.load(with: "AAPL") { self.handleResult($0, with: "News for AAPL") }
+        exchangeDataManager.load { self.handleResult($0, with: "Exchanges")}
+        companyProfileDataManager.load(with: "AAPL") { self.handleResult($0, with: "AAPL profile") }
+    }
+    
+    private func handleResult<T>(_ result: Result<T, NetworkError>, with name: String) {
+        switch result {
+        case .success:
+            print("\(name) successed load")
+        case .failure(let error):
+            print("\(name) error: \(error.localizedDescription)")
         }
     }
 
