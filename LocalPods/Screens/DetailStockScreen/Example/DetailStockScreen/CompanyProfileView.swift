@@ -12,24 +12,34 @@ struct CompanyProfileView: View {
     let companySymbol: String
     
     @State var isDetail: Bool = false
+    @ObservedObject var viewModelFetcher: ProfileViewModelFetcher
     
     init(with companySymbol: String) {
         self.companySymbol = companySymbol
+        self.viewModelFetcher = ProfileViewModelFetcher(with: companySymbol)
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
                 ZStack {
-                    
-                    Circle().fill(LinearGradient(gradient: Gradient(colors: [.purple, .pink]), startPoint: .top, endPoint: .bottom))
-                    Text("AAPL").font(.system(size: 16)).foregroundColor(.white)
+                    Circle().fill(LinearGradient(gradient: Gradient(colors: [.purple, .pink]),
+                                                 startPoint: .top,
+                                                 endPoint: .bottom))
+                    Text(viewModelFetcher.viewModel?.ticker ?? "")
+                        .font(.system(size: 16))
+                        .foregroundColor(.white)
                 }.frame(width: 50, height: 50)
-                Text("Apple Inc").font(Font.system(size: 23))
+                Text(viewModelFetcher.viewModel?.name ?? "")
+                    .font(Font.system(size: 23))
                 Spacer()
-                Text("USD").font(.system(size: 14))
+                Text(viewModelFetcher.viewModel?.currency ?? "")
+                    .font(.system(size: 14))
             }
-            Text(isDetail ? description : shortDescription).font(.system(size: 14))
+            Text((isDetail ?
+                viewModelFetcher.viewModel?.description :
+                viewModelFetcher.viewModel?.shortDescription) ?? "")
+                .font(.system(size: 14))
             Button(action: {
                 self.isDetail.toggle()
             }) {
@@ -38,12 +48,6 @@ struct CompanyProfileView: View {
                 Spacer()
             }
         }.padding(.horizontal, 25)
-    }
-    
-    private var description: String = "LoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsgwgwegwgwegwegwgwgumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsumLoremImsgwgwegwgwegwegwgwgum"
-    
-    private var shortDescription: String {
-        return String(description.prefix(180))
     }
     
 }
