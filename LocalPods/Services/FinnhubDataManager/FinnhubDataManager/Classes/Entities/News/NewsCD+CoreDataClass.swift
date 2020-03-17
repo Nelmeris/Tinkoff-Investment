@@ -32,7 +32,7 @@ extension NewsCD: ManagedObjectProtocol {
             let summary = self.summary,
             let url = self.url else { return nil }
         return News(id: id,
-                    image: URL(string: image)!,
+                    image: image,
                     headline: headline,
                     summary: summary,
                     datetime: datetime,

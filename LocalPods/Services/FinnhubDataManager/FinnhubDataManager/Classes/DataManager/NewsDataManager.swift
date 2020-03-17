@@ -5,6 +5,8 @@
 //  Created by Artem Kufaev on 15.03.2020.
 //
 
+import Network
+
 public class NewsDataManager {
     private let baseDataManager: FinnhubDataManager<News>
 
@@ -12,13 +14,13 @@ public class NewsDataManager {
         self.baseDataManager = FinnhubDataManager()
     }
 
-    public func load(completion: @escaping ((Result<[News], Error>) -> Void)) {
+    public func load(completion: @escaping ((Result<[News], NetworkError>) -> Void)) {
         baseDataManager.load(api: .news) { (result) in
             completion(result)
         }
     }
     
-    public func load(with companySymbol: String, completion: @escaping ((Result<[News], Error>) -> Void)) {
+    public func load(with companySymbol: String, completion: @escaping ((Result<[News], NetworkError>) -> Void)) {
         baseDataManager.load(api: .companyNews(symbol: companySymbol)) { (result) in
             completion(result)
         }

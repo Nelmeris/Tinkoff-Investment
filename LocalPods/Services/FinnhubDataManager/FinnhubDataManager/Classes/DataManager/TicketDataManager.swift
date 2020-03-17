@@ -5,6 +5,8 @@
 //  Created by Artem Kufaev on 15.03.2020.
 //
 
+import Network
+
 public class TicketDataManager {
     private let baseDataManager: FinnhubDataManager<Ticket>
 
@@ -12,7 +14,7 @@ public class TicketDataManager {
         self.baseDataManager = FinnhubDataManager()
     }
 
-    public func load(exchange: String, completion: @escaping ((Result<[Ticket], Error>) -> Void)) {
+    public func load(exchange: String, completion: @escaping ((Result<[Ticket], NetworkError>) -> Void)) {
         baseDataManager.load(api: .stockSymbol(exchange: exchange)) { (result) in
             completion(result)
         }
