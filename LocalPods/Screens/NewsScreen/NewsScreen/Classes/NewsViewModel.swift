@@ -7,24 +7,40 @@
 import FormattersKit
 import FinnhubDataManager
 
-struct NewsViewModel: Identifiable {
-    let id: Int
-    let imageURL: URL
-    let headline: String
-    let summary: String
-    let date: String
-    let url: URL
+public struct NewsViewModel: Identifiable {
+    public let id: Int
+    public let imageURL: URL?
+    public let headline: String
+    public let summary: String
+    public let date: String
+    public let url: URL
+    
+    public init(id: Int,
+                imageURL: URL?,
+                headline: String,
+                summary: String,
+                date: String,
+                url: URL) {
+        self.id = id
+        self.imageURL = imageURL
+        self.headline = headline
+        self.summary = summary
+        self.date = date
+        self.url = url
+    }
 }
 
-class NewsViewModelFactory {
+public class NewsViewModelFactory {
+    
+    public init() {}
 
-    func make(from models: [News]) -> [NewsViewModel] {
+    public func make(from models: [News]) -> [NewsViewModel] {
         return models.map(make)
     }
 
-    func make(from model: News) -> NewsViewModel {
+    public func make(from model: News) -> NewsViewModel {
         let id = model.id
-        let imageURL = model.image
+        let imageURL = URL(string: model.image)
         let headline = model.headline
         let summary = model.summary
         let dateFormatter = DateFormatter.unix(with: .newsFeedCell)

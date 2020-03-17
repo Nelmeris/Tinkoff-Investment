@@ -9,13 +9,17 @@ import DesignKit
 
 import struct Kingfisher.KFImage
 
-struct NewsFeedCell: View {
+public struct NewsFeedCellView: View {
     let viewModel: NewsViewModel
     @State var cellColor = Color.white
     @State var showSafari = false
     @State var isImageLoaded = false
+    
+    public init(viewModel: NewsViewModel) {
+        self.viewModel = viewModel
+    }
 
-    var body: some View {
+    public var body: some View {
         VStack {
             KFImage(self.viewModel.imageURL).onSuccess { (_) in
                 self.isImageLoaded = true
@@ -53,7 +57,7 @@ struct NewsFeedCell: View {
 
 struct NewsFeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        NewsFeedCell(viewModel:
+        NewsFeedCellView(viewModel:
             NewsViewModel(id: 25040,
                           imageURL: URL(string: "https://data.bloomberglp.com/company/sites/2/2019/01/logobbg-wht.png")!,
                           headline: "Facebook acknowledges flaw in Messenger Kids app",

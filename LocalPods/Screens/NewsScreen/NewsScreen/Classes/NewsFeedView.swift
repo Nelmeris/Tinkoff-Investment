@@ -18,7 +18,7 @@ public struct NewsFeedView: View {
         GeometryReader { geometry in
             ScrollView {
                 ForEach(self.fetcher.viewModels) { viewModel in
-                    NewsFeedCell(viewModel: viewModel)
+                    NewsFeedCellView(viewModel: viewModel)
                         .padding(.vertical, 5)
                 }.padding(.horizontal, 20)
                 .padding(.vertical, 15)
