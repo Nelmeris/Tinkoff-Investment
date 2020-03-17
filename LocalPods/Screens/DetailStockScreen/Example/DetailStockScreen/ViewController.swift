@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import FinnhubDataManager
+import SwiftUI
 
 class ViewController: UIViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let companySymbol = "AAPL"
+        let view = DetailStockView(with: companySymbol)
+        let controller = UIHostingController(rootView: view)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 
 }
 
