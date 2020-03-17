@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let controller = TicketListViewController.build()
-        controller.modalPresentationStyle = .fullScreen
-        self.present(controller, animated: true)
+        let navController = UINavigationController(rootViewController: controller)
+        navController.modalPresentationStyle = .fullScreen
+        navController.title = "Companies"
+        self.present(navController, animated: true)
     }
 
 }
