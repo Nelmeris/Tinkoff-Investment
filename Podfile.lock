@@ -8,6 +8,9 @@ PODS:
     - UIUtils
   - DesignKit (0.1.0):
     - UIUtils
+  - DetailStockScreen (0.1.0):
+    - FinnhubDataManager
+    - NewsScreen
   - FinnhubDataManager (0.1.0):
     - Network
     - Storage
@@ -38,6 +41,7 @@ DEPENDENCIES:
   - AuthManager (from `LocalPods/Services/AuthManager`)
   - AuthPinScreen (from `LocalPods/Screens/AuthPinScreen`)
   - DesignKit (from `LocalPods/Presentation/DesignKit`)
+  - DetailStockScreen (from `LocalPods/Screens/DetailStockScreen`)
   - FinnhubDataManager (from `LocalPods/Services/FinnhubDataManager`)
   - FormattersKit (from `LocalPods/Core/FormattersKit`)
   - Network (from `LocalPods/Core/Network`)
@@ -65,6 +69,8 @@ EXTERNAL SOURCES:
     :path: LocalPods/Screens/AuthPinScreen
   DesignKit:
     :path: LocalPods/Presentation/DesignKit
+  DetailStockScreen:
+    :path: LocalPods/Screens/DetailStockScreen
   FinnhubDataManager:
     :path: LocalPods/Services/FinnhubDataManager
   FormattersKit:
@@ -85,6 +91,7 @@ SPEC CHECKSUMS:
   AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
   AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
   DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
+  DetailStockScreen: 56ad72531c2e784aefcb998c650d8d032ef24167
   FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
   FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
@@ -98,6 +105,6 @@ SPEC CHECKSUMS:
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: b730e23be89c35582b2686527ea18cdab8aeb7e2
+PODFILE CHECKSUM: 9d9089a58abb30e2941992347a0aa685da659a6c
 
 COCOAPODS: 1.9.0
