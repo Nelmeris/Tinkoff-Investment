@@ -17,4 +17,11 @@ public class NewsDataManager {
             completion(result)
         }
     }
+    
+    public func load(with companySymbol: String, completion: @escaping ((Result<[News], Error>) -> Void)) {
+        baseDataManager.load(api: .companyNews(symbol: companySymbol)) { (result) in
+            completion(result)
+        }
+    }
+    
 }

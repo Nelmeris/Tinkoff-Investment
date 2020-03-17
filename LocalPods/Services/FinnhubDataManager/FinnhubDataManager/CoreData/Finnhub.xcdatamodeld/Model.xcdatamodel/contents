@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CompanyProfileCD" representedClassName="CompanyProfileCD" syncable="YES">
+        <attribute name="currency" attributeType="String"/>
+        <attribute name="descript" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="ticker" attributeType="String"/>
+    </entity>
     <entity name="ExchangeCD" representedClassName=".ExchangeCD" syncable="YES">
         <attribute name="code" attributeType="String"/>
         <attribute name="currency" attributeType="String"/>
@@ -22,5 +28,6 @@
         <element name="ExchangeCD" positionX="-54" positionY="18" width="128" height="88"/>
         <element name="NewsCD" positionX="-54" positionY="27" width="128" height="133"/>
         <element name="TicketCD" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="CompanyProfileCD" positionX="-54" positionY="54" width="128" height="103"/>
     </elements>
 </model>
