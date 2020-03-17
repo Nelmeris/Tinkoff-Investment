@@ -41,7 +41,9 @@ struct CompanyProfileView: View {
                 viewModelFetcher.viewModel?.shortDescription) ?? "")
                 .font(.system(size: 14))
             Button(action: {
-                self.isDetail.toggle()
+                withAnimation(.linear(duration: 0.3)) {
+                    self.isDetail.toggle()
+                }
             }) {
                 Spacer()
                 Text(isDetail ? "Скрыть" : "Отобразить").font(.system(size: 15))
