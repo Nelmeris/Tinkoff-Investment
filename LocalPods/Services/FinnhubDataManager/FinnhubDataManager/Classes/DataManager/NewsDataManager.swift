@@ -5,16 +5,29 @@
 //  Created by Artem Kufaev on 15.03.2020.
 //
 
-public class NewsDataManager {
-    private let baseDataManager: FinnhubDataManager<News>
+import Network
 
-    public init() {
-        self.baseDataManager = FinnhubDataManager()
+public final class NewsDataManager: FinnhubDataManager<News> {
+    
+    public func load(completion: @escaping ((Result<[News], NetworkError>) -> Void)) {
+        loadFromDB { completion(.success($0))}
+        loadFromNetwork(api: .news) { completion($0) }
     }
-
-    public func load(completion: @escaping ((Result<[News], Error>) -> Void)) {
-        baseDataManager.load(api: .news) { (result) in
-            completion(result)
+    
+    public func load(with companySymbol: String, completion: @escaping ((Result<[News], NetworkError>) -> Void)) {
+        loadFromDB { result in
+            let filtered = result.filter { $0.related == companySymbol }
+            completion(.success(filtered))
+        }
+        loadFromNetwork(api: .companyNews(symbol: companySymbol)) { result in
+            switch result {
+            case .success(let news):
+                let filtered = news.filter { $0.related == companySymbol }
+                completion(.success(filtered))
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
+    
 }

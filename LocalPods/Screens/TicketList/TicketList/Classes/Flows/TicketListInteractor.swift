@@ -6,12 +6,15 @@
 //
 
 import FinnhubDataManager
+import SwiftUI
+import DetailStockScreen
 
 protocol ITicketListInteractor: class {
     func loadTickets()
+    func ticketDidSelect(on indexPath: IndexPath)
 }
 
-protocol ITicketListViewController: class {
+protocol ITicketListViewController: UIViewController {
     func showError(_ error: Error)
     func showTickets(_ viewModels: [TicketViewModel])
 }
@@ -41,6 +44,12 @@ extension TicketListInteractor: ITicketListInteractor {
                 self.controller.showError(error)
             }
         }
+    }
+    
+    public func ticketDidSelect(on indexPath: IndexPath) {
+        let ticket = viewModels[indexPath.row]
+        let controller = UIHostingController(rootView: DetailStockView(with: ticket.symbol))
+        self.controller.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

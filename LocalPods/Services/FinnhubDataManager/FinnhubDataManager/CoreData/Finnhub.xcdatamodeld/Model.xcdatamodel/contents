@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CompanyProfileCD" representedClassName="CompanyProfileCD" syncable="YES">
+        <attribute name="currency" attributeType="String"/>
+        <attribute name="descript" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="ticker" attributeType="String"/>
+    </entity>
     <entity name="ExchangeCD" representedClassName=".ExchangeCD" syncable="YES">
         <attribute name="code" attributeType="String"/>
         <attribute name="currency" attributeType="String"/>
@@ -10,6 +16,7 @@
         <attribute name="headline" attributeType="String"/>
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" attributeType="String"/>
+        <attribute name="related" attributeType="String"/>
         <attribute name="summary" attributeType="String"/>
         <attribute name="url" attributeType="String"/>
     </entity>
@@ -19,8 +26,9 @@
         <attribute name="symbol" attributeType="String"/>
     </entity>
     <elements>
+        <element name="CompanyProfileCD" positionX="-54" positionY="54" width="128" height="103"/>
         <element name="ExchangeCD" positionX="-54" positionY="18" width="128" height="88"/>
-        <element name="NewsCD" positionX="-54" positionY="27" width="128" height="133"/>
+        <element name="NewsCD" positionX="-54" positionY="27" width="128" height="148"/>
         <element name="TicketCD" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

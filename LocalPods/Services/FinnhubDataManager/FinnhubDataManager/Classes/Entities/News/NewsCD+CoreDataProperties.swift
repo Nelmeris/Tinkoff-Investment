@@ -20,6 +20,7 @@ extension NewsCD {
     @NSManaged public var url: String?
     @NSManaged public var headline: String?
     @NSManaged public var summary: String?
+    @NSManaged public var related: String?
     @NSManaged public var datetime: Int64
 
 }

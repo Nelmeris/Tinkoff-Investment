@@ -5,16 +5,13 @@
 //  Created by Artem Kufaev on 15.03.2020.
 //
 
-public class TicketDataManager {
-    private let baseDataManager: FinnhubDataManager<Ticket>
+import Network
 
-    public init() {
-        self.baseDataManager = FinnhubDataManager()
+public class TicketDataManager: FinnhubDataManager<Ticket> {
+    
+    public func load(exchange: String, completion: @escaping ((Result<[Ticket], NetworkError>) -> Void)) {
+        loadFromDB { completion(.success($0))}
+        loadFromNetwork(api: .stockSymbol(exchange: exchange)) { completion($0) }
     }
-
-    public func load(exchange: String, completion: @escaping ((Result<[Ticket], Error>) -> Void)) {
-        baseDataManager.load(api: .stockSymbol(exchange: exchange)) { (result) in
-            completion(result)
-        }
-    }
+    
 }

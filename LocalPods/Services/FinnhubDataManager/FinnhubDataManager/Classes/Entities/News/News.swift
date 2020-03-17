@@ -10,10 +10,11 @@ import Storage
 
 public struct News: Decodable {
     public let id: Int
-    public let image: URL
+    public let image: String
     public let headline: String
     public let summary: String
     public let datetime: TimeInterval
+    public let related: String
     public let url: URL
 }
 
@@ -23,9 +24,10 @@ extension News: ManagedObjectConvertible {
     public func toManagedObject(in context: NSManagedObjectContext) -> NewsCD? {
         guard let obj = NewsCD.getOrCreateSingle(with: self.id, from: context) else { return nil }
         obj.id = Int64(id)
-        obj.image = image.absoluteString
+        obj.image = image
         obj.datetime = Int64(datetime)
         obj.headline = headline
+        obj.related = related
         obj.summary = summary
         obj.url = url.absoluteString
         return obj

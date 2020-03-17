@@ -7,7 +7,6 @@
 
 public class TableViewAdapter<Cell: UITableViewCell & ConfigurableCell>:
     NSObject,
-    UITableViewDelegate,
     UITableViewDataSource {
     public typealias Model = Cell.ViewModel
 
@@ -24,7 +23,6 @@ public class TableViewAdapter<Cell: UITableViewCell & ConfigurableCell>:
         self.tableView = table
         super.init()
         table.dataSource = self
-        table.delegate = self
         if let nib = nib {
             table.register(nib, forCellReuseIdentifier: Cell.reuseIdentifier)
         } else {

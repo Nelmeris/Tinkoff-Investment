@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Nelmeris/TicketList.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'TicketList/Classes/**/*'
 
@@ -43,4 +43,5 @@ TODO: Add long description of the pod here.
   s.dependency 'FinnhubDataManager'
   s.dependency 'DesignKit'
   s.dependency 'UIUtils'
+  s.dependency 'DetailStockScreen'
 end

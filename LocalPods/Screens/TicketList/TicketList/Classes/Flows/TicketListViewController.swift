@@ -22,7 +22,7 @@ public class TicketListViewController: UIViewController {
         configureTableView()
         interactor.loadTickets()
     }
-
+    
     private func configureUI() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
@@ -37,6 +37,7 @@ public class TicketListViewController: UIViewController {
 
     private func configureTableView() {
         self.ticketTableView.rowHeight = 80
+        self.ticketTableView.delegate = self
     }
 
     public class func build() -> TicketListViewController {
@@ -50,6 +51,15 @@ public class TicketListViewController: UIViewController {
         return controller
     }
 
+}
+
+extension TicketListViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor.ticketDidSelect(on: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 extension TicketListViewController: ITicketListViewController {
