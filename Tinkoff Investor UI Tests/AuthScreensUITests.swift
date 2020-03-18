@@ -1,5 +1,5 @@
 //
-//  Tinkoff_Investor_UI_Tests.swift
+//  AuthScreensUITests.swift
 //  Tinkoff Investor UI Tests
 //
 //  Created by Artem Kufaev on 18.03.2020.
@@ -7,37 +7,80 @@
 //
 
 import XCTest
+import AuthManager
+import Keychain
+import Nimble
 
-class Tinkoff_Investor_UI_Tests: XCTestCase {
+class AuthScreensUITests: XCTestCase {
+    
+    var app: XCUIApplication!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        super.setUp()
+        
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        
+        app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+    func testAuth() {
+        auth(isSetPin: false)
+        waitSpinner()
+        waitMainScreen()
+    }
+    
+    func testPinViews() {
+        auth(isSetPin: true)
+        waitSpinner()
+        XCTAssertFalse(app.tabBars.firstMatch.exists)
+        expect(self.app.staticTexts["Введите PIN"].exists).toEventually(beTrue(), timeout: 5)
+        typePin("2563")
+        XCTAssertTrue(app.staticTexts["Повторите PIN"].exists)
+    }
+    
+    func testPinMismatch() {
+        auth(isSetPin: true)
+        typePin("2563")
+        typePin("3739")
+        XCTAssertTrue(app.staticTexts["Несоответствие PIN кодов"].exists)
+    }
+    
+    func testPinCorrect() {
+        auth(isSetPin: true)
+        typePin("7052")
+        typePin("7052")
+        waitMainScreen()
+    }
+    
+    private func typePin(_ pin: String) {
+        for symbol in pin {
+            self.app.buttons[String(symbol)].tap()
         }
     }
+    
+    private func waitSpinner() {
+        expect(self.app.activityIndicators.firstMatch.exists).toEventually(beTrue(), timeout: 5)
+    }
+    
+    private func waitMainScreen() {
+        expect(self.app.tabBars.firstMatch.exists).toEventually(beTrue(), timeout: 5)
+    }
+    
+    private func auth(isSetPin: Bool) {
+        app.textFields["LoginLabel"].tap()
+        app.textFields["LoginLabel"].typeText("SomeLogin")
+        
+        app.secureTextFields["PasswordLabel"].tap()
+        app.secureTextFields["PasswordLabel"].typeText("123456ABcd")
+        
+        app.staticTexts["TitleLabel"].tap()
+        
+        if isSetPin {
+            app.buttons["SetPinLabel"].tap()
+        }
+        
+        app.buttons["AuthButton"].tap()
+    }
+    
 }
