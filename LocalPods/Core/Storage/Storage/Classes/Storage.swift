@@ -7,18 +7,7 @@
 
 import Foundation
 
-public protocol IStorage {
-    associatedtype Entity
-    
-    func readAll(completion: @escaping ([Entity]) -> Void)
-    func read(id: String, completion: @escaping (Entity?) -> Void)
-    func write(_ entity: Entity)
-    func write(_ entities: [Entity])
-    func delete(_ entity: Entity)
-    func delete(_ entities: [Entity])
-}
-
-public class Storage<Entity> where Entity: ManagedObjectConvertible {
+open class Storage<Entity> where Entity: ManagedObjectConvertible {
 
     private let worker: CoreDataWorker
 
@@ -27,11 +16,7 @@ public class Storage<Entity> where Entity: ManagedObjectConvertible {
         worker = CoreDataWorker(coreData: stack)
     }
     
-}
-
-extension Storage: IStorage {
-
-    public func readAll(completion: @escaping ([Entity]) -> Void) {
+    open func readAll(completion: @escaping ([Entity]) -> Void) {
         worker.get { (result: Result<[Entity], CoreDataWorkerError>) in
             switch result {
             case .success(let entities):
@@ -43,7 +28,7 @@ extension Storage: IStorage {
         }
     }
 
-    public func read(id: String, completion: @escaping (Entity?) -> Void) {
+    open func read(id: String, completion: @escaping (Entity?) -> Void) {
         worker.get(with: NSPredicate(format: "id == %@", id),
                    sortDescriptors: nil,
                    fetchLimit: nil) { (result: Result<[Entity], CoreDataWorkerError>) in
@@ -58,19 +43,19 @@ extension Storage: IStorage {
         }
     }
 
-    public func write(_ entity: Entity) {
+    open func write(_ entity: Entity) {
         worker.upsert(entity) { self.handleError($0) }
     }
 
-    public func write(_ entities: [Entity]) {
+    open func write(_ entities: [Entity]) {
         worker.upsert(entities) { self.handleError($0) }
     }
 
-    public func delete(_ entity: Entity) {
+    open func delete(_ entity: Entity) {
         worker.remove(entity) { self.handleError($0) }
     }
 
-    public func delete(_ entities: [Entity]) {
+    open func delete(_ entities: [Entity]) {
         worker.remove(entities) { self.handleError($0) }
     }
 
