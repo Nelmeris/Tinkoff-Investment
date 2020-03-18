@@ -32,6 +32,8 @@ public class AuthViewController: UIViewController {
                 print("credentials")
             case .confirmPin(let code):
                 print(code)
+            case .notLogin:
+                print("not authorized")
             }
         }
     }
