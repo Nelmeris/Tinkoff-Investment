@@ -12,7 +12,7 @@ import Keychain
 
 public class AuthViewController: UIViewController {
 
-    private var auth: AuthManager!
+    private var auth: IAuthManager!
 
     override public func viewDidLoad() {
         super.viewDidLoad()

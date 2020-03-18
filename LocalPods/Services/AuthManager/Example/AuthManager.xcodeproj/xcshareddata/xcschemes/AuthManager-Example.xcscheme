@@ -61,6 +61,16 @@
                ReferencedContainer = "container:AuthManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "57412A2224224E5F00E8019A"
+               BuildableName = "AuthManager_ExampleTests.xctest"
+               BlueprintName = "AuthManager_ExampleTests"
+               ReferencedContainer = "container:AuthManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
