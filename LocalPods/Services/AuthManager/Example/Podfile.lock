@@ -1,16 +1,22 @@
 PODS:
-  - AuthManager (0.1.0)
+  - AuthManager (0.1.0):
+    - Keychain
+  - Keychain (0.1.0)
 
 DEPENDENCIES:
   - AuthManager (from `../`)
+  - Keychain (from `../../../Core/Keychain`)
 
 EXTERNAL SOURCES:
   AuthManager:
     :path: "../"
+  Keychain:
+    :path: "../../../Core/Keychain"
 
 SPEC CHECKSUMS:
-  AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
+  AuthManager: 1d3913abc3b5f568e3cde329902cb6c0e3714bcd
+  Keychain: 89f9572fe3da55cac35ca00f8897d29451fc5e4f
 
-PODFILE CHECKSUM: dbfb76ef6b281651c819bd1401a5a4485776d230
+PODFILE CHECKSUM: 73e3350908cc995850a917dbac1f87af1a233765
 
 COCOAPODS: 1.9.0

@@ -2,7 +2,8 @@ PODS:
   - AuthLoginScreen (0.1.0):
     - DesignKit
     - Validator
-  - AuthManager (0.1.0)
+  - AuthManager (0.1.0):
+    - Keychain
   - AuthPinScreen (0.1.0):
     - DesignKit
     - UIUtils
@@ -15,6 +16,7 @@ PODS:
     - Network
     - Storage
   - FormattersKit (0.1.0)
+  - Keychain (0.1.0)
   - Kingfisher/Core (5.13.2)
   - Kingfisher/SwiftUI (5.13.2):
     - Kingfisher/Core
@@ -45,6 +47,7 @@ DEPENDENCIES:
   - DetailStockScreen (from `LocalPods/Screens/DetailStockScreen`)
   - FinnhubDataManager (from `LocalPods/Services/FinnhubDataManager`)
   - FormattersKit (from `LocalPods/Core/FormattersKit`)
+  - Keychain (from `LocalPods/Core/Keychain`)
   - Network (from `LocalPods/Core/Network`)
   - NewsScreen (from `LocalPods/Screens/NewsScreen`)
   - R.swift
@@ -76,6 +79,8 @@ EXTERNAL SOURCES:
     :path: LocalPods/Services/FinnhubDataManager
   FormattersKit:
     :path: LocalPods/Core/FormattersKit
+  Keychain:
+    :path: LocalPods/Core/Keychain
   Network:
     :path: LocalPods/Core/Network
   NewsScreen:
@@ -89,12 +94,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AuthLoginScreen: 220c0838361ae643e0486b280395e8efb7ff178b
-  AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
+  AuthManager: 1d3913abc3b5f568e3cde329902cb6c0e3714bcd
   AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
   DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
   DetailStockScreen: 56ad72531c2e784aefcb998c650d8d032ef24167
   FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
   FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
+  Keychain: 89f9572fe3da55cac35ca00f8897d29451fc5e4f
   Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
   Network: 57206d692ec3af6aea50bfee90fbde910902df59
   NewsScreen: 5765d28ff5af712dc81c3c187ec0ffee826d105b
@@ -106,6 +112,6 @@ SPEC CHECKSUMS:
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
   Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 9d9089a58abb30e2941992347a0aa685da659a6c
+PODFILE CHECKSUM: 317fbc4c2402a4657a91d785454b023aa15618e3
 
 COCOAPODS: 1.9.0

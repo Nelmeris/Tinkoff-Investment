@@ -211,10 +211,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AuthManager_Example/Pods-AuthManager_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AuthManager/AuthManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Keychain/Keychain.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AuthManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keychain.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

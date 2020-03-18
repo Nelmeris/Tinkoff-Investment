@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Keychain
 
 public class AuthManager {
     private enum KeychainKeys: String {
@@ -41,36 +42,5 @@ public class AuthManager {
         _ = keychain.remove(key: KeychainKeys.login.rawValue)
         _ = keychain.remove(key: KeychainKeys.password.rawValue)
         _ = keychain.remove(key: KeychainKeys.pin.rawValue)
-    }
-}
-
-private class Keyсhain {
-    func save(key: String, string: String) -> OSStatus {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                     kSecAttrAccount as String: key,
-                                     kSecValueData as String: Data(string.utf8)]
-        SecItemDelete(query as CFDictionary)
-        let status = SecItemAdd(query as CFDictionary, nil)
-        return status
-    }
-
-    func remove(key: String) -> OSStatus {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                     kSecAttrAccount as String: key]
-        return SecItemDelete(query as CFDictionary)
-    }
-
-    func load(key: String) -> String? {
-        let query: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
-                                     kSecAttrAccount as String: key,
-                                     kSecReturnData as String: kCFBooleanTrue!,
-                                     kSecMatchLimit as String: kSecMatchLimitOne]
-        var dataTypeRef: AnyObject?
-        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-        if status == noErr, let data = dataTypeRef as? Data {
-            return String(data: data, encoding: .utf8)
-        } else {
-            return nil
-        }
     }
 }
