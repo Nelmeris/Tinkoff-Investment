@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		005AFD6F598453FB0A6D961A /* Pods_FinnhubDataManager_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0750EFFDBFE775B6F616E3AC /* Pods_FinnhubDataManager_ExampleTests.framework */; };
-		57412A342422597200E8019A /* TicketDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A332422597200E8019A /* TicketDataManagerTests.swift */; };
+		57412A342422597200E8019A /* FinnhubDataManagersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A332422597200E8019A /* FinnhubDataManagersTests.swift */; };
+		57412A3C24226DA200E8019A /* ProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A3B24226DA200E8019A /* ProviderMock.swift */; };
+		57412A3E24226DAA00E8019A /* StorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A3D24226DAA00E8019A /* StorageMock.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -36,8 +38,10 @@
 		51D6B6EF879C9BCD4E26ABAF /* Pods_FinnhubDataManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinnhubDataManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D58FB67F73A06A5371933E /* Pods-FinnhubDataManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_Example.release.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_Example/Pods-FinnhubDataManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		57412A312422597200E8019A /* FinnhubDataManager_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinnhubDataManager_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		57412A332422597200E8019A /* TicketDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataManagerTests.swift; sourceTree = "<group>"; };
+		57412A332422597200E8019A /* FinnhubDataManagersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnhubDataManagersTests.swift; sourceTree = "<group>"; };
 		57412A352422597200E8019A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57412A3B24226DA200E8019A /* ProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderMock.swift; sourceTree = "<group>"; };
+		57412A3D24226DAA00E8019A /* StorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMock.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FinnhubDataManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinnhubDataManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,8 +79,10 @@
 		57412A322422597200E8019A /* FinnhubDataManager_ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				57412A332422597200E8019A /* TicketDataManagerTests.swift */,
+				57412A332422597200E8019A /* FinnhubDataManagersTests.swift */,
 				57412A352422597200E8019A /* Info.plist */,
+				57412A3B24226DA200E8019A /* ProviderMock.swift */,
+				57412A3D24226DAA00E8019A /* StorageMock.swift */,
 			);
 			path = FinnhubDataManager_ExampleTests;
 			sourceTree = "<group>";
@@ -354,7 +360,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57412A342422597200E8019A /* TicketDataManagerTests.swift in Sources */,
+				57412A3C24226DA200E8019A /* ProviderMock.swift in Sources */,
+				57412A342422597200E8019A /* FinnhubDataManagersTests.swift in Sources */,
+				57412A3E24226DAA00E8019A /* StorageMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
