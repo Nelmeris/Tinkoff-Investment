@@ -14,11 +14,12 @@ import AuthLoginScreen
 import AuthPinScreen
 import TicketList
 import NewsScreen
+import Keychain
 
 private typealias Credentials = (login: String, password: String)
 
 class RootAppController: UINavigationController {
-    private lazy var auth = AuthManager()
+    private lazy var auth = AuthManager(keychain: Keychain())
     private var pinCode: String?
     private var authPin: AuthPinController?
     
@@ -31,7 +32,7 @@ class RootAppController: UINavigationController {
     private func checkAuthState() {
         auth.authentificate { [weak self] state in
             switch state {
-            case .credentials:
+            case .credentials, .notLogin:
                 self?.runLogin()
             case .confirmPin(let code):
                 self?.pinCode = code
