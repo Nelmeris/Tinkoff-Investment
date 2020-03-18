@@ -21,7 +21,7 @@ public class AuthManager {
     }
 
     public enum State {
-        case credentials, confirmPin(code: String)
+        case notLogin, credentials, confirmPin(code: String)
     }
 
     private let keychain: IKeychain
@@ -35,10 +35,14 @@ public class AuthManager {
 extension AuthManager: IAuthManager {
 
     public func authentificate(_ completion: (_ state: State) -> Void) {
-        if let pin = keychain.load(key: KeychainKeys.pin.rawValue) {
-            completion(.confirmPin(code: pin))
+        if keychain.load(key: KeychainKeys.login.rawValue) != nil {
+            if let pin = keychain.load(key: KeychainKeys.pin.rawValue) {
+                completion(.confirmPin(code: pin))
+            } else {
+                completion(.credentials)
+            }
         } else {
-            completion(.credentials)
+            completion(.notLogin)
         }
     }
 
