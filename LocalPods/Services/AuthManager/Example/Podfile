@@ -10,5 +10,5 @@ target 'AuthManager_Example' do
     inherit! :search_paths
 
   end
-
+  
 end

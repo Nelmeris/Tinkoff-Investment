@@ -60,5 +60,5 @@ extension AuthManager: IAuthManager {
         _ = keychain.remove(key: KeychainKeys.password.rawValue)
         _ = keychain.remove(key: KeychainKeys.pin.rawValue)
     }
-    
+  
 }
