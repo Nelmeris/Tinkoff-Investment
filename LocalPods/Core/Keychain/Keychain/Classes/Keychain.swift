@@ -13,7 +13,7 @@ public protocol IKeychain {
     func load(key: String) -> String?
 }
 
-public class Keyсhain: IKeychain {
+public class Keychain: IKeychain {
     public init() {}
     
     public func save(key: String, string: String) -> OSStatus {

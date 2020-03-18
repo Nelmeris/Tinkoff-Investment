@@ -6,4 +6,9 @@ target 'AuthManager_Example' do
 
   pod 'Keychain', :path => '../../../Core/Keychain'
 
+  target 'AuthManager_ExampleTests' do
+    inherit! :search_paths
+
+  end
+  
 end

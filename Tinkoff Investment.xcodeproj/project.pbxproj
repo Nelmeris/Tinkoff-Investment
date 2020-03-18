@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57412A822422845300E8019A /* AuthScreensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A812422845300E8019A /* AuthScreensUITests.swift */; };
 		743068E523FDC88C0075A374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E423FDC88C0075A374 /* AppDelegate.swift */; };
 		743068E723FDC88C0075A374 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068E623FDC88C0075A374 /* SceneDelegate.swift */; };
 		743068EE23FDC88D0075A374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 743068ED23FDC88D0075A374 /* Assets.xcassets */; };
 		743068F123FDC88D0075A374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743068EF23FDC88D0075A374 /* LaunchScreen.storyboard */; };
 		743068FA23FDCD6D0075A374 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068F923FDCD6D0075A374 /* R.generated.swift */; };
 		743068FE23FE55A40075A374 /* RootAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743068FD23FE55A40075A374 /* RootAppController.swift */; };
-		CC25711B6ED187D30CFB2F72 /* Pods_Tinkoff_Investment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540840341B5B7C6E95E8C020 /* Pods_Tinkoff_Investment.framework */; };
+		A4255E4EB1EAA98A25E0EFF9 /* Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E05B55BE0B3F65112A4415B /* Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework */; };
+		D59B58B3CB544F36FA24998A /* Pods_Tinkoff_Investment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35AA0650BEB7CA29CC22D842 /* Pods_Tinkoff_Investment.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		57412A842422845300E8019A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 743068D923FDC88C0075A374 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 743068E023FDC88C0075A374;
+			remoteInfo = "Tinkoff Investment";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		4FB653D21C631C00C018FB31 /* Pods-Tinkoff Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment.debug.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.debug.xcconfig"; sourceTree = "<group>"; };
-		540840341B5B7C6E95E8C020 /* Pods_Tinkoff_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		723D3B812CC6D394B879E710 /* Pods-Tinkoff Tech Authentificator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Tech Authentificator.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Tech Authentificator/Pods-Tinkoff Tech Authentificator.release.xcconfig"; sourceTree = "<group>"; };
+		1289BE4E371867EAA5F334C6 /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment-Tinkoff Investor UI Tests.debug.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment-Tinkoff Investor UI Tests/Pods-Tinkoff Investment-Tinkoff Investor UI Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		35AA0650BEB7CA29CC22D842 /* Pods_Tinkoff_Investment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff_Investment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A38B6FAC5C9D5731653F66 /* Pods-Tinkoff Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.release.xcconfig"; sourceTree = "<group>"; };
+		57412A7F2422845300E8019A /* Tinkoff Investor UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tinkoff Investor UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57412A812422845300E8019A /* AuthScreensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreensUITests.swift; sourceTree = "<group>"; };
+		57412A832422845300E8019A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E8717A9C263561AF239A6E /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment-Tinkoff Investor UI Tests.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment-Tinkoff Investor UI Tests/Pods-Tinkoff Investment-Tinkoff Investor UI Tests.release.xcconfig"; sourceTree = "<group>"; };
 		743068E123FDC88C0075A374 /* Tinkoff Investor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinkoff Investor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		743068E423FDC88C0075A374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		743068E623FDC88C0075A374 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,16 +44,24 @@
 		743068F223FDC88D0075A374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743068F923FDCD6D0075A374 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		743068FD23FE55A40075A374 /* RootAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppController.swift; sourceTree = "<group>"; };
-		FA021A244BE473D11744061D /* Pods-Tinkoff Tech Authentificator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Tech Authentificator.debug.xcconfig"; path = "Target Support Files/Pods-Tinkoff Tech Authentificator/Pods-Tinkoff Tech Authentificator.debug.xcconfig"; sourceTree = "<group>"; };
-		FC2A52F98069DC28CAAF3B33 /* Pods-Tinkoff Investment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment.release.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.release.xcconfig"; sourceTree = "<group>"; };
+		7E05B55BE0B3F65112A4415B /* Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC03983078FD5DF8100A7A1 /* Pods-Tinkoff Investment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff Investment.debug.xcconfig"; path = "Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		57412A7C2422845300E8019A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4255E4EB1EAA98A25E0EFF9 /* Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		743068DE23FDC88C0075A374 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC25711B6ED187D30CFB2F72 /* Pods_Tinkoff_Investment.framework in Frameworks */,
+				D59B58B3CB544F36FA24998A /* Pods_Tinkoff_Investment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,22 +71,32 @@
 		510080F20F2A0D8565B6534E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA021A244BE473D11744061D /* Pods-Tinkoff Tech Authentificator.debug.xcconfig */,
-				723D3B812CC6D394B879E710 /* Pods-Tinkoff Tech Authentificator.release.xcconfig */,
-				4FB653D21C631C00C018FB31 /* Pods-Tinkoff Investment.debug.xcconfig */,
-				FC2A52F98069DC28CAAF3B33 /* Pods-Tinkoff Investment.release.xcconfig */,
+				CCC03983078FD5DF8100A7A1 /* Pods-Tinkoff Investment.debug.xcconfig */,
+				42A38B6FAC5C9D5731653F66 /* Pods-Tinkoff Investment.release.xcconfig */,
+				1289BE4E371867EAA5F334C6 /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.debug.xcconfig */,
+				63E8717A9C263561AF239A6E /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		57412A802422845300E8019A /* Tinkoff Investor UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				57412A812422845300E8019A /* AuthScreensUITests.swift */,
+				57412A832422845300E8019A /* Info.plist */,
+			);
+			path = "Tinkoff Investor UI Tests";
 			sourceTree = "<group>";
 		};
 		743068D823FDC88C0075A374 = {
 			isa = PBXGroup;
 			children = (
 				743068E323FDC88C0075A374 /* Tinkoff Investment */,
+				57412A802422845300E8019A /* Tinkoff Investor UI Tests */,
 				743068E223FDC88C0075A374 /* Products */,
 				510080F20F2A0D8565B6534E /* Pods */,
-				823F91AA57D556A342AD4242 /* Frameworks */,
 				743068F923FDCD6D0075A374 /* R.generated.swift */,
+				B37A2AB12A216A33A302FCEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				743068E123FDC88C0075A374 /* Tinkoff Investor.app */,
+				57412A7F2422845300E8019A /* Tinkoff Investor UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,10 +122,11 @@
 			path = "Tinkoff Investment";
 			sourceTree = "<group>";
 		};
-		823F91AA57D556A342AD4242 /* Frameworks */ = {
+		B37A2AB12A216A33A302FCEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				540840341B5B7C6E95E8C020 /* Pods_Tinkoff_Investment.framework */,
+				35AA0650BEB7CA29CC22D842 /* Pods_Tinkoff_Investment.framework */,
+				7E05B55BE0B3F65112A4415B /* Pods_Tinkoff_Investment_Tinkoff_Investor_UI_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,17 +134,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		57412A7E2422845300E8019A /* Tinkoff Investor UI Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57412A882422845300E8019A /* Build configuration list for PBXNativeTarget "Tinkoff Investor UI Tests" */;
+			buildPhases = (
+				C1DB71B0DFFFD8AC99E8C114 /* [CP] Check Pods Manifest.lock */,
+				57412A7B2422845300E8019A /* Sources */,
+				57412A7C2422845300E8019A /* Frameworks */,
+				57412A7D2422845300E8019A /* Resources */,
+				D61DA2E8D79F16742B4FE21C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57412A852422845300E8019A /* PBXTargetDependency */,
+			);
+			name = "Tinkoff Investor UI Tests";
+			productName = "Tinkoff Investor UI Tests";
+			productReference = 57412A7F2422845300E8019A /* Tinkoff Investor UI Tests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		743068E023FDC88C0075A374 /* Tinkoff Investment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 743068F523FDC88D0075A374 /* Build configuration list for PBXNativeTarget "Tinkoff Investment" */;
 			buildPhases = (
-				81637534283B2A47332402DA /* [CP] Check Pods Manifest.lock */,
+				5230B63F7950F2BD54607D18 /* [CP] Check Pods Manifest.lock */,
 				743068F823FDCCC70075A374 /* R.Swift */,
 				743068DD23FDC88C0075A374 /* Sources */,
 				743068DE23FDC88C0075A374 /* Frameworks */,
 				743068DF23FDC88C0075A374 /* Resources */,
-				F8EC631FB8FDBDE75298880C /* [CP] Embed Pods Frameworks */,
 				57C204892404888600A5B90E /* SwiftLint */,
+				1DE39891647BED719A10386D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +185,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Tinkoff Courses";
 				TargetAttributes = {
+					57412A7E2422845300E8019A = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 743068E023FDC88C0075A374;
+					};
 					743068E023FDC88C0075A374 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -148,11 +208,19 @@
 			projectRoot = "";
 			targets = (
 				743068E023FDC88C0075A374 /* Tinkoff Investment */,
+				57412A7E2422845300E8019A /* Tinkoff Investor UI Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		57412A7D2422845300E8019A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		743068DF23FDC88C0075A374 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +233,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1DE39891647BED719A10386D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5230B63F7950F2BD54607D18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinkoff Investment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		57C204892404888600A5B90E /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,13 +304,13 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n\n";
 		};
-		81637534283B2A47332402DA /* [CP] Check Pods Manifest.lock */ = {
+		C1DB71B0DFFFD8AC99E8C114 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,33 +325,41 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tinkoff Investment-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tinkoff Investment-Tinkoff Investor UI Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8EC631FB8FDBDE75298880C /* [CP] Embed Pods Frameworks */ = {
+		D61DA2E8D79F16742B4FE21C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment-Tinkoff Investor UI Tests/Pods-Tinkoff Investment-Tinkoff Investor UI Tests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment-Tinkoff Investor UI Tests/Pods-Tinkoff Investment-Tinkoff Investor UI Tests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinkoff Investment-Tinkoff Investor UI Tests/Pods-Tinkoff Investment-Tinkoff Investor UI Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		57412A7B2422845300E8019A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57412A822422845300E8019A /* AuthScreensUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		743068DD23FDC88C0075A374 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +373,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		57412A852422845300E8019A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 743068E023FDC88C0075A374 /* Tinkoff Investment */;
+			targetProxy = 57412A842422845300E8019A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		743068EF23FDC88D0075A374 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -270,6 +393,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		57412A862422845300E8019A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1289BE4E371867EAA5F334C6 /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = "Tinkoff Investor UI Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "artemkufaev.Tinkoff-Investor-UI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tinkoff Investment";
+			};
+			name = Debug;
+		};
+		57412A872422845300E8019A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63E8717A9C263561AF239A6E /* Pods-Tinkoff Investment-Tinkoff Investor UI Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				INFOPLIST_FILE = "Tinkoff Investor UI Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "artemkufaev.Tinkoff-Investor-UI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tinkoff Investment";
+			};
+			name = Release;
+		};
 		743068F323FDC88D0075A374 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,7 +551,7 @@
 		};
 		743068F623FDC88D0075A374 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FB653D21C631C00C018FB31 /* Pods-Tinkoff Investment.debug.xcconfig */;
+			baseConfigurationReference = CCC03983078FD5DF8100A7A1 /* Pods-Tinkoff Investment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,7 +571,7 @@
 		};
 		743068F723FDC88D0075A374 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC2A52F98069DC28CAAF3B33 /* Pods-Tinkoff Investment.release.xcconfig */;
+			baseConfigurationReference = 42A38B6FAC5C9D5731653F66 /* Pods-Tinkoff Investment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -427,6 +592,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		57412A882422845300E8019A /* Build configuration list for PBXNativeTarget "Tinkoff Investor UI Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57412A862422845300E8019A /* Debug */,
+				57412A872422845300E8019A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		743068DC23FDC88C0075A374 /* Build configuration list for PBXProject "Tinkoff Investment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

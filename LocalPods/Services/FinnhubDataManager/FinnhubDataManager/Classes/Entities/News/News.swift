@@ -16,6 +16,22 @@ public struct News: Decodable {
     public let datetime: TimeInterval
     public let related: String
     public let url: URL
+    
+    public init(id: Int,
+                image: String,
+                headline: String,
+                summary: String,
+                datetime: TimeInterval,
+                related: String,
+                url: URL) {
+        self.id = id
+        self.image = image
+        self.headline = headline
+        self.summary = summary
+        self.datetime = datetime
+        self.related = related
+        self.url = url
+    }
 }
 
 extension News: ManagedObjectConvertible {

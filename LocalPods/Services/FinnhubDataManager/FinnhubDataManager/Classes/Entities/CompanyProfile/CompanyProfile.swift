@@ -13,6 +13,16 @@ public struct CompanyProfile: Decodable {
     public let name: String
     public let currency: String
     public let description: String
+    
+    public init(ticker: String,
+                name: String,
+                currency: String,
+                description: String) {
+        self.ticker = ticker
+        self.name = name
+        self.currency = currency
+        self.description = description
+    }
 }
 
 extension CompanyProfile: ManagedObjectConvertible {

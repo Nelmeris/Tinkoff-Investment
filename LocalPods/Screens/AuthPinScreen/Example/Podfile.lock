@@ -4,26 +4,37 @@ PODS:
     - UIUtils
   - DesignKit (0.1.0):
     - UIUtils
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
+    - iOSSnapshotTestCase/Core
   - UIUtils (0.1.0)
 
 DEPENDENCIES:
   - AuthPinScreen (from `../`)
-  - DesignKit (from `../../DesignKit`)
-  - UIUtils (from `../../UIUtils`)
+  - DesignKit (from `../../../Presentation/DesignKit`)
+  - iOSSnapshotTestCase
+  - UIUtils (from `../../../Presentation/UIUtils`)
+
+SPEC REPOS:
+  trunk:
+    - iOSSnapshotTestCase
 
 EXTERNAL SOURCES:
   AuthPinScreen:
     :path: "../"
   DesignKit:
-    :path: "../../DesignKit"
+    :path: "../../../Presentation/DesignKit"
   UIUtils:
-    :path: "../../UIUtils"
+    :path: "../../../Presentation/UIUtils"
 
 SPEC CHECKSUMS:
   AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
   DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
 
-PODFILE CHECKSUM: 449cb69a6bb33d1c81e0c7c8d8b00fcf30277526
+PODFILE CHECKSUM: de5d2640b093601accc3dc99e557e64ca23aefa5
 
 COCOAPODS: 1.9.0

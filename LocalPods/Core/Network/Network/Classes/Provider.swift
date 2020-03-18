@@ -19,7 +19,7 @@ public protocol ProviderProtocol {
     func cancel()
 }
 
-public class Provider<API: INetworkAPI>: ProviderProtocol {
+open class Provider<API: INetworkAPI>: ProviderProtocol {
 
     public let session: URLSession
     private var task: URLSessionTask?
@@ -28,7 +28,7 @@ public class Provider<API: INetworkAPI>: ProviderProtocol {
         self.session = session
     }
 
-    public func load<Model: Decodable>(_ apiMethod: API, completion: @escaping Completion<Model>) {
+    open func load<Model: Decodable>(_ apiMethod: API, completion: @escaping Completion<Model>) {
         do {
             let request = try RequestBuilder.build(from: apiMethod)
             task = session.dataTask(with: request) { (data, _, _) in
@@ -46,7 +46,7 @@ public class Provider<API: INetworkAPI>: ProviderProtocol {
         }
     }
 
-    public func cancel() {
+    open func cancel() {
         self.task?.cancel()
     }
 

@@ -16,6 +16,7 @@ public class AuthLoginView: UIView {
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.text = "Авторизуйтесь"
         label.numberOfLines = 0
+        label.accessibilityIdentifier = "TitleLabel"
         return label
     }()
 
@@ -25,6 +26,7 @@ public class AuthLoginView: UIView {
         field.textContentType = .username
         field.tag = 0
         field.returnKeyType = .next
+        field.accessibilityIdentifier = "LoginLabel"
         return field
     }()
 
@@ -34,6 +36,7 @@ public class AuthLoginView: UIView {
         field.isSecureTextEntry = true
         field.textContentType = .password
         field.tag = 1
+        field.accessibilityIdentifier = "PasswordLabel"
         field.returnKeyType = .done
         return field
     }()
@@ -42,6 +45,7 @@ public class AuthLoginView: UIView {
         let button = Button(type: .system)
         button.setTitle("Войти", for: .normal)
         button.isEnabled = false
+        button.accessibilityIdentifier = "AuthButton"
         return button
     }()
 
@@ -53,6 +57,7 @@ public class AuthLoginView: UIView {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(isSetPinLabelTapped))
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(gestureRecognizer)
+        label.accessibilityIdentifier = "SetPinLabel"
         return label
     }()
 

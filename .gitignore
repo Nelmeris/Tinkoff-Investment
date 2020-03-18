@@ -82,3 +82,6 @@ iOSInjectionProject/
 .idea
 *.xcworkspacedata
 IDEWorkspaceChecks.plist
+
+## Snapshots
+ReferenceImages*

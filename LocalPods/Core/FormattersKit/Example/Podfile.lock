@@ -1,0 +1,16 @@
+PODS:
+  - FormattersKit (0.1.0)
+
+DEPENDENCIES:
+  - FormattersKit (from `../`)
+
+EXTERNAL SOURCES:
+  FormattersKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
+
+PODFILE CHECKSUM: 09b4ace88e48f2bc39753f9b9cb6ad84b8ff3ee1
+
+COCOAPODS: 1.9.0

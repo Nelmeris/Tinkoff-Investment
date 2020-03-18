@@ -12,6 +12,11 @@ public class FinnhubDataManager<Model: Decodable & ManagedObjectConvertible> {
 
     private var provider: Provider<FinnhubAPI>
     private var storage: Storage<Model>
+    
+    public init(provider: Provider<FinnhubAPI>, storage: Storage<Model>) {
+        self.provider = provider
+        self.storage = storage
+    }
 
     public init() {
         self.provider = Provider<FinnhubAPI>()

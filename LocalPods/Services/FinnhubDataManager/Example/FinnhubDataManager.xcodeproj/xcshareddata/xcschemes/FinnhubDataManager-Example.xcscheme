@@ -61,6 +61,16 @@
                ReferencedContainer = "container:FinnhubDataManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "57412A302422597200E8019A"
+               BuildableName = "FinnhubDataManager_ExampleTests.xctest"
+               BlueprintName = "FinnhubDataManager_ExampleTests"
+               ReferencedContainer = "container:FinnhubDataManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

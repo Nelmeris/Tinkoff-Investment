@@ -8,14 +8,16 @@
 
 import UIKit
 import AuthManager
+import Keychain
 
 public class AuthViewController: UIViewController {
 
-    private var auth: AuthManager!
+    private var auth: IAuthManager!
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.auth = AuthManager()
+        let keychain = Keychain()
+        self.auth = AuthManager(keychain: keychain)
         authentificate()
         auth.sendLoginCredentials(login: "Login", password: "Password")
         authentificate()
@@ -30,6 +32,8 @@ public class AuthViewController: UIViewController {
                 print("credentials")
             case .confirmPin(let code):
                 print(code)
+            case .notLogin:
+                print("not authorized")
             }
         }
     }

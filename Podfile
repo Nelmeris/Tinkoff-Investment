@@ -29,4 +29,10 @@ target 'Tinkoff Investment' do
   pod 'Network', :path => 'LocalPods/Core/Network'
   pod 'FormattersKit', :path => 'LocalPods/Core/FormattersKit'
   pod 'Keychain', :path => 'LocalPods/Core/Keychain'
+  
+  target "Tinkoff Investor UI Tests" do
+    use_frameworks!
+
+    pod 'Nimble'
+  end
 end

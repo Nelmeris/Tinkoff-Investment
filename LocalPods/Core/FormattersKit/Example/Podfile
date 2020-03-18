@@ -1,0 +1,10 @@
+use_frameworks!
+
+target 'FormattersKit_Example' do
+  pod 'FormattersKit', :path => '../'
+
+  target 'FormattersKit_Tests' do
+    inherit! :search_paths
+
+  end
+end
