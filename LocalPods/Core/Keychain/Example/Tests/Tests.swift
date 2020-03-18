@@ -11,7 +11,7 @@ class KeychainTests: XCTestCase {
     let value = "SomeValue"
     
     override func setUp() {
-        keychain = Keyсhain()
+        keychain = Keychain()
     }
     
     func testSave() {
