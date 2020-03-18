@@ -9,9 +9,17 @@ import CoreData
 import Storage
 
 public struct Exchange: Decodable {
-    let name: String
-    let code: String
-    let currency: String
+    public let name: String
+    public let code: String
+    public let currency: String
+    
+    public init(name: String,
+                code: String,
+                currency: String) {
+        self.name = name
+        self.code = code
+        self.currency = currency
+    }
 }
 
 extension Exchange: ManagedObjectConvertible {
