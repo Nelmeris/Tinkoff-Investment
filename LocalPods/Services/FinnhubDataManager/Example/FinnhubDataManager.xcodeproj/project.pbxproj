@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005AFD6F598453FB0A6D961A /* Pods_FinnhubDataManager_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0750EFFDBFE775B6F616E3AC /* Pods_FinnhubDataManager_ExampleTests.framework */; };
+		57412A342422597200E8019A /* FinnhubDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57412A332422597200E8019A /* FinnhubDataManagerTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -15,13 +17,27 @@
 		9D233448393FDE7EBE1BE13F /* Pods_FinnhubDataManager_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D6B6EF879C9BCD4E26ABAF /* Pods_FinnhubDataManager_Example.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		57412A362422597200E8019A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = FinnhubDataManager_Example;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0750EFFDBFE775B6F616E3AC /* Pods_FinnhubDataManager_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinnhubDataManager_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D851F0D45090779D9CFE35E /* Pods-FinnhubDataManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_Tests/Pods-FinnhubDataManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		204CC8102506F4DB62DA8310 /* Pods-FinnhubDataManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_Tests/Pods-FinnhubDataManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2FCC95F103088FAD6DED9E9E /* FinnhubDataManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FinnhubDataManager.podspec; path = ../FinnhubDataManager.podspec; sourceTree = "<group>"; };
 		392283811F5B1D126F62A163 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		51D6B6EF879C9BCD4E26ABAF /* Pods_FinnhubDataManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinnhubDataManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D58FB67F73A06A5371933E /* Pods-FinnhubDataManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_Example.release.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_Example/Pods-FinnhubDataManager_Example.release.xcconfig"; sourceTree = "<group>"; };
+		57412A312422597200E8019A /* FinnhubDataManager_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinnhubDataManager_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57412A332422597200E8019A /* FinnhubDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinnhubDataManagerTests.swift; sourceTree = "<group>"; };
+		57412A352422597200E8019A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FinnhubDataManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinnhubDataManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,11 +46,21 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		79C9BD16F42D567114E673C5 /* Pods_FinnhubDataManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinnhubDataManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBB644C62F3BDBCFF0A1834 /* Pods-FinnhubDataManager_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_ExampleTests/Pods-FinnhubDataManager_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E7161B866BF5F503EF1ACD4 /* Pods-FinnhubDataManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_Example/Pods-FinnhubDataManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D901405714E1704E9274BCAD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F705164E1F006F1F96689EED /* Pods-FinnhubDataManager_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinnhubDataManager_ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-FinnhubDataManager_ExampleTests/Pods-FinnhubDataManager_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		57412A2E2422597200E8019A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005AFD6F598453FB0A6D961A /* Pods_FinnhubDataManager_ExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,11 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57412A322422597200E8019A /* FinnhubDataManager_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				57412A332422597200E8019A /* FinnhubDataManagerTests.swift */,
+				57412A352422597200E8019A /* Info.plist */,
+			);
+			path = FinnhubDataManager_ExampleTests;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for FinnhubDataManager */,
+				57412A322422597200E8019A /* FinnhubDataManager_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				ACE67BF5782EF33DC6E81CCD /* Pods */,
 				CF590B53A8D28E3303C722F6 /* Frameworks */,
@@ -61,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* FinnhubDataManager_Example.app */,
+				57412A312422597200E8019A /* FinnhubDataManager_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +141,8 @@
 				53D58FB67F73A06A5371933E /* Pods-FinnhubDataManager_Example.release.xcconfig */,
 				0D851F0D45090779D9CFE35E /* Pods-FinnhubDataManager_Tests.debug.xcconfig */,
 				204CC8102506F4DB62DA8310 /* Pods-FinnhubDataManager_Tests.release.xcconfig */,
+				7CBB644C62F3BDBCFF0A1834 /* Pods-FinnhubDataManager_ExampleTests.debug.xcconfig */,
+				F705164E1F006F1F96689EED /* Pods-FinnhubDataManager_ExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -113,6 +152,7 @@
 			children = (
 				51D6B6EF879C9BCD4E26ABAF /* Pods_FinnhubDataManager_Example.framework */,
 				79C9BD16F42D567114E673C5 /* Pods_FinnhubDataManager_Tests.framework */,
+				0750EFFDBFE775B6F616E3AC /* Pods_FinnhubDataManager_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,6 +160,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		57412A302422597200E8019A /* FinnhubDataManager_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57412A3A2422597200E8019A /* Build configuration list for PBXNativeTarget "FinnhubDataManager_ExampleTests" */;
+			buildPhases = (
+				83EAB0C15886DFDC491AA20C /* [CP] Check Pods Manifest.lock */,
+				57412A2D2422597200E8019A /* Sources */,
+				57412A2E2422597200E8019A /* Frameworks */,
+				57412A2F2422597200E8019A /* Resources */,
+				DB7FA7E174B8BEEDAD453128 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57412A372422597200E8019A /* PBXTargetDependency */,
+			);
+			name = FinnhubDataManager_ExampleTests;
+			productName = FinnhubDataManager_ExampleTests;
+			productReference = 57412A312422597200E8019A /* FinnhubDataManager_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		607FACCF1AFB9204008FA782 /* FinnhubDataManager_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FinnhubDataManager_Example" */;
@@ -145,10 +205,16 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					57412A302422597200E8019A = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = YX6VKW92JQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 1130;
@@ -169,11 +235,19 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* FinnhubDataManager_Example */,
+				57412A302422597200E8019A /* FinnhubDataManager_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		57412A2F2422597200E8019A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +283,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		83EAB0C15886DFDC491AA20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinnhubDataManager_ExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		91F62965589CC89BB9FABB25 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,9 +327,37 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinnhubDataManager_Example/Pods-FinnhubDataManager_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DB7FA7E174B8BEEDAD453128 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinnhubDataManager_ExampleTests/Pods-FinnhubDataManager_ExampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinnhubDataManager_ExampleTests/Pods-FinnhubDataManager_ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		57412A2D2422597200E8019A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57412A342422597200E8019A /* FinnhubDataManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +368,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57412A372422597200E8019A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* FinnhubDataManager_Example */;
+			targetProxy = 57412A362422597200E8019A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
@@ -265,6 +397,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		57412A382422597200E8019A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CBB644C62F3BDBCFF0A1834 /* Pods-FinnhubDataManager_ExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FinnhubDataManager_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "artemkufaev.FinnhubDataManager-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinnhubDataManager_Example.app/FinnhubDataManager_Example";
+			};
+			name = Debug;
+		};
+		57412A392422597200E8019A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F705164E1F006F1F96689EED /* Pods-FinnhubDataManager_ExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YX6VKW92JQ;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = FinnhubDataManager_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "artemkufaev.FinnhubDataManager-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinnhubDataManager_Example.app/FinnhubDataManager_Example";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +588,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		57412A3A2422597200E8019A /* Build configuration list for PBXNativeTarget "FinnhubDataManager_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57412A382422597200E8019A /* Debug */,
+				57412A392422597200E8019A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "FinnhubDataManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
