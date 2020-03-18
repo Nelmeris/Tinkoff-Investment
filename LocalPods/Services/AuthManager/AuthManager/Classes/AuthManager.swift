@@ -8,6 +8,13 @@
 import Foundation
 import Keychain
 
+public protocol IAuthManager {
+    func authentificate(_ completion: (_ state: AuthManager.State) -> Void)
+    func sendLoginCredentials(login: String, password: String)
+    func sendPin(code: String)
+    func resetCredentials()
+}
+
 public class AuthManager {
     private enum KeychainKeys: String {
         case login, password, pin
@@ -22,6 +29,10 @@ public class AuthManager {
     public init(keychain: IKeychain) {
         self.keychain = keychain
     }
+    
+}
+
+extension AuthManager: IAuthManager {
 
     public func authentificate(_ completion: (_ state: State) -> Void) {
         if let pin = keychain.load(key: KeychainKeys.pin.rawValue) {
@@ -45,4 +56,5 @@ public class AuthManager {
         _ = keychain.remove(key: KeychainKeys.password.rawValue)
         _ = keychain.remove(key: KeychainKeys.pin.rawValue)
     }
+    
 }
