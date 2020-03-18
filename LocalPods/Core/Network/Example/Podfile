@@ -4,4 +4,11 @@ platform :ios, '8.0'
 target 'Network_Example' do
   pod 'Network', :path => '../'
 
+  target 'Network_ExampleTests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+  end
+
 end
