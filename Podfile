@@ -28,4 +28,5 @@ target 'Tinkoff Investment' do
   pod 'Storage', :path => 'LocalPods/Core/Storage'
   pod 'Network', :path => 'LocalPods/Core/Network'
   pod 'FormattersKit', :path => 'LocalPods/Core/FormattersKit'
+  pod 'Keychain', :path => 'LocalPods/Core/Keychain'
 end
