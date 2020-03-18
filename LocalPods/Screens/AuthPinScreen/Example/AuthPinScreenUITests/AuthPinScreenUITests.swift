@@ -12,21 +12,49 @@ import UIUtils
 
 class AuthPinScreenUITests: FBSnapshotTestCase {
 
+    var app: XCUIApplication!
+    
     override func setUp() {
         super.setUp()
-        
         continueAfterFailure = false
+        // recordMode = true
         
-        recordMode = true
+        app = XCUIApplication()
+        app.launch()
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-        
+    func testEmptyScreen() {
+        takeScreenshot()
+    }
+    
+    func testTwoNumbersClicledScreen() {
+        app.buttons["1"].tap()
+        app.buttons["1"].tap()
+        takeScreenshot()
+    }
+    
+    func testRepeatPinScreen() {
+        for _ in 1...4 {
+            app.buttons["1"].tap()
+        }
+        takeScreenshot()
+    }
+    
+    func testIncorrectPinRepetitionScreen() {
+        for _ in 1...4 {
+            app.buttons["1"].tap()
+        }
+        for _ in 1...4 {
+            app.buttons["2"].tap()
+        }
+        takeScreenshot()
+    }
+    
+    private func takeScreenshot() {
         let screenshot = app.screenshot()
-        FBSnapshotVerifyView(UIImageView(image: screenshot.image.removingStatusBar))
+        let image = screenshot.image.removingStatusBar
+        let imageView = UIImageView(image: image)
+        FBSnapshotVerifyView(imageView)
     }
     
 }
