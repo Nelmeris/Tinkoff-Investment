@@ -6,4 +6,11 @@ target 'AuthPinScreen_Example' do
 
   pod 'DesignKit', :path => '../../../Presentation/DesignKit'
   pod 'UIUtils', :path => '../../../Presentation/UIUtils'
+
+  target "AuthPinScreenUITests" do
+    use_frameworks!
+
+    pod 'iOSSnapshotTestCase'
+  end
+
 end
