@@ -17,9 +17,11 @@ public class AuthManager {
         case credentials, confirmPin(code: String)
     }
 
-    private let keychain = Keyсhain()
+    private let keychain: IKeychain
 
-    public init() {}
+    public init(keychain: IKeychain) {
+        self.keychain = keychain
+    }
 
     public func authentificate(_ completion: (_ state: State) -> Void) {
         if let pin = keychain.load(key: KeychainKeys.pin.rawValue) {
