@@ -7,6 +7,17 @@
 
 import Foundation
 
+public protocol IStorage {
+    associatedtype Entity
+    
+    func readAll(completion: @escaping ([Entity]) -> Void)
+    func read(id: String, completion: @escaping (Entity?) -> Void)
+    func write(_ entity: Entity)
+    func write(_ entities: [Entity])
+    func delete(_ entity: Entity)
+    func delete(_ entities: [Entity])
+}
+
 public class Storage<Entity> where Entity: ManagedObjectConvertible {
 
     private let worker: CoreDataWorker
@@ -15,6 +26,10 @@ public class Storage<Entity> where Entity: ManagedObjectConvertible {
         let stack = CoreDataStack.build(modelName: modelName, bundle: bundle)
         worker = CoreDataWorker(coreData: stack)
     }
+    
+}
+
+extension Storage: IStorage {
 
     public func readAll(completion: @escaping ([Entity]) -> Void) {
         worker.get { (result: Result<[Entity], CoreDataWorkerError>) in
