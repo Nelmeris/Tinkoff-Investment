@@ -13,14 +13,17 @@ public enum FinnhubAPI {
     case news
     case companyNews(symbol: String)
     case companyProfile(symbol: String)
+    
+    public static var apiKey: String = ""
+    public static var baseUrl = ""
 
-    var apiKey: String { "bpkpa07rh5rcgrlrc06g" }
+    var apiKey: String { FinnhubAPI.apiKey }
 }
 
 extension FinnhubAPI: INetworkAPI {
 
     public var schema: NetworkSchema { .https }
-    public var host: String { "finnhub.io/api/v1" }
+    public var host: String { FinnhubAPI.baseUrl }
     public var headers: HTTPHeaders? { nil }
 
     public var path: String {

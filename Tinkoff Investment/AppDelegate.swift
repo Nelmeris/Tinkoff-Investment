@@ -8,6 +8,8 @@
 
 import UIKit
 
+import FinnhubDataManager
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let bundle = Bundle.main
+        guard let token = bundle.object(forInfoDictionaryKey: "APIToken") as? String,
+            let baseURL = bundle.object(forInfoDictionaryKey: "APIBaseURL") as? String else { fatalError() }
+        FinnhubAPI.apiKey = token
+        FinnhubAPI.baseUrl = baseURL
         return true
     }
 
