@@ -97,7 +97,8 @@ platform :ios do
     scan(
       skip_build: true,
       workspace: "./LocalPods/Core/Keychain/Example/Keychain.xcworkspace",
-      output_files: "Keychain.html"
+      output_files: "Keychain.html",
+      fail_build: false
     )
 
     # Auth Manager
