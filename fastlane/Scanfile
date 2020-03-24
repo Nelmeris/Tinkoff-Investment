@@ -15,6 +15,6 @@
 # Enable skip_build to skip debug builds for faster test performance
 # skip_build(true)
 
-devices(['iPhone 8', 'iPhone 11'])
+devices(['iPhone 8'])
 output_types("html")
 disable_concurrent_testing(true)
