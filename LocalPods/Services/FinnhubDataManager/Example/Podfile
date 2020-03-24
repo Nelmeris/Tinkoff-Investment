@@ -1,0 +1,17 @@
+use_frameworks!
+platform :ios, '10.0'
+
+target 'FinnhubDataManager_Example' do
+  pod 'FinnhubDataManager', :path => '../'
+
+  pod 'Network', :path => '../../../Core/Network/'
+  pod 'Storage', :path => '../../../Core/Storage/'
+
+  target 'FinnhubDataManager_ExampleTests' do
+    inherit! :search_paths
+
+    pod 'Nimble'
+    pod 'Quick'
+  end
+
+end

@@ -1,0 +1,22 @@
+PODS:
+  - AuthManager (0.1.0):
+    - Keychain
+  - Keychain (0.1.0)
+
+DEPENDENCIES:
+  - AuthManager (from `../`)
+  - Keychain (from `../../../Core/Keychain`)
+
+EXTERNAL SOURCES:
+  AuthManager:
+    :path: "../"
+  Keychain:
+    :path: "../../../Core/Keychain"
+
+SPEC CHECKSUMS:
+  AuthManager: 1d3913abc3b5f568e3cde329902cb6c0e3714bcd
+  Keychain: 89f9572fe3da55cac35ca00f8897d29451fc5e4f
+
+PODFILE CHECKSUM: f48c2fc8f32bed8c276116944f41d3d71b145980
+
+COCOAPODS: 1.9.0

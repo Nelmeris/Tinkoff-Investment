@@ -1,0 +1,145 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+setup_travis
+
+default_platform(:ios)
+
+platform :ios do
+
+  desc "Установка зависимостей, сборка"
+  lane :build_for_testing do
+
+    # FORMATTERS
+    cocoapods(
+      clean: true,
+      podfile: "./LocalPods/Core/FormattersKit/Example/Podfile"
+    )
+
+    scan(
+      workspace: "./LocalPods/Core/FormattersKit/Example/FormattersKit.xcworkspace",
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+    # KEYCHAIN
+    cocoapods(
+      clean: true,
+      podfile: "./LocalPods/Core/Keychain/Example/Podfile"
+    )
+
+    scan(
+      workspace: "./LocalPods/Core/Keychain/Example/Keychain.xcworkspace",
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+    # Auth PIN Screen
+    cocoapods(
+      clean: true,
+      podfile: "./LocalPods/Screens/AuthPinScreen/Example/Podfile"
+    )
+
+    scan(
+      workspace: "./LocalPods/Screens/AuthPinScreen/Example/AuthPinScreen.xcworkspace",
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+    # Auth Manager
+    cocoapods(
+      clean: true,
+      podfile: "./LocalPods/Services/AuthManager/Example/Podfile"
+    )
+
+    scan(
+      workspace: "./LocalPods/Services/AuthManager/Example/AuthManager.xcworkspace",
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+    # Finnhub Data Manager
+    cocoapods(
+      clean: true,
+      podfile: "./LocalPods/Services/FinnhubDataManager/Example/Podfile"
+    )
+
+    scan(
+      workspace: "./LocalPods/Services/FinnhubDataManager/Example/FinnhubDataManager.xcworkspace",
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+    # Main
+    cocoapods(clean: true)
+
+    scan(
+      build_for_testing: true,
+      skip_slack: true
+    )
+
+  end
+
+  desc "Запуск тестов на уже скомпилированном приложении"
+  lane :run_tests do
+
+    # FORMATTERS
+    scan(
+      skip_build: true,
+      workspace: "./LocalPods/Core/FormattersKit/Example/FormattersKit.xcworkspace",
+      output_files: "FormattersKit.html"
+    )
+
+    # KEYCHAIN
+    scan(
+      skip_build: true,
+      workspace: "./LocalPods/Core/Keychain/Example/Keychain.xcworkspace",
+      output_files: "Keychain.html",
+      fail_build: false
+    )
+
+    # Auth Manager
+    scan(
+      skip_build: true,
+      workspace: "./LocalPods/Services/AuthManager/Example/AuthManager.xcworkspace",
+      output_files: "AuthManager.html"
+    )
+
+    # Auth PIN Screen
+    scan(
+      skip_build: true,
+      workspace: "./LocalPods/Screens/AuthPinScreen/Example/AuthPinScreen.xcworkspace",
+      output_files: "AuthPinScreen.html"
+    )
+
+    # Finnhub Data Manager
+    scan(
+      skip_build: true,
+      workspace: "./LocalPods/Services/FinnhubDataManager/Example/FinnhubDataManager.xcworkspace",
+      output_files: "FinnhubDataManager.html"
+    )
+
+    # Main
+    scan(
+      skip_build: true,
+      output_files: "Tinkoff Investments.html"
+    )
+
+  end
+
+  desc "Сборка и тестирование"
+  lane :build_and_test do
+    build_for_testing
+    run_tests
+  end
+
+end

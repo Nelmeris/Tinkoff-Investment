@@ -1,41 +1,121 @@
 PODS:
-  - AuthLoginScreen (0.1.0)
-  - AuthManager (0.1.0)
-  - AuthPinScreen (0.1.0)
+  - AuthLoginScreen (0.1.0):
+    - DesignKit
+    - Validator
+  - AuthManager (0.1.0):
+    - Keychain
+  - AuthPinScreen (0.1.0):
+    - DesignKit
+    - UIUtils
+  - DesignKit (0.1.0):
+    - UIUtils
+  - DetailStockScreen (0.1.0):
+    - FinnhubDataManager
+    - NewsScreen
+  - FinnhubDataManager (0.1.0):
+    - Network
+    - Storage
+  - FormattersKit (0.1.0)
+  - Keychain (0.1.0)
+  - Kingfisher/Core (5.13.2)
+  - Kingfisher/SwiftUI (5.13.2):
+    - Kingfisher/Core
+  - Network (0.1.0)
+  - NewsScreen (0.1.0):
+    - DesignKit
+    - FinnhubDataManager
+    - FormattersKit
+    - Kingfisher/SwiftUI
+  - Nimble (8.0.5)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
+  - Storage (0.1.0)
   - SwiftLint (0.38.2)
+  - TicketList (0.1.0):
+    - DesignKit
+    - DetailStockScreen
+    - FinnhubDataManager
+    - UIUtils
+  - UIUtils (0.1.0)
+  - Validator (3.2.1)
 
 DEPENDENCIES:
-  - AuthLoginScreen (from `LocalPods/AuthLoginScreen`)
-  - AuthManager (from `LocalPods/AuthManager`)
-  - AuthPinScreen (from `LocalPods/AuthPinScreen`)
+  - AuthLoginScreen (from `LocalPods/Screens/AuthLoginScreen`)
+  - AuthManager (from `LocalPods/Services/AuthManager`)
+  - AuthPinScreen (from `LocalPods/Screens/AuthPinScreen`)
+  - DesignKit (from `LocalPods/Presentation/DesignKit`)
+  - DetailStockScreen (from `LocalPods/Screens/DetailStockScreen`)
+  - FinnhubDataManager (from `LocalPods/Services/FinnhubDataManager`)
+  - FormattersKit (from `LocalPods/Core/FormattersKit`)
+  - Keychain (from `LocalPods/Core/Keychain`)
+  - Network (from `LocalPods/Core/Network`)
+  - NewsScreen (from `LocalPods/Screens/NewsScreen`)
+  - Nimble
   - R.swift
+  - Storage (from `LocalPods/Core/Storage`)
   - SwiftLint
+  - TicketList (from `LocalPods/Screens/TicketList`)
+  - UIUtils (from `LocalPods/Presentation/UIUtils`)
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
+    - Nimble
     - R.swift
     - R.swift.Library
     - SwiftLint
+    - Validator
 
 EXTERNAL SOURCES:
   AuthLoginScreen:
-    :path: LocalPods/AuthLoginScreen
+    :path: LocalPods/Screens/AuthLoginScreen
   AuthManager:
-    :path: LocalPods/AuthManager
+    :path: LocalPods/Services/AuthManager
   AuthPinScreen:
-    :path: LocalPods/AuthPinScreen
+    :path: LocalPods/Screens/AuthPinScreen
+  DesignKit:
+    :path: LocalPods/Presentation/DesignKit
+  DetailStockScreen:
+    :path: LocalPods/Screens/DetailStockScreen
+  FinnhubDataManager:
+    :path: LocalPods/Services/FinnhubDataManager
+  FormattersKit:
+    :path: LocalPods/Core/FormattersKit
+  Keychain:
+    :path: LocalPods/Core/Keychain
+  Network:
+    :path: LocalPods/Core/Network
+  NewsScreen:
+    :path: LocalPods/Screens/NewsScreen
+  Storage:
+    :path: LocalPods/Core/Storage
+  TicketList:
+    :path: LocalPods/Screens/TicketList
+  UIUtils:
+    :path: LocalPods/Presentation/UIUtils
 
 SPEC CHECKSUMS:
-  AuthLoginScreen: 598ec92b561e61497f60422d72f9410bf150d318
-  AuthManager: 6982d3ccd15f8767ca1230bec0fcf86961250330
-  AuthPinScreen: aaa252f425aa924b6b5d1f0f233bd21a109b0c9d
+  AuthLoginScreen: 220c0838361ae643e0486b280395e8efb7ff178b
+  AuthManager: 1d3913abc3b5f568e3cde329902cb6c0e3714bcd
+  AuthPinScreen: 246efd2ea7385d6874c4c854fbb0ed3da13e618a
+  DesignKit: e3e210d54b91be6779b8db7f2ee73e9f643a9dad
+  DetailStockScreen: 56ad72531c2e784aefcb998c650d8d032ef24167
+  FinnhubDataManager: b51fb2844e9be6d4a3f858fa1ae2c3efc7d37b0f
+  FormattersKit: b5664ab7f21fccbdc8c6feddf5107e7469e3d5fa
+  Keychain: 89f9572fe3da55cac35ca00f8897d29451fc5e4f
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Network: 57206d692ec3af6aea50bfee90fbde910902df59
+  NewsScreen: 5765d28ff5af712dc81c3c187ec0ffee826d105b
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  Storage: 8c90e63db432ad3aea2bbf599cef91628abf801f
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  TicketList: 2421f18a477838560e707cdbc386fb6f297dac6f
+  UIUtils: 0717d0deb9653664ebb73e9270b94e19878443d9
+  Validator: 80a6f567220c962dfd2d9928ae98a8c1d164f6f4
 
-PODFILE CHECKSUM: 560a51ff25e592b5698442b8d77606a870228559
+PODFILE CHECKSUM: 69a32d7aa3be171fdf164ecdacace14da02917a9
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0

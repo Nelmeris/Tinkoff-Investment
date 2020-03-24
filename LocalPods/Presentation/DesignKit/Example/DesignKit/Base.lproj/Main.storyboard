@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DesignKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IFy-eD-oha" customClass="TextField" customModule="DesignKit">
+                                <rect key="frame" x="139" y="166" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CyM-7r-jm4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3SG-84-C0q" customClass="Button" customModule="DesignKit">
+                                <rect key="frame" x="164" y="260" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dtt-Ci-qOb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-bA-9vs" customClass="Checkbox" customModule="DesignKit">
+                                <rect key="frame" x="28" y="357" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="tJN-y3-9rW"/>
+                                    <constraint firstAttribute="height" constant="25" id="xR8-BE-TMd"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9j-nN-4FZ" customClass="PincodeView" customModule="DesignKit">
+                                <rect key="frame" x="87" y="527" width="200" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uWd-ba-4UP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bwa-bA-9vs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="4VI-Ll-oJO"/>
+                            <constraint firstItem="IFy-eD-oha" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="CV4-7u-Rwl"/>
+                            <constraint firstItem="IFy-eD-oha" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Gqf-UE-mTe"/>
+                            <constraint firstItem="bwa-bA-9vs" firstAttribute="top" secondItem="3SG-84-C0q" secondAttribute="bottom" constant="25" id="Gxh-EU-qkz"/>
+                            <constraint firstItem="A9j-nN-4FZ" firstAttribute="top" secondItem="bwa-bA-9vs" secondAttribute="bottom" constant="25" id="Hxj-Ju-b6H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3SG-84-C0q" secondAttribute="trailing" constant="20" id="MzM-aF-kMb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A9j-nN-4FZ" secondAttribute="trailing" constant="50" id="ZU7-KL-Hmi"/>
+                            <constraint firstItem="A9j-nN-4FZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="hy2-kU-wLB"/>
+                            <constraint firstItem="3SG-84-C0q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="lcT-kv-nrf"/>
+                            <constraint firstItem="3SG-84-C0q" firstAttribute="top" secondItem="IFy-eD-oha" secondAttribute="bottom" constant="40" id="oNA-wR-IgO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IFy-eD-oha" secondAttribute="trailing" constant="20" id="p7C-jo-lkR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="134"/>
+        </scene>
+    </scenes>
+</document>

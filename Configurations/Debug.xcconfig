@@ -1,0 +1,15 @@
+//
+//  Debug.xcconfig
+//  Tinkoff Investment
+//
+//  Created by Artem Kufaev on 23.03.2020.
+//  Copyright © 2020 Tinkoff Courses. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "../Pods/Target Support Files/Pods-Tinkoff Investment/Pods-Tinkoff Investment.debug.xcconfig"
+
+API_BASE_URL = finnhub.io/api/v1
+API_TOKEN  = bpkpa07rh5rcgrlrc06g
