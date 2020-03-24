@@ -71,7 +71,7 @@ class AuthScreensUITests: XCTestCase {
         app.textFields["LoginLabel"].tap()
         app.textFields["LoginLabel"].typeText("SomeLogin")
         
-        app.secureTextFields["PasswordLabel"].tap()
+        app.keyboards.firstMatch.buttons["next"].tap()
         app.secureTextFields["PasswordLabel"].typeText("123456ABcd")
         
         app.staticTexts["TitleLabel"].tap()
