@@ -27,7 +27,8 @@ platform :ios do
 
     scan(
       workspace: "./LocalPods/Core/FormattersKit/Example/FormattersKit.xcworkspace",
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
     # KEYCHAIN
@@ -38,7 +39,8 @@ platform :ios do
 
     scan(
       workspace: "./LocalPods/Core/Keychain/Example/Keychain.xcworkspace",
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
     # Auth PIN Screen
@@ -49,7 +51,8 @@ platform :ios do
 
     scan(
       workspace: "./LocalPods/Screens/AuthPinScreen/Example/AuthPinScreen.xcworkspace",
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
     # Auth Manager
@@ -60,7 +63,8 @@ platform :ios do
 
     scan(
       workspace: "./LocalPods/Services/AuthManager/Example/AuthManager.xcworkspace",
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
     # Finnhub Data Manager
@@ -71,14 +75,16 @@ platform :ios do
 
     scan(
       workspace: "./LocalPods/Services/FinnhubDataManager/Example/FinnhubDataManager.xcworkspace",
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
     # Main
     cocoapods(clean: true)
 
     scan(
-      build_for_testing: true
+      build_for_testing: true,
+      skip_slack: true
     )
 
   end
