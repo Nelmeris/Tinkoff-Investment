@@ -20,12 +20,17 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane ios build_for_testing
 ```
-Установка зависимостей, сборка с помощью scan
+Установка зависимостей, сборка
 ### ios run_tests
 ```
 fastlane ios run_tests
 ```
 Запуск тестов на уже скомпилированном приложении
+### ios build_and_test
+```
+fastlane ios build_and_test
+```
+Сборка и тестирование
 
 ----
 
