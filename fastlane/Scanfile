@@ -1,0 +1,23 @@
+# For more information about this configuration visit
+# https://docs.fastlane.tools/actions/scan/#scanfile
+
+# In general, you can use the options available
+# fastlane scan --help
+
+# Remove the # in front of the line to enable the option
+
+# scheme("Example")
+
+# open_report(true)
+
+# clean(true)
+
+# Enable skip_build to skip debug builds for faster test performance
+# skip_build(true)
+
+devices(['iPhone 8'])
+output_types("html")
+disable_concurrent_testing(true)
+
+slack_url "https://hooks.slack.com/services/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"
+slack_channel "#fastlane"

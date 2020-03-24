@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode11.3
+xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 8
+before_install:
+  - yes | gem update --system --force
+  - gem install bundler:1.17.2
+install:
+  - bundle install
+script:
+  - fastlane build_and_test

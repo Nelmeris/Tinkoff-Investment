@@ -54,7 +54,7 @@ class AuthPinScreenUITests: FBSnapshotTestCase {
         let screenshot = app.screenshot()
         let image = screenshot.image.removingStatusBar
         let imageView = UIImageView(image: image)
-        FBSnapshotVerifyView(imageView)
+        FBSnapshotVerifyView(imageView, perPixelTolerance: 2)
     }
     
 }
