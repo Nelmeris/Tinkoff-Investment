@@ -18,3 +18,6 @@
 devices(['iPhone 8'])
 output_types("html")
 disable_concurrent_testing(true)
+
+slack_url "https://hooks.slack.com/services/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"
+slack_channel "#fastlane"
