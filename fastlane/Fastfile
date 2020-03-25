@@ -56,7 +56,8 @@ def run_testing(xcworkspaces)
     scan(
       skip_build: true,
       workspace: xcworkspace,
-      output_files: project_name + '.html'
+      output_files: project_name + '.html',
+      fail_build: project_name != 'Keychain'
     )
   end
 
