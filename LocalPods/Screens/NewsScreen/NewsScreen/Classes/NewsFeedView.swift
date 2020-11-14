@@ -24,11 +24,12 @@ public struct NewsFeedView: View {
                 .padding(.vertical, 15)
                 .frame(width: geometry.size.width)
             }.background(self.backgroundColor)
-        }.alert(isPresented: self.$fetcher.isError) { () -> Alert in
-            Alert(title: Text("Ошибка"),
-                  message: Text(self.fetcher.error?.localizedDescription ?? ""),
-                  dismissButton: .cancel())
-        }.padding(.top)
+        }
+        .alert(isPresented: $fetcher.isError, content: {
+            Alert(title: Text("Error"),
+                  message: Text(fetcher.error?.localizedDescription ?? "Unknown error"),
+                  dismissButton: .default(Text("Ok 😔")))
+        })
     }
 }
 

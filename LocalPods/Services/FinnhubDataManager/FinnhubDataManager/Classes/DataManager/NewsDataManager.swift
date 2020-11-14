@@ -19,7 +19,14 @@ public final class NewsDataManager: FinnhubDataManager<News> {
             let filtered = result.filter { $0.related == companySymbol }
             completion(.success(filtered))
         }
-        loadFromNetwork(api: .companyNews(symbol: companySymbol)) { result in
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let to = Date()
+        let from = Calendar.current.date(
+            byAdding: .month,
+            value: -1,
+            to: Date())
+        loadFromNetwork(api: .companyNews(symbol: companySymbol, from: dateFormatter.string(from: from!), to: dateFormatter.string(from: to))) { result in
             switch result {
             case .success(let news):
                 let filtered = news.filter { $0.related == companySymbol }
