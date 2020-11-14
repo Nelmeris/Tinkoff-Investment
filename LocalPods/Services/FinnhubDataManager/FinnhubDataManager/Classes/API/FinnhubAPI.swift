@@ -11,7 +11,7 @@ public enum FinnhubAPI {
     case stockSymbol(exchange: String)
     case stockExchange
     case news
-    case companyNews(symbol: String)
+    case companyNews(symbol: String, from: String, to: String)
     case companyProfile(symbol: String)
     
     public static var apiKey: String = ""
@@ -31,8 +31,8 @@ extension FinnhubAPI: INetworkAPI {
         case .stockSymbol: return "/stock/symbol"
         case .stockExchange: return "/stock/exchange"
         case .news: return "news"
-        case .companyProfile: return "/stock/profile"
-        case .companyNews(let symbol): return "news/\(symbol)"
+        case .companyProfile: return "/stock/profile2"
+        case .companyNews: return "/company-news"
         }
     }
 
@@ -64,9 +64,12 @@ extension FinnhubAPI: INetworkAPI {
             return .requestParameters(bodyParameters: nil,
                                       urlParameters: ["symbol": symbol,
                                                       "token": apiKey])
-        case .companyNews:
+        case .companyNews(let symbol, let from, let to):
             return .requestParameters(bodyParameters: nil,
-                                      urlParameters: ["token": apiKey])
+                                      urlParameters: ["symbol": symbol,
+                                                      "from": from,
+                                                      "to": to,
+                                                      "token": apiKey])
         }
     }
 

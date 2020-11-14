@@ -24,6 +24,11 @@ struct CompanyNewsView: View {
                 }
             }
         }
+        .alert(isPresented: $fetcher.isError, content: {
+            Alert(title: Text("Error"),
+                  message: Text(fetcher.error?.localizedDescription ?? "Unknown error"),
+                  dismissButton: .default(Text("Ok 😔")))
+        })
     }
 }
 

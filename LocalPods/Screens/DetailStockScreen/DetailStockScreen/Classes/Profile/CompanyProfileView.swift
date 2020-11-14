@@ -50,6 +50,11 @@ struct CompanyProfileView: View {
                 Spacer()
             }
         }.padding(.horizontal, 25)
+        .alert(isPresented: $viewModelFetcher.isError, content: {
+            Alert(title: Text("Network error"),
+                  message: Text(viewModelFetcher.error?.localizedDescription ?? "Unknown error"),
+                  dismissButton: .default(Text("Ok 😔")))
+        })
     }
     
 }

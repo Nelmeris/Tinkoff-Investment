@@ -27,10 +27,10 @@ class ProfileViewModelFactory {
         let name = model.name
         let currency = model.currency
         let description = model.description
-        return ProfileViewModel(ticker: ticker,
-                                name: name,
-                                currency: currency,
-                                description: description)
+        return ProfileViewModel(ticker: ticker ?? "",
+                                name: name ?? "",
+                                currency: currency ?? "",
+                                description: description ?? "")
     }
     
 }
